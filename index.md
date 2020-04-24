@@ -1,9 +1,6 @@
 
 ---  
 
-{% include youtube.html id=dQw4w9WgXcQ %}
-{% include youtube.html id=IQX4wJzflHA %}
-
 ### Pharaoh's Phury - a 2D Platformer Game Built with Phaser 3.  
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
 <p align="center">
