@@ -1,4 +1,3 @@
----  
 
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)  
 
