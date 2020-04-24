@@ -38,13 +38,12 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ---  
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
-### Pharaoh's Phury - a 2D Platformer Game Built with Phaser 3.
 <p align="center">
   After thousands of years of slumber, your place of rest has been invaded. Reclaim your prized possessions, avoid traps and enemy attacks, and run the British Imperialists out of your pyramid, or become their next museum display.
 </p>
 
 ---  
-
+### Pharaoh's Phury - a 2D Platformer Game Built with Phaser 3.
 <p align="center">
   **Designed and Created by**
   <br />
