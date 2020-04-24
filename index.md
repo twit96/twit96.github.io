@@ -58,7 +58,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 • 
 <a href="https://www.linkedin.com/in/tylerwittig/" target="_blank">Tyler Wittig</a>
 
-### Producer and Associate Producer  
+#### Producer and Associate Producer  
 
 <a href="https://www.linkedin.com/in/paultoprac/" target="_blank">Dr. Paul Toprac</a> 
 • 
