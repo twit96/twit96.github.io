@@ -37,16 +37,14 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.  
 
 ---  
-
+### Pharaoh's Phury - a 2D Platformer Game Built with Phaser 3.
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
 
 <p align="center">
   After thousands of years of slumber, your place of rest has been invaded. Reclaim your prized possessions, avoid traps and enemy attacks, and run the British Imperialists out of your pyramid, or become their next museum display.
 </p>
 
-<p align="center">
-  A 2D Platformer Game Built with Phaser 3.
-</p>
+---  
 
 <p align="center">
   **Designed and Created by**
