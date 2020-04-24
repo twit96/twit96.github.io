@@ -48,7 +48,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
   A 2D Platformer Game Built with Phaser 3.
 </p>
 
-### Designed and Created by  
+#### Designed and Created by  
 
 <a href="https://www.linkedin.com/in/xuxian-chen-81b648b5/" target="_blank">Xuxian Chen</a>
 • 
