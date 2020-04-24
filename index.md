@@ -38,13 +38,11 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ---  
 
-[![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
+[![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
 [A Phaser 3 Game - Click to Play Now!](https://twit96.github.io/PharaohsPhury_Phaser3/)  
 
-<h1 align="center"> Pharaoh's Phury </h1> <br>
-
 <!-- <p align="center">
-  <img width="559" height="254" src="./assets/trailer/Photos/titleCropped.png">
+  <img width="559" height="254" src="./assets/trailer/Photos/titleCropped-Text.png">
 </p> -->
 
 <p align="center">
