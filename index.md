@@ -38,15 +38,8 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 
 ---
-[Pharaoh's Phury - a Phaser 3 Game](https://twit96.github.io/PharaohsPhury_Phaser3/)
-<img src="images/titleCropped.png?raw=true"/>
-
----
-
-![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)
-
----
 
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
+[Click to Play Now!](https://twit96.github.io/PharaohsPhury_Phaser3/)  
 
 ---
