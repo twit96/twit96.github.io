@@ -1,6 +1,6 @@
 ---  
 
-[![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)]("https://twit96.github.io/PharaohsPhury_Phaser3/")  
+[![Pharaoh's Phury - a Phaser 3 Game]("/images/titleCropped-Text.png)"](https://twit96.github.io/PharaohsPhury_Phaser3/)  
 
 <p align="center"><b>Pharaoh's Phury - A 2D Platformer Game Built with Phaser 3.</b></p>
 
