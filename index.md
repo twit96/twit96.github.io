@@ -43,10 +43,10 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ---
 
-![Pharaoh's Phury - a Phaser 3 Game](img src="images/titleCropped.png?raw=true"/)
+![Pharaoh's Phury - a Phaser 3 Game](<img src="images/titleCropped.png?raw=true"/>)
 
 ---
 
-[![Pharaoh's Phury - a Phaser 3 Game](img src="images/titleCropped.png?raw=true"/)](https://twit96.github.io/PharaohsPhury_Phaser3/)
+[![Pharaoh's Phury - a Phaser 3 Game](<img src="images/titleCropped.png?raw=true"/>)](https://twit96.github.io/PharaohsPhury_Phaser3/)
 
 ---
