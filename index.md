@@ -49,7 +49,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 </p>
 
 <p align="center">
-  <h3>Designed and Created by</h3>
+  **Designed and Created by**
   <br />
   <a href="https://www.linkedin.com/in/xuxian-chen-81b648b5/" target="_blank">Xuxian Chen</a>
   • 
@@ -60,7 +60,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
   <a href="https://www.linkedin.com/in/tylerwittig/" target="_blank">Tyler Wittig</a>
   <br />
   <br />
-  <h3>Producer and Associate Producer</h3> 
+  **Producer and Associate Producer** 
   <br />
   <a href="https://www.linkedin.com/in/paultoprac/" target="_blank">Dr. Paul Toprac</a> 
   • 
