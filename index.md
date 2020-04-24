@@ -41,6 +41,20 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
 [A Phaser 3 Game - Click to Play Now!](https://twit96.github.io/PharaohsPhury_Phaser3/)  
 
+<h1 align="center"> Pharaoh's Phury </h1> <br>
+
+<!-- <p align="center">
+  <img width="559" height="254" src="./assets/trailer/Photos/titleCropped.png">
+</p> -->
+
+<p align="center">
+  A 2D Platformer Game Built with Phaser 3.
+</p>
+
+<p align="center">
+  After thousands of years of slumber, your place of rest has been invaded. Reclaim your prized possessions, avoid traps and enemy attacks, and run the British Imperialists out of your pyramid, or become their next museum display.
+</p>
+
 ### Designed and Created by:  
 
 <a href="https://www.linkedin.com/in/xuxian-chen-81b648b5/" target="_blank">Xuxian Chen</a>
