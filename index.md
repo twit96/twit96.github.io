@@ -39,7 +39,35 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ---
 
+<p align="center">
+  <img width="460" height="300" src="http://www.fillmurray.com/460/300">
+</p>
+
+
 [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)
-[Click to Play Now!](https://twit96.github.io/PharaohsPhury_Phaser3/)  
+
+<div class="pagelinks">
+  <center>
+    [Click to Play Now!](https://twit96.github.io/PharaohsPhury_Phaser3/)  
+    
+    <h3>Designed and Created by</h3>
+    <a href="https://www.linkedin.com/in/xuxian-chen-81b648b5/" target="_blank">Xuxian Chen</a>
+    <a href="https://www.linkedin.com/in/devyn-garza-858541160/" target="_blank">Devyn Garza</a>
+    <br />
+    <br />
+    <br />
+    <a href="https://www.linkedin.com/in/grey-huffines-45364a137/" target="_blank">Grey Huffines</a>
+    <a href="https://www.linkedin.com/in/tylerwittig/" target="_blank">Tyler Wittig</a>
+  </center>
+  <br />
+
+  <div style="text-align: center; padding:5px;">
+    <h3>Producer and Associate Producer</h3>
+    Paul Toprac and Jason Harron
+    <br />
+    <br />
+  </div>
+</div>
+
 
 ---
