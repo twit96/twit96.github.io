@@ -6,10 +6,19 @@ so reverted back to a static image with a clickable text link below it. -->
 <!-- [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)   -->
 
 <!-- Pharaoh's Phury -->
+![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)
+
+---
+
+![Pharaoh's Phury - a Phaser 3 Game](images/titleCropped.png)
+
+---
+
+<div style="text-align:center"><img src="images/titleCropped.png" /></div>
+
+---
+
 <p align="center">  
-  <!-- Game Title Image -->
-  ![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)
-  <br /><br />
   <!-- Game Description -->
   <b>Pharaoh's Phury - A 2D Platformer Game Built with Phaser 3.</b>
   <br /><br />
@@ -17,6 +26,7 @@ so reverted back to a static image with a clickable text link below it. -->
   <br /><br />
   <!-- Links -->
   <a href="https://youtu.be/IQX4wJzflHA" target="_blank">Watch the Trailer</a>
+  •
   <a href="https://twit96.github.io/PharaohsPhury_Phaser3/" target="_blank">Click to Play Now!</a>
   <br /><br />
   Designed and Created by
