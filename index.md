@@ -6,10 +6,8 @@ so reverted back to a static image with a clickable text link below it. -->
 <!-- [![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped-Text.png)](https://twit96.github.io/PharaohsPhury_Phaser3/)   -->
 
 <!-- Pharaoh's Phury -->
-<div style="text-align:center">
-  <img src="images/titleCropped.png" alt="Pharaoh's Phury Title Card" width="800"/>
-</div>
-
+<!-- Game Title Image -->
+![Pharaoh's Phury - a Phaser 3 Game](/images/titleCropped.png)
 <p align="center">  
   <!-- Game Description -->
   <b>Pharaoh's Phury - A 2D Platformer Game Built with Phaser 3.</b>
