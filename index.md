@@ -7,7 +7,7 @@ so reverted back to a static image with a clickable text link below it. -->
 
 <!-- Pharaoh's Phury -->
 <div style="text-align:center">
-  <img src="images/titleCropped.png" alt="Pharaoh's Phury Title Card" width="900"/>
+  <img src="images/titleCropped.png" alt="Pharaoh's Phury Title Card" width="800"/>
 </div>
 
 <p align="center">  
