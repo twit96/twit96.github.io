@@ -42,7 +42,7 @@ so reverted back to a static image with a clickable text link below it. -->
 <!-- Title Card -->
 [![Tank Fighter Title Card](/images/tankFighter-titleCard.png)](https://twit96.github.io/TankFighter_Phaser3/)
 <!-- Description -->
-<p align="center"><b>Tank Fighter: Swarm of Orbs - A Simple Top-down Shooter Built with Phaser 3.</b></p>
+<p align="center"><b>Tank Fighter: Swarm of Orbs - A Top-down Shooter Built with Phaser 3.</b></p>
 <p align="center">  
   In a post-apocalyptic world, swarms of alien orbs have nearly overtaken Earth. Your men have fallen and you have nothing left to lose. As a lone tank, it is your duty to give the invaders a fight to the death they won't soon forget. Good luck, comrade.
 </p>
