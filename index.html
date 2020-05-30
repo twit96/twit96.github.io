@@ -6,12 +6,15 @@
     <meta name="description" content="Software and Games Developer: Javascript, HTML, CSS, Python, Swift." />
 
 		<style>
+
+			/* Page */
 			body {
 			  margin: 0;
 			  font-family: Arial, Helvetica, sans-serif;
 				/* background-color: #dfdfdf; */
 			}
 
+			/* Navigation Bar */
 			.topnav {
 			  overflow: hidden;
 			  background-color: #0066ff;
@@ -19,7 +22,7 @@
 			.topnav a {
 				border-radius: 10px;
 			  float: left;
-			  color: #f2f2f2;
+			  color: black;
 			  text-align: center;
 			  padding: 14px 16px;
 			  text-decoration: none;
@@ -32,11 +35,19 @@
 			  float: left;
 			  color: #f2f2f2;
 			  text-align: center;
-			  padding: 16px 20px;
 			  text-decoration: none;
-			  font-size: 17px;
+			  font-size: 20px;
+			}
+			.topnav span {
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 20px;
 			}
 
+			/* Page Links - Grey Square Bubbles */
 			.pagelinks {
 			  overflow: hidden;
 				max-width:750px;
@@ -62,6 +73,25 @@
 				font-size: 17px;
 			}
 
+			/* Sections - Formatted Résumé Text Groups*/
+			.sections{
+			  overflow: hidden;
+				max-width:750px;
+			  margin: auto;
+				border-radius: 10px;
+			}
+			.sections a {
+				border-radius: 10px;
+			  color: black;
+			  text-align: center;
+			  padding: 14px 50px;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+			.sections a:hover {
+				color: #0066ff;
+			}
+
 		</style>
 
 	</head>
@@ -70,34 +100,39 @@
 
 		<!-- Top Navigation Bar -->
 		<div class="topnav">
-			<!-- title -->
+			<!-- Name -->
+      <div style="float:left; padding:5px;">
+        <a href="/"><b>Tyler Wittig</b></a>
+      </div>
+      <!-- Description -->
 			<div style="float:left; padding:5px;">
-				<a class="active" href="../index.html">Tyler Wittig</a>
+				<span>Software and Games Developer</span>
 			</div>
-		  <div style="float:left; padding:5px;">
-				<b>Software and Games Developer</b>
-			</div>
-			<!-- links -->
-		  <div style="float:right; padding:5px;">
-				<a href="mailto:tylerwittig@utexas.edu">Email</a>
+			<!-- Page Links -->
+			<div style="float:right; padding:5px;">
+				<a href="/contact.html">Contact</a>
 			</div>
 			<div style="float:right; padding:5px;">
-				<a href="https://www.linkedin.com/in/tylerwittig/">LinkedIn</a>
+				<a href="/resume.html">Résumé</a>
 			</div>
 			<div style="float:right; padding:5px;">
-				<a href="https://github.com/twit96">GitHub</a>
+				<a href="/"><b>Portfolio</b></a>
 			</div>
 			<div style="clear:both"></div>
 		</div>
 
-		<!-- Page Title -->
+		<!-- Page Header -->
     <br />
     <hr width="900">
-    <h1 align="center">Projects Portfolio</h1>
-    <p align="center">
-      Some of my most recent projects. More to be uploaded!
-    </p>
-    <hr width="900">
+
+		<div class="sections">
+			<h1 align="center">Projects Portfolio</h1>
+			<p align="center">
+				The things I do when I'm not working on this website.
+			</p>
+		</div>
+
+		<hr width="900">
     <br />
 
     <!-- Pharaoh's Phury -->
@@ -124,7 +159,10 @@
     <p align="center">
       <a href="https://youtu.be/IQX4wJzflHA">Watch the Trailer</a>
       •
-      <a href="https://twit96.github.io/PharaohsPhury_Phaser3/">Click to Play Now</a>
+      <a href="https://twit96.github.io/PharaohsPhury_Phaser3/"><b>Click to Play Now</b></a>
+			•
+			<a href="https://github.com/twit96/PharaohsPhury_Phaser3">View on GitHub</a>
+
     </p>
     <p align="center">
       Designed and Created by<br />
@@ -176,7 +214,9 @@
 		</div>
     <!-- Links -->
     <p align="center">
-      <a href="https://twit96.github.io/TankFighter_Phaser3/">Click to Play Now</a>
+      <a href="https://twit96.github.io/TankFighter_Phaser3/"><b>Click to Play Now</b></a>
+			•
+			<a href="https://github.com/twit96/PharaohsPhury_Phaser3">View on GitHub</a>
     </p>
     <p align="center">
       Designed and Created by<br />
@@ -221,7 +261,9 @@
 			<a href="https://www.linkedin.com/in/tylerwittig/">Tyler Wittig</a>
 		</p>
 
-		<br />
+
+    <!-- Page Footer -->
+    <br />
 		<hr width="900">
 		<br />
 
