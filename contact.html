@@ -2,120 +2,39 @@
 <html>
   <head>
     <title>Contact Tyler Wittig</title>
-    <link rel="icon" href="/assets/images/icon.png" />
-    <!-- <meta name="description" content="Software and Games Developer: JavaScript, HTML, CSS, Python, Swift." /> -->
+    <link rel="icon" href="/images/icon.png" />
+    <meta name="description" content="Software and Games Developer: JavaScript, HTML, CSS, Python, Swift." />
 
-    <style>
+    <!-- Load CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 
-      /* Page */
-      body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        /* background-color: #dfdfdf; */
-      }
-
-      /* Navigation Bar */
-      .topnav {
-        overflow: hidden;
-        background-color: #0066ff;
-      }
-      .topnav a {
-        border-radius: 10px;
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 20px;
-      }
-      .topnav a:hover {
-        background-color: rgba(221, 221, 221, 0.2);
-      }
-      .topnav b {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-      }
-      .topnav span {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 20px;
-      }
-
-      /* Page Links - Grey Square Bubbles */
-      .pagelinks {
-        overflow: hidden;
-        max-width:750px;
-        margin: auto;
-        background-color: rgba(221, 221, 221, 0.5);
-        border-radius: 10px;
-      }
-      .pagelinks a {
-        border-radius: 10px;
-        color: black;
-        text-align: center;
-        padding: 14px 50px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      .pagelinks a:hover {
-        color: #0066ff;
-      }
-      .pagelinks b {
-        color: black;
-        text-align: center;
-        padding: 14px 50px;
-        font-size: 17px;
-      }
-    </style>
-
+    <!-- jQuery CDN -->
+		<script src="https:ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Load Reusable Navigation Bar Code -->
+		<script>
+			$(function(){
+				$('#nav').load('/templates/nav_contact.html')
+			});
+		</script>
   </head>
 
   <body>
 
-    <!-- Top Navigation Bar -->
-		<div class="topnav">
-			<!-- Name -->
-      <div style="float:left; padding:5px;">
-        <a href="/"><b>Tyler Wittig</b></a>
-      </div>
-      <!-- Description -->
-			<div style="float:left; padding:5px;">
-				<span>Software and Games Developer</span>
-			</div>
-			<!-- Page Links -->
-			<div style="float:right; padding:5px;">
-				<a href="/contact.html"><b>Contact</b></a>
-			</div>
-			<div style="float:right; padding:5px;">
-				<a href="/resume.html">Résumé</a>
-			</div>
-			<div style="float:right; padding:5px;">
-				<a href="/">Portfolio</a>
-			</div>
-			<div style="clear:both"></div>
+    <!-- Navigation Bar - where reusable code will be placed -->
+		<div id="nav">
 		</div>
 
     <!-- Page Header -->
     <br />
     <hr width="900">
-    <p align="center">
-      <span style="font-size:20pt">
-        Reach out to me via any of the methods below.
-      </span>
-    </p>
+    <h1 align="center">Contact Me</h1>
     <br />
 
     <!-- links -->
     <p align="center">
-      <a href="mailto:tylerwittig@utexas.edu">tylerwittig@utexas.edu</a>
-      &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
       <a href="https://www.linkedin.com/in/tylerwittig/">LinkedIn</a>
+      &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+      <a href="mailto:tylerwittig@utexas.edu">tylerwittig@utexas.edu</a>
       &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/twit96">GitHub</a>
     </p>

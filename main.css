@@ -1,0 +1,94 @@
+/* Page */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #dfdfdf; */
+}
+
+/* Navigation Bar */
+.topnav {
+  overflow: hidden;
+  background-color: #0066ff;
+}
+.topnav a {
+  border-radius: 10px;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav a:hover {
+  background-color: rgba(221, 221, 221, 0.2);
+}
+.topnav b {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav span {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Page Links - Grey Square Bubbles */
+.pagelinks {
+  overflow: hidden;
+  max-width:750px;
+  margin: auto;
+  background-color: rgba(221, 221, 221, 0.5);
+  border-radius: 10px;
+}
+/* .pagelinks a {
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.pagelinks a:hover {
+  color: #0066ff;
+}
+.pagelinks b {
+  color: black;
+  text-align: center;
+  padding: 14px 50px;
+  font-size: 17px;
+} */
+
+/* Grey Square Bubbles */
+.description {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+
+/* Sections - Formatted Résumé Text Groups*/
+.sections{
+  overflow: hidden;
+  max-width:750px;
+  margin: auto;
+  border-radius: 10px;
+}
+.sections a {
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  /* font-size: 17px; */
+}
+.sections a:hover {
+  color: #0066ff;
+}

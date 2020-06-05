@@ -2,136 +2,38 @@
 <html>
 	<head>
 		<title>Tyler Wittig | Software and Games Developer</title>
-		<link rel="icon" href="/assets/images/icon.png" />
+		<link rel="icon" href="/images/icon.png" />
     <meta name="description" content="Software and Games Developer: JavaScript, HTML, CSS, Python, Swift." />
 
-		<style>
+		<!-- Load CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="main.css" media="screen" />
 
-			/* Page */
-			body {
-			  margin: 0;
-			  font-family: Arial, Helvetica, sans-serif;
-				/* background-color: #dfdfdf; */
-			}
-
-			/* Navigation Bar */
-			.topnav {
-			  overflow: hidden;
-			  background-color: #0066ff;
-			}
-			.topnav a {
-				border-radius: 10px;
-			  float: left;
-			  color: black;
-			  text-align: center;
-			  padding: 14px 16px;
-			  text-decoration: none;
-			  font-size: 20px;
-			}
-			.topnav a:hover {
-			  background-color: rgba(221, 221, 221, 0.2);
-			}
-			.topnav b {
-			  float: left;
-			  color: #f2f2f2;
-			  text-align: center;
-			  text-decoration: none;
-			  font-size: 20px;
-			}
-			.topnav span {
-				float: left;
-				color: #f2f2f2;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-				font-size: 20px;
-			}
-
-			/* Page Links - Grey Square Bubbles */
-			.pagelinks {
-			  overflow: hidden;
-				max-width:750px;
-			  margin: auto;
-				background-color: rgba(221, 221, 221, 0.5);
-				border-radius: 10px;
-			}
-			.pagelinks a {
-				border-radius: 10px;
-			  color: black;
-			  text-align: center;
-			  padding: 14px 50px;
-			  text-decoration: none;
-			  font-size: 17px;
-			}
-			.pagelinks a:hover {
-				color: #0066ff;
-			}
-			.pagelinks b {
-				color: black;
-				text-align: center;
-				padding: 14px 50px;
-				font-size: 17px;
-			}
-
-			/* Sections - Formatted Résumé Text Groups*/
-			.sections{
-			  overflow: hidden;
-				max-width:750px;
-			  margin: auto;
-				border-radius: 10px;
-			}
-			.sections a {
-				border-radius: 10px;
-			  color: black;
-			  text-align: center;
-			  padding: 14px 50px;
-			  text-decoration: none;
-			  font-size: 17px;
-			}
-			.sections a:hover {
-				color: #0066ff;
-			}
-
-		</style>
+		<!-- Add jQuery CDN -->
+		<script src="https:ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Load Reusable Navigation Bar Code -->
+		<script>
+			$(function(){
+				$('#nav').load('/templates/nav_portfolio.html')
+			});
+		</script>
 
 	</head>
 
 	<body>
 
-		<!-- Top Navigation Bar -->
-		<div class="topnav">
-			<!-- Name -->
-      <div style="float:left; padding:5px;">
-        <a href="/"><b>Tyler Wittig</b></a>
-      </div>
-      <!-- Description -->
-			<div style="float:left; padding:5px;">
-				<span>Software and Games Developer</span>
-			</div>
-			<!-- Page Links -->
-			<div style="float:right; padding:5px;">
-				<a href="/contact.html">Contact</a>
-			</div>
-			<div style="float:right; padding:5px;">
-				<a href="/resume.html">Résumé</a>
-			</div>
-			<div style="float:right; padding:5px;">
-				<a href="/"><b>Portfolio</b></a>
-			</div>
-			<div style="clear:both"></div>
+		<!-- Navigation Bar - Place Reusable Code -->
+		<div id="nav">
 		</div>
 
 		<!-- Page Header -->
     <br />
     <hr width="900">
-
+		<h1 align="center">Projects Portfolio</h1>
 		<div class="sections">
-			<h1 align="center">Projects Portfolio</h1>
 			<p align="center">
 				The things I do when I'm not working on this website.
 			</p>
 		</div>
-
 		<hr width="900">
     <br />
 
@@ -139,7 +41,7 @@
     <!-- Title Card -->
     <p align="center">
       <a href="https://twit96.github.io/PharaohsPhury_Phaser3/">
-        <img border="0" alt="Pharaoh's Phury - Title Card" src="/assets/images/pharaohsPhury-titleCard.png" width="800" height="375">
+        <img border="0" alt="Pharaoh's Phury - Title Card" src="/images/pharaohsPhury-titleCard.png" width="800" height="375">
       </a>
     </p>
     <!-- Description -->
@@ -186,7 +88,7 @@
     <!-- Title Card -->
     <p align="center">
       <a href="https://twit96.github.io/TankFighter_Phaser3/">
-        <img border="0" alt="Tank Fighter: Swarm of Orbs - Title Card" src="/assets/images/tankFighter-titleCard.png" width="800" height="450">
+        <img border="0" alt="Tank Fighter: Swarm of Orbs - Title Card" src="/images/tankFighter-titleCard.png" width="800" height="450">
       </a>
     </p>
     <!-- Description -->
@@ -239,7 +141,7 @@
 		</div>
 		<!-- Links -->
 		<p align="center">
-			<a href="https://twit96.github.io/StarWarsSurvey-ClassificationAnalysis/">Click to View the Project</a>
+			<a href="/posts/StarWarsSurvey_ClassificationAnalysis.html">View the Project</a>
 			<br /><br />
 		</p>
 		<!-- Contributors -->
