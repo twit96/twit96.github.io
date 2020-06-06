@@ -6,13 +6,23 @@ body {
 
 /* Images */
 img {
-  max-width: 95%;
+  max-width: 90%;
   height: auto;
+}
+
+/* Horizontal Lines - Main Dividers and Narrower Sub-Dividers */
+.long hr {
+  width: 900px;
+  max-width: 97%;
+}
+.medium hr {
+  width: 750px;
+  max-width: 90%;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  padding: 0px 10px
+  padding: 0px 10px;
 }
 
 /* Links - Prevent Line Breaks (link text must be narrower than container) */
@@ -45,7 +55,8 @@ p a:hover {
   font-size: 20px;
 }
 .topnav a:hover {
-  background-color: rgba(221, 221, 221, 0.2);
+  /* background-color: rgba(221, 221, 221, 0.2); */
+  background-color: #f0f0f025;
 }
 .topnav b {
   float: left;
