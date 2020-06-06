@@ -1,8 +1,33 @@
-/* Page */
+/* Page Body */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  /* background-color: #dfdfdf; */
+}
+
+/* Images */
+img {
+  max-width: 95%;
+  height: auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  padding: 0px 10px
+}
+
+/* Links - Prevent Line Breaks (link text must be narrower than container) */
+a {
+  white-space: nowrap;
+}
+
+/* Paragraph Links */
+p a {
+  color: #0066ff;
+  text-align: center;
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: underline;
 }
 
 /* Navigation Bar */
@@ -38,79 +63,22 @@ body {
   font-size: 20px;
 }
 
-/* Footer Bar */
-.footer {
-  overflow: hidden;
-  background-color: #0066ff;
-}
-.footer a {
-  border-radius: 10px;
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 15px;
-}
-.footer a:hover {
-  background-color: rgba(221, 221, 221, 0.2);
-}
-.footer b {
-  float: left;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-}
-.footer span {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
-/* Page Links - Grey Square Bubbles */
-.pagelinks {
-  overflow: hidden;
-  max-width:750px;
+/* Grey Rounded Square Bubbles */
+.bubbles {
+  background-color: #f0f0f0;
+  width: 700px;
+  max-width: 80%;
   margin: auto;
-  background-color: rgba(221, 221, 221, 0.5);
-  border-radius: 10px;
-}
-/* .pagelinks a {
-  border-radius: 10px;
-  color: black;
-  text-align: center;
-  padding: 14px 50px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.pagelinks a:hover {
-  color: #0066ff;
-}
-.pagelinks b {
-  color: black;
-  text-align: center;
-  padding: 14px 50px;
-  font-size: 17px;
-} */
-
-/* Grey Square Bubbles */
-.description {
-  background-color: #dfdfdf;
-  border-radius: 10px;
-  padding: 10px 20px;
-  width: 800px;
-  margin: 0 auto;
-}
-
-
-/* Sections - Formatted Résumé Text Groups*/
-.sections{
+  padding: 5px 20px;
   overflow: hidden;
-  max-width:750px;
+  border-radius: 10px;
+}
+
+/* Right-Justified Text Groups*/
+.sections {
+  overflow: hidden;
+  width: 750px;
+  max-width: 95%;
   margin: auto;
   border-radius: 10px;
 }
@@ -120,7 +88,6 @@ body {
   text-align: center;
   padding: 14px 50px;
   text-decoration: none;
-  /* font-size: 17px; */
 }
 .sections a:hover {
   color: #0066ff;
