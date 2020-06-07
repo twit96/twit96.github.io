@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
 /* Images */
@@ -40,38 +41,55 @@ p a:hover {
   text-decoration: underline;
 }
 
-/* Navigation Bar */
-.topnav {
+/* Masthead Bar */
+.masthead {
   overflow: hidden;
+  /* white-space: nowrap; */
   background-color: #0066ff;
 }
-.topnav a {
+.masthead a {
   border-radius: 10px;
   float: left;
-  color: black;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.25em;
+  padding: 10px 15px;
+  margin: 5px;
 }
-.topnav a:hover {
-  /* background-color: rgba(221, 221, 221, 0.2); */
+.masthead a:hover {
   background-color: #f0f0f025;
 }
-.topnav b {
-  float: left;
+.masthead .active {
   color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
 }
-.topnav span {
+.masthead span {
   float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 15px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.25em;
+  margin: 5px;
+}
+/* Masthead Site Title */
+.masthead-name {
+  float: left;
+  display: inline-block;
+  /* width: 525px;
+  white-space: normal; */
+}
+.masthead-name a {
+  color: white;
+}
+/* Masthead Navigation Links */
+.main-nav {
+  float: right;
+  display: inline;
+}
+.main-nav a {
+  color: black;
 }
 
 /* Grey Rounded Square Bubbles */
