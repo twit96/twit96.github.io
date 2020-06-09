@@ -33,15 +33,11 @@ hr.medium {
 a {
   /* prevent line breaks (link text must be narrower than container) */
   white-space: nowrap;
-}
-
-/* Paragraph Links */
-p a {
   color: #0066ff;
   text-align: center;
   text-decoration: none;
 }
-p a:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -64,14 +60,4 @@ p a:hover {
   max-width: 95%;
   margin: auto;
   border-radius: 10px;
-}
-.sections a {
-  border-radius: 10px;
-  color: black;
-  text-align: center;
-  padding: 14px 50px;
-  text-decoration: none;
-}
-.sections a:hover {
-  color: #0066ff;
 }
