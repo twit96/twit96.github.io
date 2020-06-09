@@ -1,0 +1,59 @@
+/* Masthead - Top Bar Elements */
+.masthead {
+  background-color: #0066ff;
+  color: white;
+  padding: 5px 5px 0px 5px;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+/* Containers for Title and Navigation */
+.masthead-container {
+  /* rendering */
+  display: inline-block;
+  max-width: 95%;
+  margin: 0% 2.5%;
+  text-align: center;
+  /* overflow handling */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* General Links */
+.masthead a {
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  margin: 0em 0.5em;
+  color: black;
+}
+.masthead a:hover {
+  background-color: #f0f0f025;
+}
+
+/* Current Page Link */
+.masthead .active {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Title Link */
+.masthead .title {
+  font-weight: bold;
+  color: white;
+}
+
+/* Description Text */
+/* default - hide short version */
+.short-text {
+  display: none;
+}
+/* small screens - display short version and hide long version */
+@media (max-width: 500px) {
+  .short-text { display: inline-block; }
+  .full-text { display: none; }
+}
