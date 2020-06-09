@@ -47,54 +47,63 @@ p a:hover {
 
 /* Masthead Bar */
 .masthead {
-  overflow: hidden;
-  /* white-space: nowrap; */
   background-color: #0066ff;
+  padding: 5px 5px 0px 5px;
+  text-align: center;
+  font-size: 1.25em;
+  color: white;
 }
+
+/* Title and Navigation Containers */
+.masthead div {
+  /* rendering */
+  display: inline-block;
+  max-width: 95%;
+  margin: 0% 2.5%;
+  text-align: center;
+  /* overflow handling */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Masthead Links */
 .masthead a {
   border-radius: 10px;
-  float: left;
+  display: inline-block;
   text-align: center;
   text-decoration: none;
-  font-size: 1.25em;
-  padding: 10px 15px;
-  margin: 5px;
+  padding: 10px;
+  margin: 0em 0.5em;
+  color: black;
 }
 .masthead a:hover {
   background-color: #f0f0f025;
 }
+
+/* Masthead Custom Elements */
+/* current page link */
 .masthead .active {
   color: white;
   font-weight: bold;
   text-decoration: underline;
 }
-.masthead span {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin: 5px;
-}
-/* Masthead Site Title */
-.masthead-name {
-  float: left;
-  display: inline-block;
-  /* width: 525px;
-  white-space: normal; */
-}
-.masthead-name a {
+/* title link */
+.masthead .title {
+  font-weight: bold;
   color: white;
 }
-/* Masthead Navigation Links */
-.main-nav {
-  float: right;
-  display: inline;
+/* description text - short and full versions */
+/* hide short by default */
+.short-text {
+  display: none;
 }
-.main-nav a {
-  color: black;
+/* display short and hide long for small screens */
+@media (max-width: 500px) {
+  .short-text { display: inline-block; }
+  .full-text { display: none; }
 }
+
 
 /* Grey Rounded Square Bubbles */
 .bubbles {
