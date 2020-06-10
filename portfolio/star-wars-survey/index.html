@@ -7,9 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Load CSS Stylesheets -->
-		<!-- page -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" media="screen" />
-		<!-- top bar -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/masthead.css" media="screen" />
 
     <!-- Add jQuery -->
@@ -19,6 +17,7 @@
 		<script>
 			$(function(){
 				$('#nav').load('/templates/nav.html')
+				$('#data-prep').load('/templates/nav.html')
 			});
 		</script>
   </head>
@@ -82,7 +81,8 @@
         The project is divided into the six Jupyter Notebooks below:
       </p>
 			<ol>
-				<li><a href="https://twit96.github.io/StarWarsSurvey-ClassificationAnalysis/data_prep.html">Data Preparation</a></li>
+				<!-- <li><a href="https://twit96.github.io/StarWarsSurvey-ClassificationAnalysis/data_prep.html">Data Preparation</a></li> -->
+				<li><a href="data-prep.html">Data Preparation</a></li>
 				<li><a href="https://twit96.github.io/StarWarsSurvey-ClassificationAnalysis/data_expl_feature_eng.html">Data Exploration and Feature Engineering</a></li>
 				<li><a href="https://twit96.github.io/StarWarsSurvey-ClassificationAnalysis/decision_trees.html">Decision Tree Classifier</a></li>
 				<li><a href="https://twit96.github.io/StarWarsSurvey-ClassificationAnalysis/knn.html">K-Nearest Neighbors Classifier</a></li>
