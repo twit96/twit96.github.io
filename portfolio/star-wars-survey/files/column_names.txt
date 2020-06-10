@@ -1,0 +1,38 @@
+RespondentID
+Seen a Star Wars film
+Fan of Star Wars
+Seen The Phantom Menace
+Seen Attack of the Clones
+Seen Revenge of the Sith
+Seen A New Hope
+Seen The Empire Strikes Back
+Seen Return of the Jedi
+Rank for The Phantom Menace
+Rank for Attack of the Clones
+Rank for Revenge of the Sith
+Rank for A New Hope
+Rank for The Empire Strikes Back
+Rank for Return of the Jedi
+View of Han Solo
+View of Luke Skywalker
+View of Princess Leia Organa
+View of Anakin Skywalker
+View of Obi Wan Kenobi
+View of Emperor Palpatine
+View of Darth Vader
+View of Lando Calrissian
+View of Boba Fett
+View of C-3P0
+View of R2 D2
+View of Jar Jar Binks
+View of Padme Amidala
+View of Yoda
+Which character shot first?
+Familiar with the Expanded Universe?
+Fan of the Expanded Universe?
+Star Trek Fan
+Gender
+Age
+Household Income
+Education
+Location (Census Region)
