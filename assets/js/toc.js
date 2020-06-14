@@ -26,5 +26,8 @@ $(document).ready( function(){
      "</ul>" +
     "</div>";
 
-    $(".section").prepend(ToC);
+    // $(".section").prepend(ToC);
+    // $(".section").append(ToC);
+    $('#toc').append(ToC)
+    // $("#one").prepend(ToC);
  });

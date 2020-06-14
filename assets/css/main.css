@@ -29,16 +29,6 @@ a.emphasis {
   border-right: 2px solid;
 }
 
-img {
-  max-width: 90%;
-  height: auto;
-  color: black;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-
-/* BASIC CUSTOM ELEMENTS */
 /* Horizontal Rule Classes */
 hr.long {
   width: 900px;
@@ -49,6 +39,15 @@ hr.medium {
   max-width: 90%;
 }
 
+img {
+  max-width: 90%;
+  height: auto;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* CUSTOM CONTAINER ELEMENTS */
 /* Section - Simple Container */
 .section {
   overflow: hidden;
@@ -80,6 +79,18 @@ hr.medium {
   border-color: #dbdbdb;
 }
 
+/* Outline Box */
+/* .border-box {
+  border: 5px solid #f0f0f0;
+  width: 700px;
+  max-width: 90%;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 10px;
+} */
+
+
 /* Responsive Text */
 .short-text {
   /* default: hide short version */
@@ -94,18 +105,4 @@ hr.medium {
   .section .full-text { display: none; }
   .bubbles .short-text { display: inline-block; }
   .bubbles .full-text { display: none; }
-}
-
-
-/* Outline Box */
-.border-box {
-  border: 5px solid #f0f0f0;
-  /* border-bottom: 5px solid #f0f0f0; */
-
-  width: 700px;
-  max-width: 90%;
-  margin: auto;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 10px;
 }
