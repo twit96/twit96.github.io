@@ -26,5 +26,5 @@ $(document).ready( function(){
      "</ul>" +
     "</div>";
 
-    $(".sections").prepend(ToC);
+    $(".section").prepend(ToC);
  });

@@ -1,16 +1,34 @@
-/* Main Elements */
-/* combine CSS into single file later on */
+/* MAIN ELEMENTS */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   padding: 0px 10px;
+} */
+
+a {
+  color: #0066ff;
+  text-align: center;
+  text-decoration: none;
+  /* prevent line break of links - text must now be narrower than container */
+  white-space: nowrap;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.emphasis {
+  /* links with side border bars */
+  padding: 0px 7px;
+  margin: 5px;
+  display: inline-block;
+  /* border - color override specified by custom elements*/
+  border-left: 2px solid;
+  border-right: 2px solid;
 }
 
-/* Images */
 img {
   max-width: 90%;
   height: auto;
@@ -19,7 +37,9 @@ img {
   font-weight: bold;
 }
 
-/* Horizontal Lines */
+
+/* BASIC CUSTOM ELEMENTS */
+/* Horizontal Rule Classes */
 hr.long {
   width: 900px;
   max-width: 97%;
@@ -29,20 +49,20 @@ hr.medium {
   max-width: 90%;
 }
 
-/* Links */
-a {
-  /* prevent line breaks (link text must be narrower than container) */
-  white-space: nowrap;
-  color: #0066ff;
-  text-align: center;
-  text-decoration: none;
+/* Section - Simple Container */
+.section {
+  overflow: hidden;
+  width: 750px;
+  max-width: 95%;
+  margin: auto;
+  border-radius: 10px;
 }
-a:hover {
-  text-decoration: underline;
+.section a.emphasis {
+  /* override border color */
+  border-color: #f0f0f0;
 }
 
-
-/* Grey Rounded Square Bubbles */
+/* Bubbles - Grey Rounded Square Container */
 .bubbles {
   background-color: #f0f0f0;
   width: 700px;
@@ -52,12 +72,40 @@ a:hover {
   overflow: hidden;
   border-radius: 10px;
 }
+.bubbles h1, h2, h3, h4, h5, h6 {
+  padding: 0px;
+}
+.bubbles a.emphasis {
+  /* override border color */
+  border-color: #dbdbdb;
+}
 
-/* Text Groups */
-.sections {
-  overflow: hidden;
-  width: 750px;
-  max-width: 95%;
+/* Responsive Text */
+.short-text {
+  /* default: hide short version */
+  display: none;
+}
+.full-text {
+  display: inline-block;
+}
+/* breakpoint: swap long for short */
+@media (max-width: 35em) {
+  .section .short-text { display: inline-block; }
+  .section .full-text { display: none; }
+  .bubbles .short-text { display: inline-block; }
+  .bubbles .full-text { display: none; }
+}
+
+
+/* Outline Box */
+.border-box {
+  border: 5px solid #f0f0f0;
+  /* border-bottom: 5px solid #f0f0f0; */
+
+  width: 700px;
+  max-width: 90%;
   margin: auto;
+  padding: 0;
+  overflow: hidden;
   border-radius: 10px;
 }

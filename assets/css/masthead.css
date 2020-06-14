@@ -1,4 +1,4 @@
-/* Masthead - Top Bar Elements */
+/* MASTHEAD ELEMENTS - Top Bar */
 .masthead {
   background-color: #0066ff;
   color: white;
@@ -27,7 +27,6 @@
   text-align: center;
   text-decoration: none;
   padding: 10px;
-  /* margin: 0em 0.5em; */
   color: black;
 }
 .masthead a:hover {
@@ -47,13 +46,14 @@
   color: white;
 }
 
-/* Description Text */
-/* default - hide short version */
+/* Responsive Text */
+/* default: hide short version, show long version */
+/* breakpoints set as needed for each element */
 .short-text {
   display: none;
 }
 /* small screens - display short version and hide long version */
 @media (max-width: 500px) {
-  .short-text { display: inline-block; }
-  .full-text { display: none; }
+  .masthead .short-text { display: inline-block; }
+  .masthead .full-text { display: none; }
 }
