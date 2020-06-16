@@ -1,4 +1,4 @@
-/* MASTHEAD ELEMENTS - Top Bar */
+/* MASTHEAD (Top Bar) ELEMENTS */
 .masthead {
   background-color: #0066ff;
   color: white;
@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-/* Containers for Title and Navigation */
+/* Container for Title and Navigation */
 .masthead-container {
   /* rendering */
   display: inline-block;
@@ -17,10 +17,9 @@
   /* overflow handling */
   white-space: nowrap;
   overflow: hidden;
-  /* text-overflow: ellipsis; */
 }
 
-/* General Links */
+/* Links */
 .masthead a {
   border-radius: 10px;
   display: inline-block;
@@ -32,8 +31,6 @@
 .masthead a:hover {
   background-color: #f0f0f025;
 }
-
-/* Current Page Link */
 .masthead .active {
   color: white;
   font-weight: bold;
@@ -44,16 +41,4 @@
 .masthead .title {
   font-weight: bold;
   color: white;
-}
-
-/* Responsive Text */
-/* default: hide short version, show long version */
-/* breakpoints set as needed for each element */
-.short-text {
-  display: none;
-}
-/* small screens - display short version and hide long version */
-@media (max-width: 500px) {
-  .masthead .short-text { display: inline-block; }
-  .masthead .full-text { display: none; }
 }

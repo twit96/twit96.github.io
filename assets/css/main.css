@@ -5,31 +5,24 @@ body {
   font-size: 100%;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-  padding: 0px 10px;
-} */
-
 a {
   color: #0066ff;
   text-align: center;
   text-decoration: none;
-  /* prevent line break of links - text must now be narrower than container */
-  white-space: nowrap;
 }
 a:hover {
   text-decoration: underline;
 }
 a.emphasis {
-  /* links with side border bars */
+  /* emphasized with side border bars */
   padding: 0px 7px;
   margin: 5px;
   display: inline-block;
-  /* border - color override specified by custom elements*/
+  /* border color specified by parent element */
   border-left: 2px solid;
   border-right: 2px solid;
 }
 
-/* Horizontal Rule Classes */
 hr.long {
   width: 900px;
   max-width: 97%;
@@ -47,22 +40,22 @@ img {
   font-weight: bold;
 }
 
-/* CUSTOM CONTAINER ELEMENTS */
-/* Section - Simple Container */
+
+/* CUSTOM SIMPLE CONTAINERS */
+/* Section - Set Width and Unstyled */
 .section {
   overflow: hidden;
   width: 750px;
   max-width: 95%;
   margin: auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 .section a.emphasis {
-  /* override border color */
   border-color: #f0f0f0;
 }
 
-/* Bubbles - Grey Rounded Square Container */
-.bubbles {
+/* Bubble - Grey Rounded Square */
+.bubble {
   background-color: #f0f0f0;
   width: 700px;
   max-width: 80%;
@@ -71,27 +64,15 @@ img {
   overflow: hidden;
   border-radius: 10px;
 }
-.bubbles h1, h2, h3, h4, h5, h6 {
+.bubble h1, h2, h3, h4, h5, h6 {
   padding: 0px;
 }
-.bubbles a.emphasis {
-  /* override border color */
+.bubble a.emphasis {
   border-color: #dbdbdb;
 }
 
-/* Outline Box */
-/* .border-box {
-  border: 5px solid #f0f0f0;
-  width: 700px;
-  max-width: 90%;
-  margin: auto;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 10px;
-} */
 
-
-/* Responsive Text */
+/* RESPONSIVE TEXT */
 .short-text {
   /* default: hide short version */
   display: none;
@@ -99,10 +80,14 @@ img {
 .full-text {
   display: inline-block;
 }
-/* breakpoint: swap long for short */
+/* Breakpoints: swap long for short */
+@media (max-width: 500px) {
+  .masthead .short-text { display: inline-block; }
+  .masthead .full-text { display: none; }
+}
 @media (max-width: 35em) {
   .section .short-text { display: inline-block; }
   .section .full-text { display: none; }
-  .bubbles .short-text { display: inline-block; }
-  .bubbles .full-text { display: none; }
+  .bubble .short-text { display: inline-block; }
+  .bubble .full-text { display: none; }
 }
