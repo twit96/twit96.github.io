@@ -1,0 +1,17 @@
+#blog-post .page-header {
+  width: 100%;
+  height: 25vw;
+  background-image:
+    radial-gradient(ellipse closest-side, #00000090, #000000),
+    url("/portfolio/star-wars-survey/title-card.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#blog-post .masthead {
+  background-color: black;
+}
+#blog-post .masthead a {
+  color: grey;
+}
