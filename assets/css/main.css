@@ -77,7 +77,7 @@ img {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 35vw;
+  min-height: 45vw;
   /* background */
   background-image:
     radial-gradient(ellipse closest-side, #00000090, #000000),
@@ -132,7 +132,7 @@ img {
 }
 #blog .page-header {
   background-image:
-    radial-gradient(ellipse closest-side, #00000080, #000000),
+    radial-gradient(ellipse closest-side, #00000090, #000000),
     url("/portfolio/star-wars-survey/title-card.png");
 }
 
@@ -147,10 +147,10 @@ img {
 }
 /* Medium Screens */
 @media (min-width: 40em) {
-  .page-header { font-size: 1.5em; }
-  /* .page-header .content { max-width: 75%; } */
-
-  /* .banner p { max-width: 65%; } */
+  .page-header {
+    font-size: 1.5em;
+    min-height: 40vw;
+  }
 }
 
 /* Large Screens */
@@ -158,8 +158,10 @@ img {
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
-  .page-header { font-size: 1.75em; }
-  /* .page-header .content { max-width: 65%; } */
+  .page-header {
+    font-size: 1.75em;
+    min-height: 30vw;
+  }
 
   .banner { font-size: 90%; }
 }

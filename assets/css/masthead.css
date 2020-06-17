@@ -70,6 +70,9 @@
 #blog .masthead a {
   color: grey;
 }
+.masthead a:hover {
+  background-color: #f0f0f015;
+}
 #blog .masthead .title {
   color: white;
 } */
