@@ -48,7 +48,6 @@ img {
   width: 750px;
   max-width: 95%;
   margin: auto;
-  /* border-radius: 10px; */
 }
 .section a.emphasis {
   border-color: #f0f0f0;
@@ -72,22 +71,95 @@ img {
 }
 
 
-/* RESPONSIVE TEXT */
-.short-text {
-  /* default: hide short version */
-  display: none;
+/* PAGE HEADER */
+.page-header {
+  /* self */
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 25vw;
+  /* background */
+  background-image:
+    radial-gradient(ellipse closest-side, #00000090, #000000),
+    url("/assets/img/default-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* font */
+  font-size: 1.25em;
+  color: white;
+  /* children */
+  /* padding-top: 1em; */
+  display: flex;
+  align-items: center;
 }
-.full-text {
+.page-header .content {
+  width: 750px;
+  min-width: 65%;
+  max-width: 95%;
+  margin: auto;
+  /* padding-bottom: 1em; */
+}
+.page-header b {
+  font-size: 80%;
+}
+
+.banner {
+  background-color: #f0f0f0;
+  position: relative;
+  padding: 0 2em;
+  font-size: 80%;
+  overflow: hidden;
+  border-radius: 0px 0px 25px 0px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  /* children */
+  padding: 1em 0em;
+  display: flex;
+  align-items: center;
+}
+.banner p {
+  width: 750px;
+  min-width: 65%;
+  max-width: 95%;
+  margin: auto;
+}
+
+
+/* BLOG PAGES */
+#blog .section {
+  min-width: 65%;
+}
+#blog .page-header {
+  background-image:
+    radial-gradient(ellipse closest-side, #00000080, #000000),
+    url("/portfolio/star-wars-survey/title-card.png");
+}
+
+
+/* RESPONSIVE ELEMENTS */
+/* default: display short and hide full text */
+.short-text {
   display: inline-block;
 }
-/* Breakpoints: swap long for short */
-@media (max-width: 500px) {
-  .masthead .short-text { display: inline-block; }
-  .masthead .full-text { display: none; }
+.full-text {
+  display: none;
 }
-@media (max-width: 35em) {
-  .section .short-text { display: inline-block; }
-  .section .full-text { display: none; }
-  .bubble .short-text { display: inline-block; }
-  .bubble .full-text { display: none; }
+/* Medium Screens */
+@media (min-width: 40em) {
+  .page-header { font-size: 1.5em; }
+  /* .page-header .content { max-width: 75%; } */
+
+  /* .banner p { max-width: 65%; } */
+}
+
+/* Large Screens */
+@media (min-width: 62.5em) {
+  .short-text { display: none; }
+  .full-text { display: inline-block; }
+
+  .page-header { font-size: 1.75em; }
+  /* .page-header .content { max-width: 65%; } */
+
+  .banner { font-size: 90%; }
 }
