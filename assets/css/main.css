@@ -77,7 +77,7 @@ img {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 25vw;
+  min-height: 35vw;
   /* background */
   background-image:
     radial-gradient(ellipse closest-side, #00000090, #000000),
