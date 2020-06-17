@@ -6,12 +6,18 @@
   font-size: 1.25em;
   text-align: center;
 }
+.masthead-wrapper {
+  /* width: 750px;
+  min-width: 65%;
+  max-width: 95%;
+  margin: auto; */
+}
 
 /* Container for Title and Navigation */
 .masthead-container {
   /* rendering */
   display: inline-block;
-  max-width: 95%;
+  /* max-width: 95%; */
   margin: 0% 2.5%;
   text-align: center;
   /* overflow handling */
