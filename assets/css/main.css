@@ -5,6 +5,11 @@ body {
   font-size: 100%;
 }
 
+.page-wrapper {
+  padding: 0 2.5%;
+  margin: inherit;
+}
+
 a {
   color: #0066ff;
   text-align: center;
@@ -40,7 +45,6 @@ img {
   font-weight: bold;
 }
 
-
 /* CUSTOM SIMPLE CONTAINERS */
 /* Section - Set Width and Unstyled */
 .section {
@@ -69,6 +73,7 @@ img {
 .bubble a.emphasis {
   border-color: #dbdbdb;
 }
+
 
 
 /* PAGE HEADER */
@@ -125,7 +130,6 @@ img {
   margin: auto;
 }
 
-
 /* BLOG PAGES */
 #blog .section {
   min-width: 65%;
@@ -145,6 +149,12 @@ img {
 .full-text {
   display: none;
 }
+
+/* Small Screens */
+@media (max-width: 40em) {
+  .page-wrapper { font-size: 0.9em; }
+}
+
 /* Medium Screens */
 @media (min-width: 40em) {
   .page-header {

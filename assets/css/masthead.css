@@ -5,20 +5,17 @@
   padding: 5px 5px 0px 5px;
   font-size: 1.25em;
   text-align: center;
-}
-.masthead-wrapper {
-  /* width: 750px;
+
   min-width: 65%;
-  max-width: 95%;
-  margin: auto; */
+  margin: auto;
 }
 
 /* Container for Title and Navigation */
 .masthead-container {
   /* rendering */
   display: inline-block;
-  /* max-width: 95%; */
-  margin: 0% 2.5%;
+  /* margin: 0% 2.5%; */
+  margin: 0% 2%;
   text-align: center;
   /* overflow handling */
   white-space: nowrap;
@@ -64,7 +61,7 @@
 } */
 
 /* 2. Blue to Black Soft Gradient Bar */
-#blog .masthead {
+/* #blog .masthead {
   background-image: linear-gradient(#0066ff, black);
 }
 #blog .masthead a {
@@ -75,7 +72,7 @@
 }
 #blog .masthead .title {
   color: white;
-}
+} */
 
 /* 3. Blue to Black Hard Gradient Bar */
 /* #blog .masthead {
