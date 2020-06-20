@@ -24,130 +24,113 @@
 
 	<body>
     <!-- Navigation Bar -->
-			<div class="masthead" id="nav"></div>
+		<div class="masthead" id="nav"></div>
 
-		<!-- Page Header -->
-    <br />
-    <hr class="long" />
-		<h2 align="center">Star Wars Survey Classification Analysis</h2>
+		<div class="page-wrapper">
+			<!-- Page Header -->
+			<h2 align="center">Star Wars Survey Classification Analysis</h2>
 
-		<div class="sections">
-			<p align="center">
-				A Machine Learning Classification Project
-			</p>
+			<div class="sections">
+				<p align="center">
+					A Machine Learning Classification Project
+				</p>
+			</div>
+			<hr class="long" />
+			<br />
+
+			<!-- Project Details -->
+	    <div class="bubble">
+				<!-- Overview -->
+				<h3>Introduction</h3>
+				<p>
+					Given a Star Wars Survey dataset, our aim is to train a
+					classifier that can predict a person's responses to questions about
+					the Star Wars franchise given their answers to other such questions,
+					or to try to predict the person's personal characteristics based off
+					of their responses to questions about the franchise.
+				</p>
+				<hr>
+				<!-- Dataset -->
+				<h3>Dataset Description</h3>
+	      <p>
+					The Star Wars Survey dataset is a labeled dataset with 1188 records.
+					It has 15 features, which are survey questions regarding people's
+					opinions on the Star Wars franchise and some personal information
+					such as:
+				</p>
+				<ul>
+					<li>"Do you consider yourself a Star Wars fan?",</li>
+					<li>"Which is your favorite movie?",</li>
+					<li>"Which character shot first?",</li>
+					<li>"Gender",</li>
+					<li>"Income",</li>
+					<li>et cetera.</li>
+				</ul>
+	      <p>
+	        More information about this dataset can be found
+					<a href="https://github.com/fivethirtyeight/data/tree/master/star-wars-survey">here</a>.
+	      </p>
+			</div>
+			<br />
+
+	    <div class="bubble">
+				<!-- Notebooks -->
+				<h3>Project Notebooks</h3>
+	      <p>
+	        The project is divided into the six Jupyter Notebooks below:
+	      </p>
+				<ol>
+					<li><a href="files/data-prep.html">Data Preparation</a></li>
+					<li><a href="files/data-expl-feature-eng.html">Data Exploration and Feature Engineering</a></li>
+					<li><a href="files/decision-trees.html">Decision Tree Classifier</a></li>
+					<li><a href="files/knn.html">K-Nearest Neighbors Classifier</a></li>
+					<li><a href="files/naive-bayes.html">Naive Bayes Classifier</a></li>
+					<li><a href="files/neural-network.html">Neural Network Classifier</a></li>
+				</ol>
+				<hr>
+				<!-- Other Files -->
+				<h3>Miscellaneous Files</h3>
+				<ul>
+					<li>
+						<a href="files/column_names.txt">
+							Column Names
+						</a>
+						 - Text file manually created and used in the Data Preparation
+						 notebook to replace the two header rows of the dataset with a
+						 simpler, single header row.
+					</li>
+					<li>
+						<a href="files/unique_values.txt">
+							Unique Values
+						</a>
+						- Text file generated in the Data Preparation notebook in order to
+						manually check for inconsistent values in the dataset.
+					</li>
+				</ul>
+			</div>
+			<br />
+
+			<div class="bubble">
+				<h3>Contributors</h3>
+				<p>
+					<a class="emphasis" href="https://github.com/nicoarrieche">Nico Arrieche</a>
+					<a class="emphasis" href="https://github.com/cmason1998">Chance Mason</a>
+					<a class="emphasis" href="https://www.linkedin.com/in/walker-mitchel/">Mitchel Walker</a>
+					<a class="emphasis" href="https://www.linkedin.com/in/tylerwittig/">Tyler Wittig</a>
+				</p>
+				<hr />
+				<p>
+					<b>View the GitHub Repository
+					<a href="https://github.com/twit96/StarWarsSurvey-ClassificationAnalysis">here.</a></b>
+				</p>
+			</div>
+			<br />
+
+			<!-- Page Footer -->
+			<hr class="long" />
+			<br />
+
 		</div>
-		<hr class="medium" />
-		<br />
-
-		<!-- Project Details -->
-    <div class="bubble">
-			<!-- Overview -->
-			<h3>Introduction</h3>
-			<p>
-				Given a Star Wars Survey dataset, our aim is to train a
-				classifier that can predict a person's responses to questions about
-				the Star Wars franchise given their answers to other such questions,
-				or to try to predict the person's personal characteristics based off
-				of their responses to questions about the franchise.
-			</p>
-			<hr>
-			<!-- Dataset -->
-			<h3>Dataset Description</h3>
-      <p>
-				The Star Wars Survey dataset is a labeled dataset with 1188 records.
-				It has 15 features, which are survey questions regarding people's
-				opinions on the Star Wars franchise and some personal information
-				such as:
-			</p>
-			<ul>
-				<li>"Do you consider yourself a Star Wars fan?",</li>
-				<li>"Which is your favorite movie?",</li>
-				<li>"Which character shot first?",</li>
-				<li>"Gender",</li>
-				<li>"Income",</li>
-				<li>et cetera.</li>
-			</ul>
-      <p>
-        More information about this dataset can be found
-				<a href="https://github.com/fivethirtyeight/data/tree/master/star-wars-survey">here</a>.
-      </p>
-		</div>
-		<br />
-
-    <div class="bubble">
-			<!-- Notebooks -->
-			<h3>Project Notebooks</h3>
-      <p>
-        The project is divided into the six Jupyter Notebooks below:
-      </p>
-			<ol>
-				<li><a href="files/data-prep.html">Data Preparation</a></li>
-				<li><a href="files/data-expl-feature-eng.html">Data Exploration and Feature Engineering</a></li>
-				<li><a href="files/decision-trees.html">Decision Tree Classifier</a></li>
-				<li><a href="files/knn.html">K-Nearest Neighbors Classifier</a></li>
-				<li><a href="files/naive-bayes.html">Naive Bayes Classifier</a></li>
-				<li><a href="files/neural-network.html">Neural Network Classifier</a></li>
-			</ol>
-			<hr>
-			<!-- Other Files -->
-			<h3>Miscellaneous Files</h3>
-			<ul>
-				<li>
-					<a href="files/column_names.txt">
-						Column Names
-					</a>
-					 - Text file manually created and used in the Data Preparation
-					 notebook to replace the two header rows of the dataset with a
-					 simpler, single header row.
-				</li>
-				<li>
-					<a href="files/unique_values.txt">
-						Unique Values
-					</a>
-					- Text file generated in the Data Preparation notebook in order to
-					manually check for inconsistent values in the dataset.
-				</li>
-			</ul>
-		</div>
-		<br />
-
-    <!-- <div class="bubble">
-			<h3>Contributors</h3>
-			<p>
-			  <a href="https://github.com/nicoarrieche">Nico Arrieche</a>
-			  •
-			  <a href="https://github.com/cmason1998">Chance Mason</a>
-			  •
-			  <a href="https://www.linkedin.com/in/walker-mitchel/">Mitchel Walker</a>
-			  •
-			  <a href="https://www.linkedin.com/in/tylerwittig/">Tyler Wittig</a>
-			</p>
-			<hr />
-			<p>
-				<b>View the GitHub Repository
-				<a href="https://github.com/twit96/StarWarsSurvey-ClassificationAnalysis">here.</a></b>
-			</p>
-    </div> -->
-
-		<div class="bubble">
-			<h3>Contributors</h3>
-			<p>
-				<a class="emphasis" href="https://github.com/nicoarrieche">Nico Arrieche</a>
-				<a class="emphasis" href="https://github.com/cmason1998">Chance Mason</a>
-				<a class="emphasis" href="https://www.linkedin.com/in/walker-mitchel/">Mitchel Walker</a>
-				<a class="emphasis" href="https://www.linkedin.com/in/tylerwittig/">Tyler Wittig</a>
-			</p>
-			<hr />
-			<p>
-				<b>View the GitHub Repository
-				<a href="https://github.com/twit96/StarWarsSurvey-ClassificationAnalysis">here.</a></b>
-			</p>
-		</div>
-
-		<!-- Page Footer -->
-		<br />
-		<hr class="long" />
-		<br />
 
 	</body>
 

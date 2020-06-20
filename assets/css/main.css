@@ -134,12 +134,6 @@ img {
 #blog .section {
   min-width: 65%;
 }
-#blog .page-header {
-  background-image:
-    radial-gradient(ellipse closest-side, #00000090, #000000),
-    url("/portfolio/star-wars-survey/title-card.png");
-}
-
 
 /* RESPONSIVE ELEMENTS */
 /* default: display short and hide full text */
@@ -148,11 +142,6 @@ img {
 }
 .full-text {
   display: none;
-}
-
-/* Small Screens */
-@media (max-width: 40em) {
-  .page-wrapper { font-size: 0.9em; }
 }
 
 /* Medium Screens */
