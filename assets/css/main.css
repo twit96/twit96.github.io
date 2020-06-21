@@ -93,6 +93,7 @@ hr.medium {
   overflow: hidden;
   border-radius: 10px;
   width: 95%;
+  border-bottom: 3px solid #dbdbdb;
 }
 .bubble .section {
   width: 95%;
@@ -121,6 +122,7 @@ hr.medium {
   display: flex;
   align-items: center;
   margin: 0 auto;
+  /* text */
   font-size: 1.25em;
   color: white;
 }
@@ -135,9 +137,9 @@ hr.medium {
   /* description banner */
   background-image: linear-gradient(black, #f0f0f0, #f0f0f0, #f0f0f0, #f0f0f0);
   position: relative;
-  font-size: 75%;
   overflow: hidden;
   border-bottom: 2px solid black;
+  font-size: 75%;
 }
 .banner p {
   width: 95%;
@@ -153,7 +155,6 @@ hr.medium {
 }
 #portfolio .bubble {
   max-width: 750px;
-  border-bottom: 3px solid #dbdbdb;
 }
 
 #resume .page-wrapper {
@@ -162,6 +163,9 @@ hr.medium {
 
 #blog .bubble {
   /* border-top: 3px solid #dbdbdb; */
+}
+#overview #links {
+  display: none;
 }
 
 
@@ -176,9 +180,7 @@ hr.medium {
 
 /* Medium Screens */
 @media (min-width: 40em) {
-  .header-container {
-    font-size: 1.5em;
-  }
+  .header-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
 }
 
@@ -187,11 +189,7 @@ hr.medium {
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
-  .header-container {
-    font-size: 1.75em;
-  }
-  .banner {
-    font-size: 90%;
-  }
+  .header-container { font-size: 1.75em; }
+  .banner { font-size: 90%; }
 
 }
