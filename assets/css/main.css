@@ -23,9 +23,6 @@ body {
   margin: 0 auto;
 }
 
-#resume .page-wrapper {
-  max-width: 800px;
-}
 
 a {
   color: #0066ff;
@@ -35,17 +32,29 @@ a:hover {
   text-decoration: underline;
 }
 a.emphasis {
-  /* emphasized links */
   padding: 0 0.5em;
   margin: 5px;
   display: inline-block;
-  /* side borders - color specified by parent element */
-  border-left: 2px solid;
-  border-right: 2px solid;
+  /* side borders */
+  border-left: 2px solid #dbdbdb;
+  border-right: 2px solid #dbdbdb;
 }
 
 ol, ul {
   padding: 0 1.5em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  /* alt text */
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 hr.long {
@@ -55,14 +64,6 @@ hr.long {
 hr.medium {
   width: 750px;
   max-width: 90%;
-}
-
-img {
-  max-width: 90%;
-  height: auto;
-  color: black;
-  font-size: 1.5em;
-  font-weight: bold;
 }
 
 
@@ -77,40 +78,34 @@ img {
 }
 
 
+/* Containers */
+.section {
+  /* simple - width set, unstyled */
+  overflow: hidden;
+  width: 95%;
+  margin: auto;
+}
+
 .bubble {
-  /* container - grey rounded background */
+  /* grey rounded background */
   background-color: #f0f0f0;
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
   width: 95%;
 }
-.bubble a.emphasis {
-  border-color: #dbdbdb;
-}
 .bubble .section {
   width: 95%;
 }
 
 
-.section {
-  /* container - width set, unstyled */
-  overflow: hidden;
-  /* width: 750px;
-  max-width: 95%; */
-  width: 95%;
-  margin: auto;
-}
-.section a.emphasis {
-  border-color: #f0f0f0;
-}
-
-
+/* Page Header */
 .header {
   width: 100%;
   background-color: black;
 }
 .header-container {
+  /* container - image background */
   width: 95%;
   max-width: 900px;
   height: 45vw;
@@ -123,45 +118,54 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   /* children */
+  display: flex;
+  align-items: center;
   margin: 0 auto;
   font-size: 1.25em;
   color: white;
-
-  display: flex;
-  align-items: center;
 }
 .header-container .content {
+  /* text content */
   padding-bottom: 1em;
 }
-
 .header-container h2 {
   margin-bottom: 0;
 }
-
 .banner {
-  background-color: #f0f0f0;
+  /* description banner */
+  background-image: linear-gradient(black, #f0f0f0, #f0f0f0, #f0f0f0, #f0f0f0);
   position: relative;
   font-size: 75%;
   overflow: hidden;
-  border-radius: 0px 0px 25px 0px;
   border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  /* children */
-  padding: 1em 0em;
 }
 .banner p {
   width: 95%;
   max-width: 900px;
   margin: auto;
-
+  padding: 1.5em 0em 1em 0em;
 }
 
 
+/* Page-Specific Styles */
+#portfolio img {
+  border-radius: 0px 0px 10px 10px;
+}
 #portfolio .bubble {
   max-width: 750px;
+  border-bottom: 3px solid #dbdbdb;
 }
 
-/* RESPONSIVE ELEMENTS */
+#resume .page-wrapper {
+  max-width: 800px;
+}
+
+#blog .bubble {
+  /* border-top: 3px solid #dbdbdb; */
+}
+
+
+/* Responsive Text */
 /* default: display short and hide full text */
 .short-text {
   display: inline-block;

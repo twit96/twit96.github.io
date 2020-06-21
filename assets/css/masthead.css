@@ -14,7 +14,6 @@
 .masthead-container {
   /* rendering */
   display: inline-block;
-  /* margin: 0% 2.5%; */
   margin: 0% 2%;
   text-align: center;
   /* overflow handling */
@@ -32,7 +31,7 @@
   color: black;
 }
 .masthead a:hover {
-  background-color: #f0f0f025;
+  background-color: #dbdbdb25;
 }
 .masthead .active {
   color: white;
@@ -45,36 +44,3 @@
   font-weight: bold;
   color: white;
 }
-
-
-/* CUSTOM STYLE EXAMPLES (in blog div class) */
-/* 1. Black Bar */
-/* #blog .masthead {
-  background-color: black;
-  border-bottom: 1px solid #f0f0f050;
-}
-#blog .masthead a {
-  color: grey;
-}
-#blog .masthead .title {
-  color: white;
-} */
-
-/* 2. Blue to Black Soft Gradient Bar */
-/* #blog .masthead {
-  background-image: linear-gradient(#0066ff, black);
-}
-#blog .masthead a {
-  color: grey;
-}
-.masthead a:hover {
-  background-color: #f0f0f015;
-}
-#blog .masthead .title {
-  color: white;
-} */
-
-/* 3. Blue to Black Hard Gradient Bar */
-/* #blog .masthead {
-  background-image: linear-gradient(#0066ff,#0066ff,#0066ff,#0066ff,#0066ff, black);
-} */
