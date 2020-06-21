@@ -1,32 +1,49 @@
-/* MAIN ELEMENTS */
+html {
+  margin: 0;
+  padding: 0;
+  /* 16px=100%. 10px=62.5%. */
+  font-size: 100%;
+  background-color: #fff;
+  /* scrollbar always active */
+  height: 101%;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
+  /* take up whole view window */
+  min-height: 100%;
+
 }
 
 .page-wrapper {
-  padding: 0 2.5%;
-  margin: inherit;
+  /* contents of page (excluding masthead and header) */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#resume .page-wrapper {
+  max-width: 800px;
 }
 
 a {
   color: #0066ff;
-  text-align: center;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 a.emphasis {
-  /* emphasized with side border bars */
-  padding: 0px 7px;
+  /* emphasized links */
+  padding: 0 0.5em;
   margin: 5px;
   display: inline-block;
-  /* border color specified by parent element */
+  /* side borders - color specified by parent element */
   border-left: 2px solid;
   border-right: 2px solid;
 }
+
 ol, ul {
   padding: 0 1.5em;
 }
@@ -48,82 +65,76 @@ img {
   font-weight: bold;
 }
 
-/* TEXT STYLES */
-/* prevent text break */
+
 .no-break {
+  /* prevent text breaks */
   white-space: nowrap;
 }
-/* smaller text within container - can be nested in itself */
+
 .sub-text {
+  /* smaller text - can be nested in itself */
   font-size: 75%;
 }
 
-/* CONTAINERS */
-/* section container - set width, unstyled */
-.section {
+
+.bubble {
+  /* container - grey rounded background */
+  background-color: #f0f0f0;
+  margin: auto;
   overflow: hidden;
-  width: 750px;
-  max-width: 95%;
+  border-radius: 10px;
+  width: 95%;
+}
+.bubble a.emphasis {
+  border-color: #dbdbdb;
+}
+.bubble .section {
+  width: 95%;
+}
+
+
+.section {
+  /* container - width set, unstyled */
+  overflow: hidden;
+  /* width: 750px;
+  max-width: 95%; */
+  width: 95%;
   margin: auto;
 }
 .section a.emphasis {
   border-color: #f0f0f0;
 }
 
-/* bubble - grey rounded square */
-.bubble {
-  background-color: #f0f0f0;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
-.bubble a.emphasis {
-  border-color: #dbdbdb;
-}
-.bubble .section {
-  width: 100%;
-}
-#portfolio .bubble {
-  width: 700px;
-  max-width: 80%;
-  padding: 5px 20px;
-}
-#blog .bubble {
-  width: 750px;
-  min-width: 65%;
-  max-width: 100%;
-}
 
-
-/* PAGE HEADER */
-.page-header {
-  /* self */
-  position: relative;
+.header {
   width: 100%;
-  height: auto;
-  min-height: 45vw;
-  /* background */
+  background-color: black;
+}
+.header-container {
+  width: 95%;
+  max-width: 900px;
+  height: 45vw;
+  max-height: 400px;
+  /* background defaults */
   background-image:
     radial-gradient(ellipse closest-side, #00000090, #000000),
     url("/assets/img/default-header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* font */
+  /* children */
+  margin: 0 auto;
   font-size: 1.25em;
   color: white;
-  /* children */
+
   display: flex;
   align-items: center;
 }
-.page-header .content {
-  width: 750px;
-  min-width: 65%;
-  max-width: 95%;
-  margin: auto;
+.header-container .content {
   padding-bottom: 1em;
 }
-.page-header h2 {
+
+.header-container h2 {
   margin-bottom: 0;
 }
 
@@ -137,16 +148,17 @@ img {
   border-right: 2px solid black;
   /* children */
   padding: 1em 0em;
-
 }
 .banner p {
-  width: 750px;
-  min-width: 65%;
-  max-width: 90%;
+  width: 95%;
+  max-width: 900px;
   margin: auto;
-  /* padding: 0em 0.5em;
-  margin 1em auto;
-  border-left: 2px solid black; */
+
+}
+
+
+#portfolio .bubble {
+  max-width: 750px;
 }
 
 /* RESPONSIVE ELEMENTS */
@@ -160,9 +172,8 @@ img {
 
 /* Medium Screens */
 @media (min-width: 40em) {
-  .page-header {
+  .header-container {
     font-size: 1.5em;
-    min-height: 40vw;
   }
   .banner { font-size: 80%; }
 }
@@ -172,9 +183,8 @@ img {
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
-  .page-header {
+  .header-container {
     font-size: 1.75em;
-    min-height: 30vw;
   }
   .banner {
     font-size: 90%;
