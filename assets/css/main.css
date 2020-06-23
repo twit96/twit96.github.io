@@ -58,11 +58,11 @@ img {
 }
 
 hr.long {
-  width: 900px;
-  max-width: 97%;
+  width: 960px;
+  max-width: 95%;
 }
 hr.medium {
-  width: 750px;
+  width: 900px;
   max-width: 90%;
 }
 
@@ -100,9 +100,8 @@ hr.medium {
 }
 .bubble img {
   /* child images - rounded corners */
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px;
 }
-
 
 /* Page Heading */
 .heading {
@@ -110,8 +109,8 @@ hr.medium {
   width: 100%;
   background-color: black;
 }
-.heading-container {
-  /* container - set width, vignette image background */
+/* vignette image background */
+.vignette-container {
   width: 95%;
   max-width: 900px;
   height: 45vw;
@@ -131,11 +130,11 @@ hr.medium {
   font-size: 1.25em;
   color: white;
 }
-.heading-container .content {
+.vignette-container .content {
   /* text content */
   padding-bottom: 1em;
 }
-.heading-container h2 {
+.vignette-container h2 {
   margin-bottom: 0;
 }
 .banner {
@@ -153,6 +152,23 @@ hr.medium {
   padding: 1.5em 0em 1em 0em;
 }
 
+#overview {
+  /* bubble heading */
+  background-color: white;
+}
+#overview .bubble {
+  /* style overrides */
+  width: 100%;
+  max-width: 915px;
+  border-radius: 0px 0px 10px 10px;
+}
+#overview .bubble img {
+  border-radius: 0px 0px 10px 10px;
+}
+#overview #links {
+  display: none;
+}
+
 
 /* Page-Specific Styles */
 #portfolio .bubble {
@@ -163,14 +179,6 @@ hr.medium {
   max-width: 800px;
 }
 
-#article .bubble {
-  /* border-top: 3px solid #dbdbdb; */
-}
-#overview #links {
-  display: none;
-}
-
-
 /* Responsive Text */
 /* default: display short and hide full text */
 .short-text {
@@ -180,18 +188,17 @@ hr.medium {
   display: none;
 }
 
-/* Medium Screens */
+/* Medium Screens - at least 640px */
 @media (min-width: 40em) {
-  .heading-container { font-size: 1.5em; }
+  .vignette-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
 }
 
-/* Large Screens */
+/* Large Screens - at least 1000px */
 @media (min-width: 62.5em) {
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
-  .heading-container { font-size: 1.75em; }
+  .vignette-container { font-size: 1.75em; }
   .banner { font-size: 90%; }
-
 }
