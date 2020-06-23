@@ -18,7 +18,7 @@ body {
 }
 
 .page-wrapper {
-  /* contents of page (excluding masthead and header) */
+  /* contents of page (excluding masthead and heading) */
   max-width: 960px;
   margin: 0 auto;
 }
@@ -79,7 +79,7 @@ hr.medium {
 
 
 /* Containers */
-.section {
+.text-section {
   /* simple - width set, unstyled */
   overflow: hidden;
   width: 95%;
@@ -95,18 +95,23 @@ hr.medium {
   width: 95%;
   border-bottom: 3px solid #dbdbdb;
 }
-.bubble .section {
+.bubble .text-section {
   width: 95%;
+}
+.bubble img {
+  /* child images - rounded corners */
+  border-radius: 0px 0px 10px 10px;
 }
 
 
-/* Page Header */
-.header {
+/* Page Heading */
+.heading {
+  /* full screen width */
   width: 100%;
   background-color: black;
 }
-.header-container {
-  /* container - image background */
+.heading-container {
+  /* container - set width, vignette image background */
   width: 95%;
   max-width: 900px;
   height: 45vw;
@@ -114,7 +119,7 @@ hr.medium {
   /* background defaults */
   background-image:
     radial-gradient(ellipse closest-side, #00000090, #000000),
-    url("/assets/img/default-header.jpg");
+    url("/assets/img/default-heading.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -126,11 +131,11 @@ hr.medium {
   font-size: 1.25em;
   color: white;
 }
-.header-container .content {
+.heading-container .content {
   /* text content */
   padding-bottom: 1em;
 }
-.header-container h2 {
+.heading-container h2 {
   margin-bottom: 0;
 }
 .banner {
@@ -150,9 +155,6 @@ hr.medium {
 
 
 /* Page-Specific Styles */
-#portfolio img {
-  border-radius: 0px 0px 10px 10px;
-}
 #portfolio .bubble {
   max-width: 750px;
 }
@@ -161,7 +163,7 @@ hr.medium {
   max-width: 800px;
 }
 
-#blog .bubble {
+#article .bubble {
   /* border-top: 3px solid #dbdbdb; */
 }
 #overview #links {
@@ -180,7 +182,7 @@ hr.medium {
 
 /* Medium Screens */
 @media (min-width: 40em) {
-  .header-container { font-size: 1.5em; }
+  .heading-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
 }
 
@@ -189,7 +191,7 @@ hr.medium {
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
-  .header-container { font-size: 1.75em; }
+  .heading-container { font-size: 1.75em; }
   .banner { font-size: 90%; }
 
 }
