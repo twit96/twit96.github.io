@@ -202,6 +202,9 @@ hr.medium {
 
 /* Medium Screens - at least 640px */
 @media (min-width: 40em) {
+  #resume .short-text { display: none; }
+  #resume .full-text { display: inline-block; }
+
   .vignette-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
 }
