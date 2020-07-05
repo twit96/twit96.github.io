@@ -1,3 +1,10 @@
+:root {
+  --main-accent-color: #0066ff;
+  /* #0B5394 */
+  --main-emphasis-color: #dbdbdb;
+  --sub-bg-color: #f0f0f0;
+}
+
 html {
   margin: 0;
   padding: 0;
@@ -25,7 +32,7 @@ body {
 
 
 a {
-  color: #0066ff;
+  color: var(--main-accent-color);
   text-decoration: none;
 }
 a:hover {
@@ -36,8 +43,8 @@ a.emphasis {
   margin: 5px;
   display: inline-block;
   /* side borders */
-  border-left: 2px solid #dbdbdb;
-  border-right: 2px solid #dbdbdb;
+  border-left: 2px solid var(--main-emphasis-color);
+  border-right: 2px solid var(--main-emphasis-color);
 }
 
 ol, ul {
@@ -72,6 +79,11 @@ hr.medium {
   white-space: nowrap;
 }
 
+.date-text {
+  float: right;
+  font-size: 90%;
+  font-weight: bold;
+}
 .sub-text {
   /* smaller text - can be nested in itself */
   font-size: 75%;
@@ -88,12 +100,12 @@ hr.medium {
 
 .bubble {
   /* grey rounded background */
-  background-color: #f0f0f0;
+  background-color: var(--sub-bg-color);
   margin: auto;
   overflow: hidden;
   border-radius: 10px;
   width: 95%;
-  border-bottom: 3px solid #dbdbdb;
+  border-bottom: 3px solid var(--main-emphasis-color);
 }
 .bubble .text-section {
   width: 95%;
@@ -139,7 +151,7 @@ hr.medium {
 }
 .banner {
   /* description banner */
-  background-image: linear-gradient(black, #f0f0f0, #f0f0f0, #f0f0f0, #f0f0f0);
+  background-image: linear-gradient(black, var(--sub-bg-color), var(--sub-bg-color), var(--sub-bg-color), var(--sub-bg-color));
   position: relative;
   overflow: hidden;
   border-bottom: 2px solid black;

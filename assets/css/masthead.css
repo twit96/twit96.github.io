@@ -1,6 +1,6 @@
 /* MASTHEAD (Top Bar) ELEMENTS */
 .masthead {
-  background-color: #0066ff;
+  background-color: var(--main-accent-color);
   color: white;
   padding: 5px 5px 0px 5px;
   font-size: 1.25em;
@@ -43,4 +43,10 @@
 .masthead .title {
   font-weight: bold;
   color: white;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
