@@ -31,22 +31,7 @@ body {
 }
 
 
-a {
-  color: var(--main-accent-color);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-a.emphasis {
-  padding: 0 0.5em;
-  margin: 5px;
-  display: inline-block;
-  /* side borders */
-  border-left: 2px solid var(--main-emphasis-color);
-  border-right: 2px solid var(--main-emphasis-color);
-}
-
+/* Page Elements */
 ol, ul {
   padding: 0 1.5em;
 }
@@ -74,32 +59,67 @@ hr.medium {
 }
 
 
+/* Links */
+a {
+  color: var(--main-accent-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.emphasis {
+  /* emphasized with left and right border bars */
+  padding: 0 0.5em;
+  margin: 5px;
+  display: inline-block;
+  /* side borders */
+  border-left: 2px solid var(--main-emphasis-color);
+  border-right: 2px solid var(--main-emphasis-color);
+}
+
+
+/* Text */
 .no-break {
-  /* prevent text breaks */
+  /* prevent text breaks inline */
   white-space: nowrap;
+}
+.sub-text {
+  /* smaller text (can be nested in itself) */
+  font-size: 75%;
 }
 
 .date-text {
+  /* date format style */
   float: right;
   font-size: 90%;
   font-weight: bold;
 }
-.sub-text {
-  /* smaller text - can be nested in itself */
-  font-size: 75%;
+
+/* Responsive Text */
+/*
+Default: display short text and hide full text.
+Large screen breakpoint swaps to hide short and display full text.
+To swap at medium screen breakpoint instead, mid class can be added on both,
+(i.e. class="short-text mid" and class="long-text mid")
+*/
+.short-text {
+  display: inline-block;
+}
+.full-text {
+  display: none;
 }
 
 
 /* Containers */
 .text-section {
-  /* simple - width set, unstyled */
+  /* basic container - unstyled, set width */
   overflow: hidden;
   width: 95%;
   margin: auto;
 }
 
 .bubble {
-  /* grey rounded background */
+  /* styled container - grey background, rounded corners */
   background-color: var(--sub-bg-color);
   margin: auto;
   overflow: hidden;
@@ -107,13 +127,15 @@ hr.medium {
   width: 95%;
   border-bottom: 3px solid var(--main-emphasis-color);
 }
-.bubble .text-section {
-  width: 95%;
-}
 .bubble img {
   /* child images - rounded corners */
   border-radius: 10px;
 }
+.bubble .text-section {
+  /* [to come back to this ------------------------------------------------] */
+  width: 95%;
+}
+
 
 /* Page Heading */
 .heading {
@@ -121,13 +143,14 @@ hr.medium {
   width: 100%;
   background-color: black;
 }
-/* vignette image background */
+
+/* heading container - vignette image background */
 .vignette-container {
   width: 95%;
   max-width: 900px;
   height: 45vw;
   max-height: 400px;
-  /* background defaults */
+  /* background defaults - if no override specified on page */
   background-image:
     radial-gradient(ellipse closest-side, #00000090, #000000),
     url("/assets/img/default-heading.jpg");
@@ -147,10 +170,12 @@ hr.medium {
   padding-bottom: 1em;
 }
 .vignette-container h2 {
+  /* reduce space below title */
   margin-bottom: 0;
 }
+
 .banner {
-  /* description banner */
+  /* heading container - bottom text banner for page description */
   background-image: linear-gradient(black, var(--sub-bg-color), var(--sub-bg-color), var(--sub-bg-color), var(--sub-bg-color));
   position: relative;
   overflow: hidden;
@@ -158,52 +183,37 @@ hr.medium {
   font-size: 75%;
 }
 .banner p {
+  /* banner text */
   width: 95%;
   max-width: 900px;
   margin: auto;
   padding: 1.5em 0em 1em 0em;
 }
 
-#overview {
-  /* bubble heading */
-  background-color: white;
-}
-#overview .bubble {
-  /* style overrides */
-  width: 100%;
-  max-width: 915px;
-  border-radius: 0px 0px 10px 10px;
-}
-#overview .bubble img {
-  border-radius: 0px 0px 10px 10px;
-}
-#overview #links {
-  display: none;
-}
-
 
 /* Page-Specific Styles */
 #portfolio .bubble {
+  /* bubble override on portfolio overviews */
   max-width: 750px;
 }
 
 #resume .page-wrapper {
+  /* page width override on resume page */
   max-width: 800px;
 }
 
-/* Responsive Text */
-/* default: display short and hide full text */
-.short-text {
-  display: inline-block;
-}
-.full-text {
-  display: none;
-}
+
+/* Responsive Breakpoints */
+/*
+Site and elements designed at screen sizes smaller than first breakpoint,
+and to expand or adjust 'up' at medium and large screen breakpoints.
+ */
 
 /* Medium Screens - at least 640px */
 @media (min-width: 40em) {
-  #resume .short-text { display: none; }
-  #resume .full-text { display: inline-block; }
+  /* swap short and full responsive text if 'mid' class specified */
+  .short-text.mid { display: none; }
+  .full-text.mid { display: inline-block; }
 
   .vignette-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
@@ -211,6 +221,7 @@ hr.medium {
 
 /* Large Screens - at least 1000px */
 @media (min-width: 62.5em) {
+  /* swap all short and full text */
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
