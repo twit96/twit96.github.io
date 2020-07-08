@@ -49,6 +49,7 @@ img {
   text-align: center;
 }
 
+
 hr.long {
   width: 960px;
   max-width: 95%;
@@ -67,15 +68,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-a.emphasis {
-  /* emphasized with left and right border bars */
-  padding: 0 0.5em;
-  margin: 5px;
-  display: inline-block;
-  /* side borders */
-  border-left: 2px solid var(--main-emphasis-color);
-  border-right: 2px solid var(--main-emphasis-color);
-}
 
 
 /* Text */
@@ -87,9 +79,18 @@ a.emphasis {
   /* smaller text (can be nested in itself) */
   font-size: 75%;
 }
+.emphasis {
+  /* emphasized text with left and right border bars */
+  padding: 0 0.5em;
+  margin: 5px;
+  display: inline-block;
+  /* side borders */
+  border-left: 2px solid var(--main-emphasis-color);
+  border-right: 2px solid var(--main-emphasis-color);
+}
 
 .date-text {
-  /* date format style */
+  /* date format text style */
   float: right;
   font-size: 90%;
   font-weight: bold;
@@ -117,6 +118,7 @@ To swap at medium screen breakpoint instead, mid class can be added on both,
   width: 95%;
   margin: auto;
 }
+
 
 .bubble {
   /* styled container - grey background, rounded corners */
@@ -203,6 +205,82 @@ To swap at medium screen breakpoint instead, mid class can be added on both,
 }
 
 
+/* Contact Page Business Card */
+#business-card {
+  max-width: 750px;
+  height: 45vw;
+  max-height: 350px;
+  padding: 0.5em;
+  font-size: 2.65vmin;
+  /* flex properties */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#business-card .container {
+  /* background-color: white; */
+  width: 50%;
+  margin: 0.5em;
+  /* flex properties */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container.profile {
+  text-align: center;
+}
+.profile .name-text {
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.container.links {
+  padding-left:1em;
+  border-left:2px solid black;
+  font-size: 1.25em;
+}
+.links .link-card {
+  width: 100%;
+  /* border-radius: 10px;
+  background-color: tan; */
+
+  /* flex properties */
+  display: flex;
+  align-items: center;
+}
+.link-card a {
+  padding: 0 0.5em;
+  margin: 5px;
+}
+
+
+
+img.icon {
+  /* smaller icon images - img overrides */
+  display: inline-block;
+  width: 15%;
+  margin: 2.5%;
+  /* background-color: pink; */
+}
+img.avatar {
+  /* medium avatar icon images - img.icon overrides */
+  /* display: inline-block; */
+  width: 50%;
+  margin: 2.5%;
+  border-radius: 50%;
+  border: 3px solid black;
+  /* background-color: pink; */
+}
+
+
+
+
+
 /* Responsive Breakpoints */
 /*
 Site and elements designed at screen sizes smaller than first breakpoint,
@@ -211,20 +289,30 @@ and to expand or adjust 'up' at medium and large screen breakpoints.
 
 /* Medium Screens - at least 640px */
 @media (min-width: 40em) {
-  /* swap short and full responsive text if 'mid' class specified */
+  /* Responsive Text - swap short and full text if 'mid' class specified */
   .short-text.mid { display: none; }
   .full-text.mid { display: inline-block; }
 
+  /* Page Heading */
   .vignette-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
+
+  /* Business Card */
+  #business-card { font-size: 1em; }
+  .profile .name-text { font-size: 1.75em; }
+
 }
 
 /* Large Screens - at least 1000px */
 @media (min-width: 62.5em) {
-  /* swap all short and full text */
+  /* Responsive Text - swap all short and full text */
   .short-text { display: none; }
   .full-text { display: inline-block; }
 
+  /* Page Heading */
   .vignette-container { font-size: 1.75em; }
   .banner { font-size: 90%; }
+
+  /* Business Card */
+  .profile .name-text { font-size: 2.0em; }
 }
