@@ -1,17 +1,23 @@
 :root {
-  --main-accent-color: #0066ff;
-  /* #0B5394 */
-  --main-emphasis-color: #dbdbdb;
+  --main-bg-color: #fff;
   --sub-bg-color: #f0f0f0;
+  --main-accent-color: #0066ff;
+  /* --dim-accent-color: #0B5394; */
+  --main-emphasis-color: #dbdbdb;
+}
+
+* {
+  /* Print background colors (Chrome, Safari) */
+  -webkit-print-color-adjust: exact !important;
 }
 
 html {
   margin: 0;
   padding: 0;
-  /* 16px=100%. 10px=62.5%. */
+  /* font size (16px=100%, 10px=62.5%) */
   font-size: 100%;
-  background-color: #fff;
-  /* scrollbar always active */
+  background-color: var(--main-bg-color);
+  /* set scrollbar always active */
   height: 101%;
 }
 
@@ -21,7 +27,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   /* take up whole view window */
   min-height: 100%;
-
 }
 
 .page-wrapper {
@@ -32,8 +37,23 @@ body {
 
 
 /* Page Elements */
-ol, ul {
-  padding: 0 1.5em;
+a {
+  color: var(--main-accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr.long {
+  width: 960px;
+  max-width: 95%;
+}
+
+hr.medium {
+  width: 900px;
+  max-width: 90%;
 }
 
 img {
@@ -42,6 +62,7 @@ img {
   height: auto;
   margin: 0 auto;
   padding: 0;
+  border-radius: 10px;
   /* alt text */
   color: black;
   font-size: 1.5em;
@@ -49,42 +70,41 @@ img {
   text-align: center;
 }
 
-
-hr.long {
-  width: 960px;
-  max-width: 95%;
-}
-hr.medium {
-  width: 900px;
-  max-width: 90%;
+img.avatar {
+  /* medium avatar icon images - img.icon overrides */
+  width: 50%;
+  margin: 2.5%;
+  border-radius: 50%;
+  border: 3px solid black;
 }
 
-
-/* Links */
-a {
-  color: var(--main-accent-color);
-  text-decoration: none;
+img.icon {
+  /* smaller icon images - img overrides */
+  width: 15%;
+  margin: 2.5%;
 }
-a:hover {
-  text-decoration: underline;
+
+ol, ul {
+  padding: 0 1.5em;
 }
 
 
-/* Text */
+/* Custom Classes */
 .no-break {
-  /* prevent text breaks inline */
+  /* prevent text breaks (inline) */
   white-space: nowrap;
 }
+
 .sub-text {
   /* smaller text (can be nested in itself) */
   font-size: 75%;
 }
+
 .emphasis {
-  /* emphasized text with left and right border bars */
+  /* emphasized text (has left and right border bars) */
   padding: 0 0.5em;
-  margin: 5px;
+  margin: 0.25em;
   display: inline-block;
-  /* side borders */
   border-left: 2px solid var(--main-emphasis-color);
   border-right: 2px solid var(--main-emphasis-color);
 }
@@ -96,46 +116,29 @@ a:hover {
   font-weight: bold;
 }
 
-/* Responsive Text */
-/*
-Default: display short text and hide full text.
-Large screen breakpoint swaps to hide short and display full text.
-To swap at medium screen breakpoint instead, mid class can be added on both,
-(i.e. class="short-text mid" and class="long-text mid")
-*/
 .short-text {
+  /* displayed below large screen breakpoint, hidden above */
   display: inline-block;
 }
+
 .full-text {
+  /* hidden below large screen breakpoint, displayed above */
   display: none;
 }
 
 
-/* Containers */
-.text-section {
+.container {
   /* basic container - unstyled, set width */
-  overflow: hidden;
   width: 95%;
   margin: auto;
+  overflow: hidden;
 }
 
-
-.bubble {
+.container.bubble {
   /* styled container - grey background, rounded corners */
   background-color: var(--sub-bg-color);
-  margin: auto;
-  overflow: hidden;
   border-radius: 10px;
-  width: 95%;
   border-bottom: 3px solid var(--main-emphasis-color);
-}
-.bubble img {
-  /* child images - rounded corners */
-  border-radius: 10px;
-}
-.bubble .text-section {
-  /* [to come back to this ------------------------------------------------] */
-  width: 95%;
 }
 
 
@@ -146,8 +149,8 @@ To swap at medium screen breakpoint instead, mid class can be added on both,
   background-color: black;
 }
 
-/* heading container - vignette image background */
 .vignette-container {
+  /* heading container - vignette image background */
   width: 95%;
   max-width: 900px;
   height: 45vw;
@@ -193,6 +196,54 @@ To swap at medium screen breakpoint instead, mid class can be added on both,
 }
 
 
+/* Contact Page Business Card */
+#business-card {
+  max-width: 750px;
+  height: 45vw;
+  max-height: 350px;
+  padding: 0.5em;
+  font-size: 2.65vmin;
+  /* flex properties */
+  display: flex;
+  justify-content: space-evenly;
+}
+#business-card .container {
+  /* background-color: white; */
+  width: 50%;
+  margin: 0.5em;
+  /* flex properties */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container.profile {
+  text-align: center;
+}
+.profile .name-text {
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.container.links {
+  padding-left:1em;
+  border-left:2px solid black;
+  font-size: 1.25em;
+}
+.links .link-card {
+  width: 100%;
+  /* flex properties */
+  display: flex;
+  align-items: center;
+}
+.link-card a {
+  padding: 0 0.5em;
+  margin: 5px;
+}
+
+
 /* Page-Specific Styles */
 #portfolio .bubble {
   /* bubble override on portfolio overviews */
@@ -205,91 +256,9 @@ To swap at medium screen breakpoint instead, mid class can be added on both,
 }
 
 
-/* Contact Page Business Card */
-#business-card {
-  max-width: 750px;
-  height: 45vw;
-  max-height: 350px;
-  padding: 0.5em;
-  font-size: 2.65vmin;
-  /* flex properties */
-  display: flex;
-  justify-content: space-evenly;
-}
-
-#business-card .container {
-  /* background-color: white; */
-  width: 50%;
-  margin: 0.5em;
-  /* flex properties */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.container.profile {
-  text-align: center;
-}
-.profile .name-text {
-  margin-top: 1.0em;
-  margin-bottom: 0.5em;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.container.links {
-  padding-left:1em;
-  border-left:2px solid black;
-  font-size: 1.25em;
-}
-.links .link-card {
-  width: 100%;
-  /* border-radius: 10px;
-  background-color: tan; */
-
-  /* flex properties */
-  display: flex;
-  align-items: center;
-}
-.link-card a {
-  padding: 0 0.5em;
-  margin: 5px;
-}
-
-
-
-img.icon {
-  /* smaller icon images - img overrides */
-  display: inline-block;
-  width: 15%;
-  margin: 2.5%;
-  /* background-color: pink; */
-}
-img.avatar {
-  /* medium avatar icon images - img.icon overrides */
-  /* display: inline-block; */
-  width: 50%;
-  margin: 2.5%;
-  border-radius: 50%;
-  border: 3px solid black;
-  /* background-color: pink; */
-}
-
-
-
-
-
-/* Responsive Breakpoints */
-/*
-Site and elements designed at screen sizes smaller than first breakpoint,
-and to expand or adjust 'up' at medium and large screen breakpoints.
- */
-
 /* Medium Screens - at least 640px */
 @media (min-width: 40em) {
-  /* Responsive Text - swap short and full text if 'mid' class specified */
+  /* swap short and full text if 'mid' class specified */
   .short-text.mid { display: none; }
   .full-text.mid { display: inline-block; }
 
@@ -315,4 +284,12 @@ and to expand or adjust 'up' at medium and large screen breakpoints.
 
   /* Business Card */
   .profile .name-text { font-size: 2.0em; }
+}
+
+/* Print Settings */
+@media print {
+  /* revert color of resume links */
+  #resume .page-wrapper a { color: black !important }
+  /* reduce size of resume headers - (Temporary fix) */
+  #resume h2 { font-size: 1.25em; }
 }
