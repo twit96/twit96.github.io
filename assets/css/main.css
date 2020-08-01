@@ -186,6 +186,7 @@ ol, ul {
   overflow: hidden;
   border-bottom: 2px solid black;
   font-size: 75%;
+  font-style: oblique;
 }
 .banner p {
   /* banner text */
@@ -249,11 +250,7 @@ ol, ul {
   /* bubble override on portfolio overviews */
   max-width: 750px;
 }
-
-#blog .bubble {
-  max-width: 750px;
-}
-#blog .vignette-container {
+#portfolio .vignette-container {
   width: 90%;
   padding: 5%;
   max-height: 150px;
@@ -279,6 +276,12 @@ ol, ul {
   #business-card { font-size: 1em; }
   .profile .name-text { font-size: 1.75em; }
 
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* Large Screens - at least 1000px */
@@ -288,11 +291,14 @@ ol, ul {
   .full-text { display: inline-block; }
 
   /* Page Heading */
-  .vignette-container { font-size: 1.75em; }
+  #article .vignette-container { font-size: 1.75em; }
   .banner { font-size: 90%; }
 
   /* Business Card */
   .profile .name-text { font-size: 2.0em; }
+
+  #portfolio .vignette-container h2 { font-size: 1em; }
+  #portfolio .bubble { max-width: 450px; }
 }
 
 /* Print Settings */
