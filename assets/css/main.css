@@ -263,6 +263,19 @@ ol, ul {
 }
 
 
+/* Mobile Landscape Screens */
+@media (min-width:320px) and (max-width: 850px) and (orientation: landscape) {
+  /* Portfolio Flex Container */
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #portfolio .vignette-container h2 { font-size: 1em; }
+  #portfolio .bubble { max-width: 45vw; }
+}
+
 /* Medium Screens - at least 640px */
 @media (min-width: 40em) {
   /* swap short and full text if 'mid' class specified */
@@ -285,7 +298,6 @@ ol, ul {
     justify-content: center;
   }
   #portfolio .vignette-container h2 { font-size: 1em; }
-  #portfolio .bubble { max-width: 45vw; }
 
 }
 
