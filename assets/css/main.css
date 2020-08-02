@@ -264,7 +264,7 @@ ol, ul {
 
 
 /* Mobile Landscape Screens */
-@media (min-width:320px) and (max-width: 850px) and (orientation: landscape) {
+@media (min-width:320px) and (max-width: 1000px) and (orientation: landscape) {
   /* Portfolio Flex Container */
   .flex {
     display: flex;
