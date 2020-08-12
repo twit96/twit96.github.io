@@ -8,6 +8,7 @@
 
   min-width: 65%;
   margin: auto;
+  overflow: hidden;
 }
 
 /* Container for Title and Navigation */
@@ -49,4 +50,16 @@
   content: "";
   clear: both;
   display: table;
+}
+
+/* tweaks for footer bar (class masthead with id footer) */
+#contact #footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer .masthead-container {
+  /* allow text wrapping */
+  white-space: normal;
 }
