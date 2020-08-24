@@ -250,6 +250,18 @@ ol, ul {
   max-width: 750px;
 }
 
+/* Portfolio Flex Container */
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex .bubble {
+  /* fix height of overview cards */
+  height: 95%;
+}
+
 #portfolio .vignette-container {
   width: 90%;
   padding: 5%;
@@ -264,13 +276,6 @@ ol, ul {
 
 /* Mobile Landscape Screens */
 @media (min-width:320px) and (max-width: 1000px) and (orientation: landscape) {
-  /* Portfolio Flex Container */
-  .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   #portfolio .vignette-container h2 { font-size: 1em; }
   #portfolio .bubble { max-width: 45vw; }
 }
@@ -289,13 +294,6 @@ ol, ul {
   #business-card { font-size: 1em; }
   .profile .name-text { font-size: 1.75em; }
 
-  /* Portfolio Flex Container */
-  .flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   #portfolio .vignette-container h2 { font-size: 1em; }
 
 }
