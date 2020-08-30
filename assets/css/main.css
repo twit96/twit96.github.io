@@ -221,6 +221,18 @@ ol, ul {
 .container.profile {
   text-align: center;
 }
+
+/* swap contact page profile picture with icon on mouseover */
+.container.profile #avatar-sub {
+  display: none;
+}
+.container:hover #avatar-main {
+  display: none;
+}
+.container:hover #avatar-sub {
+  display: inline-block;
+}
+
 .profile .name-text {
   margin-top: 1.0em;
   margin-bottom: 0.5em;
