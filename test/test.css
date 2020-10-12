@@ -92,6 +92,10 @@ header .title {
 }
 
 /* intro content ----------------------------------------------------------- */
+#intro {
+  padding: 1em 0;
+}
+
 #intro h1 {
   padding-left: 5%;
   margin-bottom: 0;
