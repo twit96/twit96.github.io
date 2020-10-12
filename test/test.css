@@ -1,0 +1,231 @@
+:root {
+  --root-color: #fff;
+  --main-color: #e6e6e6;
+  --accent-color: #0066ff;
+  --dim-accent-color: #0B5394;
+  --shadow-color: #b0b0b0;
+}
+
+* {
+  /* Print background colors (Chrome, Safari) */
+  -webkit-print-color-adjust: exact !important;
+}
+
+/* page containers --------------------------------------------------------- */
+html {
+  margin: 0;
+  padding: 0;
+  /* font size (16px=100%, 10px=62.5%) */
+  font-size: 100%;
+  background-color: var(--main-bg-color);
+  /* set scrollbar always active */
+  height: 101%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  /* contents of page */
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* header bar -------------------------------------------------------------- */
+header {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1.25em;
+  overflow: hidden;
+}
+
+/* header navigation content wrapper */
+header nav {
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* header navigation links lists */
+header ul {
+  list-style: none;
+  margin: 0% 2%;
+  padding: 0.75em;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+header li {
+  display: inline-block;
+}
+
+/* header links style */
+header a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+header a:hover {
+  background-color: #dbdbdb25;
+}
+
+/* active link */
+header .active {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* title link */
+header .title {
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+/* intro content ----------------------------------------------------------- */
+#intro h1 {
+  padding-left: 5%;
+  margin-bottom: 0;
+}
+
+#intro img {
+  /* float image to the right of container */
+  float: right;
+  width: 30%;
+  margin-right: 5%;
+  margin-left: 0.5em;
+  /* make image circular */
+  border-radius: 50%;
+  border: 7px solid var(--root-color);
+}
+
+/* swap icon with profile picture on page mouseover */
+#avatar-sub {
+  display: none;
+}
+
+.page-wrapper:hover #avatar-main {
+  display: none;
+}
+.page-wrapper:hover #avatar-sub {
+  display: inline-block;
+}
+
+/* page sections ----------------------------------------------------------- */
+section {
+  /* self style */
+  background-color: var(--main-color);
+  border-radius: 15px;
+  /* layout style */
+  padding: 2.5%;
+  margin: 0.75em auto;
+  line-height: 130%;
+  max-width: 90%;
+}
+
+section h2 {
+  border-bottom: 3px solid var(--main-emphasis-color);
+  padding-bottom: 0.5em;
+  margin-top: 0;
+}
+
+section p {
+  margin: 0.5em;
+}
+
+
+/* about section ----------------------------------------------------------- */
+#about p {
+  margin-right: 1em;
+}
+
+/* experience section ------------------------------------------------------ */
+#experience {
+  background-color: var(--root-color);
+}
+
+/* portfolio projects section ---------------------------------------------- */
+article {
+  /* layout style */
+  padding: 0 2.5% 2.5% 2.5%;
+  margin: 0.75em auto;
+  line-height: 130%;
+  max-width: 90%;
+}
+
+article h1 {
+  margin-bottom: 0.25em;
+}
+
+.card-list {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 1.5em 0 1em 0;
+  border-top: 3px solid var(--main-emphasis-color);
+}
+
+.card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+  background: var(--main-emphasis-color);
+  border-radius: 10px;
+}
+
+.card-list::-webkit-scrollbar-track {
+  background-color: var(--main-bg-color);
+  box-shadow: inset 2px 2px 2px var(--sub-bg-color), inset -2px -2px 2px var(--sub-bg-color);
+  border-radius: 15px;
+}
+
+.card {
+  min-width: 400px;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: var(--sub-bg-color);
+  border-radius: 10px;
+  box-shadow: -1rem 0 3em var(--shadow-color) inset;
+
+  transition: .15s;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:hover~.card {
+  transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card p {
+  padding: 0 1em;
+}
+
+/* only need this if you remove 'align-items center' on 'card-list' class */
+/* .card .links {
+  margin-top: auto;
+} */
+
+/* contact section --------------------------------------------------------- */
+th {
+  text-align: left;
+  padding-right: 1em;
+}
