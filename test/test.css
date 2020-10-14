@@ -11,7 +11,32 @@
   -webkit-print-color-adjust: exact !important;
 }
 
-/* page containers --------------------------------------------------------- */
+
+/* General Classes --------------------------------------------------------- */
+.no-break {
+  /* prevent text breaks (inline) */
+  white-space: nowrap;
+}
+
+
+.short-text {
+  /* displayed below large screen breakpoint, hidden above */
+  display: inline-block;
+}
+
+.full-text {
+  /* hidden below large screen breakpoint, displayed above */
+  display: none;
+}
+
+@media (min-width: 62.5em) {
+  /* large screens - at least 1000px - swap all short and full text */
+  .short-text { display: none; }
+  .full-text { display: inline-block; }
+}
+
+
+/* Page Containers --------------------------------------------------------- */
 html {
   margin: 0;
   padding: 0;
@@ -35,7 +60,7 @@ body {
   margin: 0 auto;
 }
 
-/* header bar -------------------------------------------------------------- */
+/* Header Bar -------------------------------------------------------------- */
 header {
   background-color: var(--accent-color);
   color: white;
@@ -50,6 +75,12 @@ header nav {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+@media (max-width: 43.75em) {
+  header nav {
+    justify-content: center;
+  }
 }
 
 /* header navigation links lists */
