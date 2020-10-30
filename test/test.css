@@ -286,7 +286,7 @@ th {
   width: 150vw;
   height: 150vw;
   left: -75vw;
-  bottom: -25vw;
+  top: -75vw;
   /* style */
   border-radius: 50%;
   background-color: var(--main-accent-color);
@@ -297,6 +297,7 @@ th {
 
 .flipped {
   /* class to reposition second set of circles */
+  top: auto;
   left: 25vw;
   bottom: -75vw;
 }
