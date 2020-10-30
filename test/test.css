@@ -240,6 +240,9 @@ article h1 {
   transition: .15s;
 }
 
+/* refactor card layout on small screens */
+@media (max-width: 450px) { .card { min-width: 95%; } }
+
 .card:hover {
   transform: translateY(-1rem);
 }
