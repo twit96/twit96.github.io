@@ -9,6 +9,7 @@
 
     <!-- Load CSS Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/masthead.css" />
 
     <!-- Add jQuery -->
@@ -16,7 +17,7 @@
 		<!-- Load Reusable Navigation Bar Code -->
 		<script>
 			$(function(){
-				$('#nav').load('/assets/templates/nav_contact.html')
+        $('header').load('/assets/templates/header.html')
         $('#footer').load('/assets/templates/foot.html')
 			});
 		</script>
@@ -26,7 +27,7 @@
     <div id="contact">
 
       <!-- Navigation Bar -->
-  		<div class="masthead" id="nav"></div>
+  		<header></header>
 
       <div class="page-wrapper">
 

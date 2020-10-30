@@ -1,14 +1,23 @@
 :root {
   --root-color: #fff;
-  --main-color: #e6e6e6;
+  --main-color: #f0f0f0;
   --accent-color: #0066ff;
-  --dim-accent-color: #0B5394;
+  --dim-accent-color: #dbdbdb;
   --shadow-color: #b0b0b0;
 }
 
 * {
   /* Print background colors (Chrome, Safari) */
   -webkit-print-color-adjust: exact !important;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 
@@ -35,7 +44,6 @@
   .full-text { display: inline-block; }
 }
 
-
 /* Page Containers --------------------------------------------------------- */
 html {
   margin: 0;
@@ -60,13 +68,18 @@ body {
   margin: 0 auto;
 }
 
-/* Header Bar -------------------------------------------------------------- */
-header {
+/* Header/Footer Bar ------------------------------------------------------- */
+header, footer {
   background-color: var(--accent-color);
   color: white;
-  font-size: 1.25em;
   overflow: hidden;
 }
+
+/* bigger header text */
+header { font-size: 1.25em; }
+
+/* smaller footer text */
+footer { font-size: 0.95em; }
 
 /* header navigation content wrapper */
 header nav {
@@ -83,6 +96,44 @@ header nav {
   }
 }
 
+/* footer navigation content wrapper */
+footer nav {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.25em auto;
+}
+
+/* header/footer link style */
+header a, footer a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+header a:hover {
+  background-color: #dbdbdb25;
+}
+footer a:hover {
+  background-color: #dbdbdb25;
+}
+
+/* active link */
+header .active, footer .active {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* title link */
+header .title, footer .title {
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
 /* header navigation links lists */
 header ul {
   list-style: none;
@@ -96,31 +147,6 @@ header li {
   display: inline-block;
 }
 
-/* header links style */
-header a {
-  color: black;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-header a:hover {
-  background-color: #dbdbdb25;
-}
-
-/* active link */
-header .active {
-  color: white;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* title link */
-header .title {
-  font-weight: bold;
-  color: white;
-  text-shadow: 1px 1px black;
-}
 
 /* intro content ----------------------------------------------------------- */
 #intro {
@@ -168,7 +194,7 @@ section {
 }
 
 section h2 {
-  border-bottom: 3px solid var(--main-emphasis-color);
+  border-bottom: 3px solid var(--dim-accent-color);
   padding-bottom: 0.5em;
   margin: 0.25em 0.5em 0.5em 0.25em;
 }
@@ -184,10 +210,13 @@ section p {
 }
 
 /* experience section ------------------------------------------------------ */
-#experience {
-  background: 0;
-  /* background-color: var(--main-bg-color); */
-  /* background-color: #e6e6e675; */
+#experience { background: 0; }
+
+#experience i {
+  /* date format text style */
+  float: right;
+  font-size: 90%;
+  font-weight: bold;
 }
 
 /* portfolio projects section ---------------------------------------------- */
@@ -208,7 +237,7 @@ article h1 {
   align-items: center;
   overflow-x: scroll;
   padding: 1.5em 0 1em 0;
-  border-top: 3px solid var(--main-emphasis-color);
+  border-top: 3px solid var(--dim-accent-color);
 }
 
 .card-list::-webkit-scrollbar {
@@ -216,7 +245,7 @@ article h1 {
   height: 10px;
 }
 .card-list::-webkit-scrollbar-thumb {
-  background: var(--main-emphasis-color);
+  background: var(--dim-accent-color);
   border-radius: 10px;
 }
 
@@ -233,11 +262,34 @@ article h1 {
   flex-direction: column;
   align-items: flex-start;
 
-  background-color: var(--sub-bg-color);
+  background-color: var(--main-color);
   border-radius: 10px;
   box-shadow: -1rem 0 3em var(--shadow-color) inset;
 
   transition: .15s;
+}
+
+/* emphasized link text (has left and right border bars) */
+.card a {
+  padding: 0 0.5em;
+  margin: 0.25em;
+  display: inline-block;
+  border-left: 2px solid var(--dim-accent-color);
+  border-right: 2px solid var(--dim-accent-color);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 10px;
+  /* alt text */
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* refactor card layout on small screens */
@@ -289,7 +341,7 @@ th {
   top: -75vw;
   /* style */
   border-radius: 50%;
-  background-color: var(--main-accent-color);
+  background-color: var(--accent-color);
   /* animation */
   animation: ripple 15s infinite ease-in;
   visibility: hidden;

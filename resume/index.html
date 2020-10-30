@@ -10,13 +10,14 @@
     <!-- Load CSS Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/masthead.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 
     <!-- Add jQuery -->
 		<script src="/assets/js/jquery-3.5.1.min.js"></script>
 		<!-- Load Reusable Navigation Bar Code -->
 		<script>
 			$(function(){
-				$('#nav').load('/assets/templates/nav_resume.html')
+        $('header').load('/assets/templates/header.html')
         $('#footer').load('/assets/templates/foot_resume.html')
 			});
 		</script>
@@ -24,8 +25,9 @@
 
   <body>
     <div id="resume">
+
       <!-- Navigation Bar -->
-      <div class="masthead" id="nav"></div>
+			<header></header>
 
       <div class="page-wrapper">
         <div class="container">
@@ -45,15 +47,15 @@
           <p>
             <b>Languages</b>
             <br />
-            JavaScript, HTML, CSS, Python, Swift
+            JavaScript, CSS, HTML, Python, PHP
             <br /><br />
             <b>Version Control and Runtimes</b>
             <br />
-            Git, Atom, Jupyter, Xcode
+            Git, Atom, Jupyter
             <br /><br />
             <b>Frameworks and Libraries</b>
             <br />
-            Pandas, Phaser, jQuery, JSON, Matplotlib
+            jQuery, Pandas, Phaser
             <br /><br />
             <b>Asset Development</b>
             <br />

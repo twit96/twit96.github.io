@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Tyler Wittig | Software and Games Developer</title>
+		<title>Tyler Wittig | Software / Web / Games Developer</title>
 		<link rel="icon" href="/assets/img/icon.png" />
-    <meta name="description" content="Software and Games Developer: JavaScript, HTML, CSS, Python, Swift." />
+    <meta name="description" content="Web and Games Developer: JavaScript, HTML, CSS, Python, Swift." />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="black" />
 
 		<!-- Load CSS Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="/assets/css/masthead.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="/assets/css/main.css" /> -->
+		<!-- <link rel="stylesheet" type="text/css" href="/assets/css/masthead.css" /> -->
+		<link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 
 		<!-- Add jQuery -->
 		<script src="/assets/js/jquery-3.5.1.min.js"></script>
 		<!-- Load Navigation Bar and Project Overviews -->
 		<script>
 			$(function(){
-				$('#nav').load('/assets/templates/nav_portfolio.html')
+				$('header').load('/assets/templates/header.html')
+				$('#skills').load('/assets/templates/skills.html')
+				$('#experience').load('/assets/templates/experience.html')
+
+				$('footer').load('/assets/templates/footer.html')
 				$('#footer').load('/assets/templates/foot.html')
-				$('#WebProgramming').load('/portfolio/web-programming/overview.html')
-				$('#WittigGrass').load('/portfolio/wittiggrass/overview.html')
-				// $('#20200717-OOP').load('/blog/posts/20200716-OOP/overview.html')
-				$('#StarWarsSurvey').load('/portfolio/star-wars-survey/overview.html')
-				$('#PharaohsPhury').load('/portfolio/pharaohs-phury/overview.html')
-				$('#TankFighter').load('/portfolio/tank-fighter/overview.html')
 			});
 		</script>
 	</head>
@@ -31,43 +30,200 @@
 	<body>
 		<div id="portfolio">
 
+			<!-- Animated Background -->
+			<div class="ripple-background">
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+				<div class="circle"></div>
+			</div>
+			<div class="ripple-background">
+				<div class="circle flipped"></div>
+				<div class="circle flipped"></div>
+				<div class="circle flipped"></div>
+				<div class="circle flipped"></div>
+				<div class="circle flipped"></div>
+			</div>
+
 			<!-- Navigation Bar -->
-			<div class="masthead" id="nav"></div>
+			<header></header>
 
 			<!-- Page Contents -->
 			<div class="page-wrapper">
 
-				<!-- Title -->
-				<h2 align="center">When I'm not working on this website...</h2>
-				<!-- <div class="container">
-					<p>
-						Over the past few months, I have programmed this portfolio website
-						from the ground up to teach myself web development.
-						I am self-taught and learning everyday, so feedback
-						and suggestions are always welcome!
-					</p>
-				</div> -->
-				<hr class="long" />
-				<br />
-
-				<!-- Project Overviews -->
-				<div class="flex">
-					<div id="WebProgramming"></div>
-					<div id="WittigGrass"></div>
-					<div id="StarWarsSurvey"></div>
-					<div id="PharaohsPhury"></div>
-					<div id="TankFighter"></div>
-					<!-- <div id="20200717-OOP"></div> -->
+				<div id="intro">
+					<img id="avatar-sub" src="/assets/img/icon.png" alt="Logo Icon">
+					<img id="avatar-main" src="/assets/img/profile.png" alt="Profile Icon">
 				</div>
 
-				<!-- Page Footer -->
-				<hr class="long" />
-				<br />
+				<section id="about">
+					<h2>
+						Well <i>hello</i> world,
+						<span class="no-break">I'm Tyler...</span>
+					</h2>
+					<p>
+						I am a Software Developer and student at The
+						University of Texas at Austin, with experience in Web Programming,
+						Game Development, Data Analytics and Machine Learning, Audio and
+						Image Design, and an extensive background in Mathematics.
+					</p>
+				</section>
+
+				<section id="skills"></section>
+
+				<!-- Portfolio Projects -->
+				<article id="projects">
+					<h1>
+						<span class="full-text">When I'm not working on this portfolio website...</span>
+						<span class="short-text">Projects</span>
+					</h1>
+
+					<!-- Project Overviews -->
+					<div class="card-list">
+
+						<!-- Web Programming -->
+						<div class="card">
+							<!-- Title Card -->
+							<img border="0" src="/portfolio/web-programming/title-card.png" alt="Web Programming">
+							<!-- Overview -->
+							<p>
+									<b>A Set of Web Programming Assignments</b>
+							</p>
+							<!-- Description -->
+							<p class="description">
+								A mobile-responsive landing page, complete with a pure-CSS
+					      animated background, links to various assignments I've completed
+					      this semester involving JavaScript, CSS, and HTML.
+							</p>
+							<!-- Links -->
+							<p class="links">
+									<a href="https://fall-2020.cs.utexas.edu/cs329e-bulko/wittig/"><b>View Website</b></a>
+							</p>
+						</div>
+
+						<!-- Wittig Grass -->
+						<div class="card">
+							<!-- Title Card -->
+						  <img border="0" src="/portfolio/wittiggrass/title-card.png" alt="Wittig Grass">
+							<!-- Overview -->
+							<p>
+									<b>A Static Website Project for a Business</b>
+							</p>
+							<!-- Description -->
+							<p class="description">
+								This <u>work-in-progress</u> static website gives a new face to a
+								business website in need of some love.
+								Background image slideshows and scrollable image cards are the first
+								of many pure CSS (no framework) features that this project has touched on.
+							</p>
+							<!-- Links -->
+							<p class="links">
+									<a href="https://twit96.github.io/wittiggrass/"><b>View Website</b></a>
+									<a href="https://github.com/twit96/wittiggrass">View GitHub</a>
+							</p>
+						</div>
+
+						<!-- Star Wars Survey -->
+						<div class="card">
+							<!-- Title Card -->
+						  <img border="0" src="/portfolio/star-wars-survey/title-card.png" alt="Star Wars Survey Classification Analysis">
+							<!-- Overview -->
+							<p>
+								<b>A Machine Learning Classification Analysis</b>
+							</p>
+							<!-- Description -->
+							<p>
+								By utilizing a few machine learning classification techniques,
+								determining whether or not someone is a Star Wars fan need only
+								require their responses to a few survey questions.
+							</p>
+							<!-- Links -->
+							<p class="links">
+									<a href="/portfolio/star-wars-survey/"><b>View Project</b></a>
+									<a href="https://github.com/twit96/StarWarsSurvey-ClassificationAnalysis">View GitHub</a>
+							</p>
+						</div>
+
+						<!-- Pharaoh's Phury -->
+						<div class="card">
+							<!-- Title Card -->
+							<img border="0" src="/portfolio/pharaohs-phury/title-card.png" alt="Pharaoh's Phury">
+							<!-- Overview -->
+							<p>
+								<b>A 2D Platformer Web Game</b>
+							</p>
+							<!-- Description -->
+							<p>
+								After thousands of years of slumber, your place of rest has been invaded. Reclaim your prized
+								possessions, avoid traps and enemy attacks, and run the British Imperialists out of your pyramid,
+								or become their next museum exhibit.
+							</p>
+							<!-- Links -->
+							<p class="links">
+									<a href="https://youtu.be/IQX4wJzflHA">Watch Trailer</a>
+									<a href="https://twit96.github.io/PharaohsPhury_Phaser3/"><b>Play Now</b></a>
+									<a href="https://github.com/twit96/PharaohsPhury_Phaser3">View GitHub</a>
+							</p>
+						</div>
+
+						<!-- Tank Fighter -->
+						<div class="card">
+							<!-- Title Card -->
+						  <img border="0" src="/portfolio/tank-fighter/title-card.png" alt="Tank Fighter: Swarm of Orbs">
+							<!-- Overview -->
+							<p>
+								<b>A Top-Down Shooter Web Minigame</b>
+							</p>
+							<!-- Description -->
+							<p>
+								In a post-apocalyptic world, swarms of alien orbs have nearly overtaken planet Earth.
+								Your men have fallen and you have nothing left to lose.
+								As a lone tank, it is your duty to give the invaders a fight to the death that they won't soon forget.
+								Good luck, comrade.
+							</p>
+							<!-- Links -->
+							<p class="links">
+									<a href="https://twit96.github.io/TankFighter_Phaser3/"><b>Play Now</b></a>
+									<a href="https://github.com/twit96/TankFighter_Phaser3">View GitHub</a>
+							</p>
+						</div>
+					</div>
+				</article>
+
+				<!-- Education Section -->
+				<section>
+					<h2>Education</h2>
+					<b>The University of Texas at Austin</b>
+					<br>
+					Bachelor of Science and Arts - Mathematics,
+					<br>
+					Elements of Computing Certificate
+				</section>
+
+				<!-- Work Experience Section -->
+				<section id="experience"></section>
+
+				<!-- Contact Information Section -->
+				<section id="contact">
+					<h2>Contact Information</h2>
+					<table>
+						<tr>
+							<th>Location:</th>
+							<td>Austin, TX</td>
+						</tr>
+						<tr>
+							<th>Email:</th>
+							<td><a href="mailto:tylerwittig@utexas.edu">tylerwittig@utexas.edu</a></td>
+						</tr>
+					</table>
+				</section>
 
 			</div>
 
+			<br />
 			<!-- Page Footer -->
-			<div class="masthead" id="footer"></div>
+			<footer></footer>
 
 		</div>
 	</body>

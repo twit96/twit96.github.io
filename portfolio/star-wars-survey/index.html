@@ -9,6 +9,7 @@
 
 		<!-- Load CSS Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/masthead.css" />
 
     <!-- Import jQuery -->
@@ -17,7 +18,7 @@
 		<!-- Load Navigation Bar -->
 		<script>
 			$(function(){
-				$('#nav').load('/assets/templates/nav.html')
+				$('header').load('/assets/templates/header.html')
 			});
 		</script>
   </head>
@@ -26,7 +27,7 @@
 		<div id="article">
 
 			<!-- Navigation Bar -->
-			<div class="masthead" id="nav"></div>
+			<header></header>
 
 			<!-- Page Heading -->
 			<div class="heading">
