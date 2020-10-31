@@ -185,11 +185,12 @@ header li {
 section {
   /* self style */
   background-color: var(--main-color);
+  box-shadow: 0 0 0.5em var(--shadow-color) inset;
   border-radius: 15px;
   /* layout style */
   padding: 2.5%;
   margin: 0.75em auto;
-  line-height: 130%;
+  line-height: 1.5em;
   max-width: 90%;
 }
 
@@ -210,7 +211,10 @@ section p {
 }
 
 /* experience section ------------------------------------------------------ */
-#experience { background: 0; }
+#experience {
+  background: none;
+  box-shadow: none;
+}
 
 #experience i {
   /* date format text style */
