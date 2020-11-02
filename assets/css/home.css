@@ -167,6 +167,7 @@ header li {
   /* make image circular */
   border-radius: 50%;
   border: 7px solid var(--root-color);
+  box-shadow: 0 0 0.5em var(--shadow-color);
 }
 
 /* swap icon with profile picture on page mouseover */
