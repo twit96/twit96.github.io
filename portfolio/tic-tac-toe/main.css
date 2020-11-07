@@ -1,0 +1,91 @@
+/* Config HTML ------------------------------------------------------------- */
+:root {
+  /* reused colors */
+  --main-color: #f2f2f2;
+  --accent-color: #0066ff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* centered and arbitrary max width set */
+  margin: 0 auto;
+  /* position of children */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Game Board -------------------------------------------------------------- */
+table {
+  max-width: 960px;
+  margin: 1em 5%;
+}
+
+button {
+  width: 25vw;
+  height: 25vw;
+  max-width: 150px;
+  max-height: 150px;
+  font-size: 3em;
+  color: var(--accent-color);
+  border: 0;
+  border-radius: 50%;
+  margin: min(1vw, 5px);
+}
+
+button:hover { box-shadow: 0 0 0.5em var(--accent-color) inset; }
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0.15em var(--accent-color);
+}
+
+/* Replay Button ----------------------------------------------------------- */
+#replay {
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 15px;
+  border: 0;
+  padding: 0.75em;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+#replay:hover {
+  cursor: pointer;
+  box-shadow: 0 0 1em var(--accent-color);
+}
+
+#replay:focus {
+  outline: none;
+}
+
+/* Scoreboard -------------------------------------------------------------- */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* add padding to body content to account for fixed footer */
+body { padding-bottom: 100px;}
+
+footer h2 { text-align: center; }
+
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  margin: 0 auto;
+  max-width: 450px;
+}
