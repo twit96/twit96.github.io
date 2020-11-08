@@ -1,7 +1,7 @@
 /* Config HTML ------------------------------------------------------------- */
 :root {
   /* reused colors */
-  --main-color: #f2f2f2;
+  --main-color: #fff;
   --accent-color: #0066ff;
 }
 
@@ -19,7 +19,7 @@ header {
   width: 100%;
   text-align: center;
   background-color: var(--accent-color);
-  color: white;
+  color: var(--main-color);
 }
 
 /* Game Board -------------------------------------------------------------- */
@@ -50,7 +50,7 @@ button:focus {
 /* Replay Button ----------------------------------------------------------- */
 #replay {
   background-color: var(--accent-color);
-  color: white;
+  color: var(--main-color);
   border-radius: 15px;
   border: 0;
   padding: 0.75em;
@@ -74,7 +74,7 @@ footer {
   bottom: 0;
   right: 0;
   background-color: var(--accent-color);
-  color: white;
+  color: var(--main-color);
 }
 
 /* add padding to body content to account for fixed footer */

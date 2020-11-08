@@ -2,6 +2,7 @@
 var turn = 0;
 var symbols = ["X", "O"];
 var played = ["","","","","","","","",""];
+var winner = false;
 
 // button click event
 $("button").click(function(e) {
@@ -17,9 +18,11 @@ $("button").click(function(e) {
     played[e.target.id] = symbol;
 
     // check for winner
-    if (check_win(symbol)) {
+    if (check_win(symbol) && !winner) {
       alert(String(symbol) + " has won!");  // alert winner
       update_score(symbol);  // update scoreboard
+      winner = true;
+      setTimeout(() => { reset_board() }, 1000);
 
     // update turn counter if no winner
     } else {
@@ -103,8 +106,9 @@ function reset_board() {
     played[i] = "";
   }
 
-  // reset turn
+  // reset turn and winner variables
   turn = 0;
+  winner = false;
 }
 
 // replay button click event
