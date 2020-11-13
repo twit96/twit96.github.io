@@ -22,11 +22,20 @@ a:hover {
 
 
 /* General Classes --------------------------------------------------------- */
+a.emphasis {
+  /* emphasized links */
+  padding: 0 0.5em;
+  font-weight: bold;
+  border-left: 2px solid var(--dim-accent-color);
+  border-right: 2px solid var(--dim-accent-color);
+}
+
 .no-break {
   /* prevent text breaks (inline) */
   white-space: nowrap;
 }
 
+.r-float { float: right; }
 
 .short-text {
   /* displayed below large screen breakpoint, hidden above */
@@ -200,6 +209,9 @@ section h2 {
   padding-bottom: 0.5em;
   margin: 0.25em 0.5em 0.5em 0.25em;
 }
+
+
+#experience h2 { margin: 0 0 0.5em 0; }
 
 section p {
   margin: 0.5em;
