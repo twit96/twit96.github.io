@@ -1,6 +1,25 @@
-/* Light and Dark Mode ----------------------------------------------------- */
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Table of Contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  - Light and Dark Mode (Root)
+  - HTML Config
+  - General Classes
+
+  - Animated Circles Background
+  - Header/Footer Bar
+
+  - Intro Content
+  - Portfolio Projects Section
+  - Experience Section
+  - Contact Section
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+
+/* Light and Dark Mode (Root) ---------------------------------------------- */
 :root {
-  /* Light Mode */
+  /* Default - Light Mode */
   --root-color: #fff;
   --main-text-color: #000;
   --main-color: #f0f0f0;
@@ -10,7 +29,7 @@
 }
 
 :root.invert-color-scheme {
-  /* Dark Mode */
+  /* Toggleable - Dark Mode */
   --root-color: #171717;
   --main-text-color: #e0e0e0;
   --main-color: #474747;
@@ -19,10 +38,10 @@
   --shadow-color: #171717;
 }
 
-/* If user prefers dark theme, swap root and invert color schemes */
+/* If user prefers dark theme, swap root and inverted color schemes */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark Mode */
+    /* Default - Dark Mode */
     --root-color: #171717;
     --main-text-color: #e0e0e0;
     --main-color: #474747;
@@ -31,7 +50,7 @@
     --shadow-color: #171717;
   }
   :root.invert-color-scheme {
-    /* Light Mode */
+    /* Toggleable - Light Mode */
     --root-color: #fff;
     --main-text-color: #000;
     --main-color: #f0f0f0;
@@ -48,11 +67,9 @@
   -ms-transition:     all 0.2s ease;
   -o-transition:      all 0.2s ease;
   transition:         all 0.2s ease;
-  /* Print background colors (Chrome, Safari) */
-  -webkit-print-color-adjust: exact !important;
 }
 
-/* Toggle Slider */
+/* Light/Dark Mode Toggle Slider */
 #toggle {
   position: relative;
   display: inline-block;
@@ -104,7 +121,31 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* General HTML ------------------------------------------------------------ */
+
+/* HTML Config ------------------------------------------------------------- */
+* {
+  /* Print background colors (Chrome, Safari) */
+  -webkit-print-color-adjust: exact !important;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  /* font size (16px=100%, 10px=62.5%) */
+  font-size: 100%;
+  background-color: var(--root-color);
+  /* set scrollbar always active */
+  height: 101%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: var(--main-text-color);
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -112,6 +153,28 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+section {
+  /* self style */
+  background-color: var(--main-color);
+  box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  border-radius: 15px;
+  /* layout style */
+  padding: 2.5%;
+  margin: 0.75em auto;
+  line-height: 1.5em;
+  max-width: 90%;
+}
+
+section h2 {
+  border-bottom: 3px solid var(--dim-accent-color);
+  padding-bottom: 0.5em;
+  margin: 0.25em 0.5em 0.5em 0.25em;
+}
+
+section p {
+  margin: 0.5em;
 }
 
 
@@ -137,30 +200,75 @@ a:hover {
   .full-text { display: inline-block; }
 }
 
-/* Page Containers --------------------------------------------------------- */
-html {
-  margin: 0;
-  padding: 0;
-  /* font size (16px=100%, 10px=62.5%) */
-  font-size: 100%;
-  background-color: var(--root-color);
-  /* set scrollbar always active */
-  height: 101%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  color: var(--main-text-color);
-}
-
 .page-wrapper {
   /* contents of page */
   max-width: 960px;
   margin: 0 auto;
 }
+
+
+/* Animated Circles Background --------------------------------------------- */
+.ripple-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  width: 150vw;
+  height: 150vw;
+  left: -75vw;
+  top: -75vw;
+  /* style */
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  /* animation */
+  animation: ripple 15s infinite ease-in;
+  visibility: hidden;
+}
+
+.flipped {
+  /* class to reposition second set of circles */
+  top: auto;
+  left: 25vw;
+  bottom: -75vw;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.15;
+    visibility: visible;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.circle:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.circle:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.circle:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.circle:nth-child(5) {
+  animation-delay: 12s;
+}
+
 
 /* Header/Footer Bar ------------------------------------------------------- */
 header, footer {
@@ -276,50 +384,6 @@ header li {
   display: inline-block;
 }
 
-/* page sections ----------------------------------------------------------- */
-section {
-  /* self style */
-  background-color: var(--main-color);
-  box-shadow: 0 0 0.5em var(--shadow-color) inset;
-  border-radius: 15px;
-  /* layout style */
-  padding: 2.5%;
-  margin: 0.75em auto;
-  line-height: 1.5em;
-  max-width: 90%;
-}
-
-section h2 {
-  border-bottom: 3px solid var(--dim-accent-color);
-  padding-bottom: 0.5em;
-  margin: 0.25em 0.5em 0.5em 0.25em;
-}
-
-
-#experience h2 { margin: 0 0 0.5em 0; }
-
-section p {
-  margin: 0.5em;
-}
-
-
-/* about section ----------------------------------------------------------- */
-#about p {
-  margin-right: 1em;
-}
-
-/* experience section ------------------------------------------------------ */
-#experience {
-  background: none;
-  box-shadow: none;
-}
-
-#experience i {
-  /* date format text style */
-  float: right;
-  font-size: 90%;
-  font-weight: bold;
-}
 
 /* portfolio projects section ---------------------------------------------- */
 article {
@@ -418,72 +482,23 @@ article h1 {
   margin-top: auto;
 } */
 
+/* experience section ------------------------------------------------------ */
+#experience {
+  background: none;
+  box-shadow: none;
+}
+
+#experience h2 { margin: 0 0 0.5em 0; }
+
+#experience i {
+  /* date format text style */
+  float: right;
+  font-size: 90%;
+  font-weight: bold;
+}
+
 /* contact section --------------------------------------------------------- */
 th {
   text-align: left;
   padding-right: 1em;
-}
-
-
-
-/* Circles ----------------------------------------------------------------- */
-.ripple-background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.circle {
-  position: absolute;
-  width: 150vw;
-  height: 150vw;
-  left: -75vw;
-  top: -75vw;
-  /* style */
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  /* animation */
-  animation: ripple 15s infinite ease-in;
-  visibility: hidden;
-}
-
-.flipped {
-  /* class to reposition second set of circles */
-  top: auto;
-  left: 25vw;
-  bottom: -75vw;
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 0.15;
-    visibility: visible;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-.circle:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.circle:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.circle:nth-child(3) {
-  animation-delay: 6s;
-}
-
-.circle:nth-child(4) {
-  animation-delay: 9s;
-}
-
-.circle:nth-child(5) {
-  animation-delay: 12s;
 }
