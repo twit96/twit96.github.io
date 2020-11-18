@@ -1,16 +1,88 @@
+/* Light and Dark Mode ----------------------------------------------------- */
 :root {
+  /* Light Mode */
   --root-color: #fff;
+  --main-text-color: #000;
   --main-color: #f0f0f0;
   --accent-color: #0066ff;
   --dim-accent-color: #dbdbdb;
   --shadow-color: #b0b0b0;
 }
 
+:root.dark {
+  /* Dark Mode */
+  --root-color: #171717;
+  --main-text-color: #e0e0e0;
+  --main-color: #474747;
+  --accent-color: #0052cf;
+  --dim-accent-color: #636363;
+  --shadow-color: #171717;
+}
+
 * {
+  /* pretty transition between light and dark mode */
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+  transition:         all 0.2s ease;
   /* Print background colors (Chrome, Safari) */
   -webkit-print-color-adjust: exact !important;
 }
 
+/* Toggle Slider */
+#toggle {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: 60px;
+  height: 34px;
+  margin: 0.25em 0 0 2.5%;
+}
+
+#toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:var(--dim-accent-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--root-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* General HTML ------------------------------------------------------------ */
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -49,7 +121,7 @@ html {
   padding: 0;
   /* font size (16px=100%, 10px=62.5%) */
   font-size: 100%;
-  background-color: var(--main-bg-color);
+  background-color: var(--root-color);
   /* set scrollbar always active */
   height: 101%;
 }
@@ -59,6 +131,7 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  color: var(--main-text-color);
 }
 
 .page-wrapper {
@@ -106,7 +179,7 @@ footer nav {
 
 /* header/footer link style */
 header a, footer a {
-  color: black;
+  color: var(--main-text-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
@@ -121,7 +194,7 @@ footer a:hover {
 
 /* active link */
 header .active, footer .active {
-  color: white;
+  color: var(--root-color);
   font-weight: bold;
   text-decoration: underline;
 }
@@ -257,7 +330,7 @@ article h1 {
 }
 
 .card-list::-webkit-scrollbar-track {
-  background-color: var(--main-bg-color);
+  background-color: var(--root-color);
   box-shadow: inset 2px 2px 2px var(--sub-bg-color), inset -2px -2px 2px var(--sub-bg-color);
   border-radius: 15px;
 }

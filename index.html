@@ -9,6 +9,7 @@
 
 		<link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 		<script src="/assets/js/jquery-3.5.1.min.js"></script>
+		<script src="/assets/js/toggles.js" defer></script>
 		<script>
 			// Load Navigation Bar and Project Overviews
 			$(function(){
@@ -24,7 +25,6 @@
 
 	<body>
 		<div id="portfolio">
-
 			<!-- Animated Background -->
 			<div class="ripple-background">
 				<div class="circle"></div>
@@ -46,6 +46,12 @@
 
 			<!-- Page Contents -->
 			<div class="page-wrapper">
+				<!-- Rounded switch -->
+				<label id="toggle">
+					<input type="checkbox">
+					<span class="slider"></span>
+				</label>
+
 
 				<div id="intro">
 					<img id="avatar-sub" src="/assets/img/icon.png" alt="Logo Icon">
