@@ -104,8 +104,8 @@ ol, ul {
   padding: 0 0.5em;
   margin: 0.25em;
   display: inline-block;
-  border-left: 2px solid var(--main-emphasis-color);
-  border-right: 2px solid var(--main-emphasis-color);
+  border-left: 2px solid var(--dim-accent-color);
+  border-right: 2px solid var(--dim-accent-color);
 }
 
 .date-text {
@@ -135,9 +135,9 @@ ol, ul {
 
 .container.bubble {
   /* styled container - grey background, rounded corners */
-  background-color: var(--sub-bg-color);
+  background-color: var(--main-color);
   border-radius: 10px;
-  border-bottom: 3px solid var(--main-emphasis-color);
+  border-bottom: 3px solid var(--shadow-color);
 }
 
 /* Page Heading */

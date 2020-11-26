@@ -58,16 +58,23 @@
     --dim-accent-color: #dbdbdb;
     --shadow-color: #b0b0b0;
   }
+
+  /* Reduce Image Brightness */
+  img { filter: brightness(75%); }
+  img:hover { filter: brightness(100%); }
+  /* fix for filter making img display over other cards */
+  img { z-index: 1; }
+  .card { z-index: 2; }
 }
 
-/* pretty transition between light and dark mode */
-/* * {
+/* animated transition between light and dark mode */
+* {
   -webkit-transition: all 0.2s ease;
   -moz-transition:    all 0.2s ease;
   -ms-transition:     all 0.2s ease;
   -o-transition:      all 0.2s ease;
   transition:         all 0.2s ease;
-} */
+}
 
 /* Light/Dark Mode Toggle Slider */
 #toggle {
@@ -405,7 +412,6 @@ article h1 {
   padding: 1.5em 0 1em 0;
   border-top: 3px solid var(--dim-accent-color);
 }
-
 .card-list::-webkit-scrollbar {
   width: 10px;
   height: 10px;
