@@ -26,7 +26,6 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  line-height: 175%;
 }
 
 .page-wrapper {
@@ -275,9 +274,10 @@ ol, ul {
 .flex .bubble {
   /* fix height of overview cards */
   height: 95%;
-  /* -moz-box-shadow:    0 0 1em var(--shadow-color); */
-  /* -webkit-box-shadow: 0 0 1em var(--shadow-color); */
-  box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  line-height: 130%;
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
 }
 
 .flex .bubble .container {
