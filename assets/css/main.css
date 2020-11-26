@@ -89,7 +89,7 @@ img.icon {
   /* fix color reverting on hover */
   img.icon:hover { filter: invert(0.85); }
   /* fix z-index issues caused by filter function */
-  #footer { z-index: 1000; }
+  #footer { z-index: 1000; } 
 }
 
 ol, ul {
