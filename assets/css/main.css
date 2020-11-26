@@ -26,6 +26,7 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
+  line-height: 175%;
 }
 
 .page-wrapper {
@@ -139,6 +140,7 @@ ol, ul {
   border-radius: 10px;
   border-bottom: 3px solid var(--shadow-color);
 }
+
 
 /* Page Heading */
 .heading {
@@ -268,10 +270,19 @@ ol, ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 .flex .bubble {
   /* fix height of overview cards */
   height: 95%;
+  /* -moz-box-shadow:    0 0 1em var(--shadow-color); */
+  /* -webkit-box-shadow: 0 0 1em var(--shadow-color); */
+  box-shadow: 0 0 0.5em var(--shadow-color) inset;
+}
+
+.flex .bubble .container {
+  padding: 2.5%;
+  box-sizing: border-box;
 }
 
 #portfolio .vignette-container {
