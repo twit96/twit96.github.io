@@ -146,7 +146,6 @@ ol, ul {
   /* styled container - grey background, rounded corners */
   background-color: var(--main-color);
   border-radius: 10px;
-  border-bottom: 3px solid var(--shadow-color);
 }
 
 
@@ -213,7 +212,9 @@ ol, ul {
   box-sizing: border-box;
   /* flex properties */
   display: flex;
-  /* justify-content: space-evenly; */
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
 }
 #business-card .container {
   /* background-color: white; */
@@ -303,6 +304,8 @@ ol, ul {
 #resume .page-wrapper {
   /* page width override on resume page */
   max-width: 800px;
+  line-height: 130%;
+
 }
 
 
