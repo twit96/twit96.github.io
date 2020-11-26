@@ -166,7 +166,9 @@ a:hover {
 section {
   /* self style */
   background-color: var(--main-color);
-  box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
   border-radius: 15px;
   /* layout style */
   padding: 2.5%;
@@ -376,7 +378,9 @@ header li {
   /* make image circular */
   border-radius: 50%;
   border: 7px solid var(--root-color);
-  box-shadow: 0 0 0.5em var(--shadow-color);
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
 }
 
 /* swap icon with profile picture on page mouseover */
@@ -423,7 +427,8 @@ article h1 {
 
 .card-list::-webkit-scrollbar-track {
   background-color: var(--root-color);
-  box-shadow: inset 2px 2px 2px var(--main-color), inset -2px -2px 2px var(--main-color);
+  box-shadow:         2px 2px 2px var(--main-color) inset,
+                      -2px -2px 2px var(--main-color) inset;
   border-radius: 15px;
 }
 
@@ -436,8 +441,12 @@ article h1 {
 
   background-color: var(--main-color);
   border-radius: 10px;
-  box-shadow: -1rem 0 3em var(--shadow-color) inset;
-
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset,
+                      -1rem 0 3em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset,
+                      -1rem 0 3em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset,
+                      -1rem 0 3em var(--shadow-color) inset;
   transition: .15s;
 }
 
