@@ -384,14 +384,14 @@ header li {
 }
 
 /* swap icon with profile picture on page mouseover */
-#avatar-sub {
+.avatar-sub {
   display: none;
 }
 
-.page-wrapper:hover #avatar-main {
+.page-wrapper:hover .avatar-main {
   display: none;
 }
-.page-wrapper:hover #avatar-sub {
+.page-wrapper:hover .avatar-sub {
   display: inline-block;
 }
 
@@ -513,8 +513,64 @@ article h1 {
 }
 
 /* contact section --------------------------------------------------------- */
-th {
-  text-align: left;
-  padding-right: 1em;
-  padding-left: 0.5em;
+.business-card {
+  display: flex;
+  justify-content: center;
+}
+
+.business-card-container {
+  width: 35%;
+  margin: 1em 0;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.business-card-container:nth-child(1) {
+  border-right: 1px solid var(--dim-accent-color);
+  flex-shrink: 5;
+}
+.business-card-container:nth-child(2) {
+  flex-grow: 5;
+}
+
+.business-card-container h3 {
+  padding: 0 0.5em;
+  border-left: 2px solid var(--dim-accent-color);
+  border-right: 2px solid var(--dim-accent-color);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: min(1.5em, 4vmin);
+  font-weight: bold;
+}
+
+.business-card-container img {
+  width: min(75%, 150px);
+  border-radius: 50%;
+}
+
+.business-card .avatar-main, .business-card .avatar-sub {
+  border: 3px solid black;
+}
+
+.link-card {
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.link-card img {
+  width: min(25%, 75px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .link-card img { filter: invert(0.85); }
+}
+
+.link-card a {
+  margin-left: 1em;
+  font-weight: bold;
 }
