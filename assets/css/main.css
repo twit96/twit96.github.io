@@ -180,7 +180,7 @@ ol, ul {
 
 .banner {
   /* heading container - bottom text banner for page description */
-  background-image: linear-gradient(black, var(--sub-bg-color), var(--sub-bg-color), var(--sub-bg-color), var(--sub-bg-color));
+  background-image: linear-gradient(black, var(--main-color), var(--main-color), var(--main-color), var(--main-color));
   position: relative;
   overflow: hidden;
   border-bottom: 2px solid black;
