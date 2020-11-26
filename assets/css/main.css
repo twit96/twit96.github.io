@@ -83,6 +83,15 @@ img.icon {
   margin: 2.5%;
 }
 
+@media (prefers-color-scheme: dark) {
+  /* change SVG images from black to white outlines */
+  img.icon { filter: invert(0.85); }
+  /* fix color reverting on hover */
+  img.icon:hover { filter: invert(0.85); }
+  /* fix z-index issues caused by filter function */
+  #footer { z-index: 1000; }
+}
+
 ol, ul {
   padding: 0 1.5em;
 }
@@ -200,18 +209,18 @@ ol, ul {
 /* Contact Page Business Card */
 #business-card {
   max-width: 750px;
-  height: 45vw;
-  max-height: 350px;
   padding: 0.5em;
-  font-size: 2.65vmin;
+  box-sizing: border-box;
   /* flex properties */
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 #business-card .container {
   /* background-color: white; */
   width: 50%;
   margin: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   /* flex properties */
   display: flex;
   flex-direction: column;
