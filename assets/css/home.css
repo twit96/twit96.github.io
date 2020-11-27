@@ -559,6 +559,12 @@ footer .wrapper a {
   padding: 0 1em;
 }
 
+.card .links {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 /* education section ------------------------------------------------------- */
 #education a {
   float: right;
