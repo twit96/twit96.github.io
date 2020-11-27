@@ -10,10 +10,10 @@
 		<link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 		<script src="/assets/js/jquery-3.5.1.min.js"></script>
 		<script src="/assets/js/toggles.js" defer></script>
+		<script src="/assets/js/header.js" defer></script>
 		<script>
 			// Load Navigation Bar and Project Overviews
 			$(function(){
-				$('header').load('/assets/templates/header.html')
 				$('#skills').load('/assets/templates/skills.html')
 				$('#experience').load('/assets/templates/experience.html')
 
@@ -42,7 +42,36 @@
 			</div>
 
 			<!-- Navigation Bar -->
-			<header></header>
+			<header>
+				<div class="wrapper">
+				  <!-- Title and Tagline -->
+				  <div id="title-nav">
+				    <a class="title" href="javascript:;">Tyler Wittig</a>
+				    <span>Web Developer</span>
+				  </div>
+				  <!-- Hamburger Icon -->
+				  <svg class="hamburger-icon" viewBox="0 0 50 50">
+				    <line x1="7.5" y1="12.5" x2="42.5" y2="12.5"></line>
+				    <line x1="7.5" y1="25" x2="42.5" y2="25"></line>
+				    <line x1="7.5" y1="37.5" x2="42.5" y2="37.5"></line>
+				  </svg>
+				  <!-- Full Nav -->
+				  <ul id="full-nav">
+				    <li><a class="projects" href="javascript:;">Projects</a></li>
+				    <li><a class="education" href="javascript:;">Résumé</a></li>
+				    <li><a class="contact" href="javascript:;">Contact</a></li>
+				  </ul>
+				</div>
+
+				<!-- Small Nav -->
+				<ul id="small-nav">
+					<li><a class="projects" href="javascript:;">Projects</a></li>
+					<li><a class="education" href="javascript:;">Résumé</a></li>
+					<li><a class="contact" href="javascript:;">Contact</a></li>
+				</ul>
+				<!-- background -->
+				<div id="small-nav-bg"></div>
+			</header>
 
 			<!-- Page Contents -->
 			<div class="page-wrapper">

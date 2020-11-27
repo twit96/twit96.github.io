@@ -186,6 +186,22 @@ section p {
   margin: 0.5em;
 }
 
+svg {
+  stroke: var(--root-color);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  border-radius: 50%;
+  padding: 0.25em;
+  transition: background-color 0.25s linear, color 0.25s linear;
+}
+
+svg.wasClicked {
+  stroke: var(--accent-color);
+  background-color: var(--root-color);
+}
+
 
 /* General Classes --------------------------------------------------------- */
 .no-break {
@@ -280,61 +296,42 @@ section p {
 
 
 /* Header/Footer Bar ------------------------------------------------------- */
+/* ------------------------------------------------------------------ Config */
 header, footer {
   background-color: var(--accent-color);
   color: white;
   overflow: hidden;
 }
 
-/* bigger header text */
-header { font-size: 1.25em; }
-
-/* smaller footer text */
-footer { font-size: 0.95em; }
-
-/* header navigation content wrapper */
-header nav {
-  max-width: 1000px;
+/* content wrapper */
+header .wrapper, footer .wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5em 2.5%;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  align-items: center;
 }
 
-@media (max-width: 43.75em) {
-  header nav {
-    justify-content: center;
-  }
-}
-
-/* footer navigation content wrapper */
-footer nav {
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0.25em auto;
-}
-
-/* header/footer link style */
+/* links */
 header a, footer a {
   color: var(--main-text-color);
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
+  transition: color 0.5s ease-in-out;
 }
 
-header a:hover {
+header a:hover, footer a:hover {
   background-color: #dbdbdb25;
-}
-footer a:hover {
-  background-color: #dbdbdb25;
+  color: var(--root-color);
+  text-decoration: underline;
 }
 
 /* active link */
 header .active, footer .active {
   color: var(--root-color);
-  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -345,17 +342,83 @@ header .title, footer .title {
   text-shadow: 1px 1px black;
 }
 
-/* header navigation links lists */
-header ul {
+/* navigation links */
+header ul, footer ul {
+  margin: 0.25em 0;
   list-style: none;
-  margin: 0% 2%;
-  padding: 0.75em;
-  display: inline-block;
-  white-space: nowrap;
 }
 
-header li {
-  display: inline-block;
+header li, footer li { display: inline-block; }
+
+/* ---------------------------------------------------------- header content */
+header {
+  position: fixed;
+  left: 0; top: 0; right: 0;
+  z-index: 1000;
+  font-size: 1.25em;
+}
+
+header + .page-wrapper {
+  /* add space to page for fixed header */
+  padding-top: 55px;
+}
+
+/* Title and Tagline */
+@media (max-width: 400px) {
+  /* hide tagline on smaller screens */
+  header span { display: none; }
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  height: 25px;
+  display: none;
+  /* wasClicked animation */
+  -moz-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.hamburger-icon.wasClicked {
+  transform: rotate(-540deg);
+}
+
+/* Full Nav */
+@media (max-width: 700px) {
+  /* swap full nav with hamburger icon on small screens */
+  #full-nav { display: none; }
+  .hamburger-icon { display: block; }
+}
+
+/* Small Nav */
+#small-nav {
+  display: none;
+  text-align: right;
+  padding-right: 2.5%;
+}
+
+#small-nav li {
+  display: block;
+  margin: 1.25em 0;
+}
+
+#small-nav-bg {
+  /* background image */
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000000bb;
+  display: none;
+}
+
+/* ---------------------------------------------------------- footer content */
+footer {
+  font-size: 0.95em;
+  text-align: center;
+}
+
+footer .wrapper a {
+  margin: 0 auto;
 }
 
 
@@ -494,6 +557,13 @@ header li {
 
 .card p {
   padding: 0 1em;
+}
+
+/* education section ------------------------------------------------------- */
+#education a {
+  float: right;
+  margin-top: 0.75em;
+  margin-right: 2.5%;
 }
 
 /* experience section ------------------------------------------------------ */
