@@ -397,7 +397,7 @@ header li {
 
 
 /* portfolio projects section ---------------------------------------------- */
-article {
+#projects {
   /* layout style */
   padding: 0 2.5% 2.5% 2.5%;
   margin: 0.75em auto;
@@ -405,8 +405,12 @@ article {
   max-width: 90%;
 }
 
-article h1 {
+#projects h1 {
   margin-bottom: 0.25em;
+}
+
+#projects a {
+  float: right;
 }
 
 .card-list {
@@ -491,11 +495,6 @@ article h1 {
 .card p {
   padding: 0 1em;
 }
-
-/* only need this if you remove 'align-items center' on 'card-list' class */
-/* .card .links {
-  margin-top: auto;
-} */
 
 /* experience section ------------------------------------------------------ */
 #experience {
