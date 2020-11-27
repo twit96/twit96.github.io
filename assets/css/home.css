@@ -371,7 +371,7 @@ header + .page-wrapper {
 
 /* Hamburger Icon */
 .hamburger-icon {
-  height: 25px;
+  height: 26.5px;
   display: none;
   /* wasClicked animation */
   -moz-transition: transform 0.5s;
