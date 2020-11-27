@@ -139,7 +139,7 @@ html {
   margin: 0;
   padding: 0;
   /* font size (16px=100%, 10px=62.5%) */
-  font-size: 100%;
+  font-size: 110%;
   line-height: 1.5em;
   background-color: var(--root-color);
   /* set scrollbar always active */
@@ -444,6 +444,13 @@ footer .wrapper a {
   -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
   -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
   box-shadow:         0 0 0.5em var(--shadow-color) inset;
+}
+
+@media (max-width: 450px) {
+  #intro img {
+    width: 86.5%;
+    margin-bottom: 1em;
+  }
 }
 
 /* swap icon with profile picture on page mouseover */
