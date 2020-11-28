@@ -532,15 +532,6 @@ doesn't cause temporary line break during animation
   transition: .15s;
 }
 
-/* emphasized link text (has left and right border bars) */
-.card a {
-  padding: 0 0.5em;
-  margin: 0.25em;
-  display: inline-block;
-  border-left: 2px solid var(--dim-accent-color);
-  border-right: 2px solid var(--dim-accent-color);
-}
-
 .card img {
   display: block;
   width: 100%;
@@ -553,6 +544,22 @@ doesn't cause temporary line break during animation
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+}
+
+.card .date-text {
+  color: var(--shadow-color);
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+/* emphasized link text (has left and right border bars) */
+.card a {
+  padding: 0 0.5em;
+  margin: 0.25em;
+  display: inline-block;
+  font-size: 0.95em;
+  border-left: 2px solid var(--dim-accent-color);
+  border-right: 2px solid var(--dim-accent-color);
 }
 
 /* refactor card layout on small screens */
@@ -609,7 +616,7 @@ doesn't cause temporary line break during animation
 }
 
 .business-card-container {
-  width: 35%;
+  width: 40%;
   margin: 1em 0;
   padding: 0 1em;
   display: flex;
@@ -633,9 +640,10 @@ doesn't cause temporary line break during animation
   border-right: 2px solid var(--dim-accent-color);
   margin-top: 1em;
   margin-bottom: 0.5em;
-  font-size: min(1.5em, 4vmin);
   font-weight: bold;
 }
+
+.business-card-container .shrink-text { font-size: min(1.5em, 4vw); }
 
 .business-card-container img {
   width: min(75%, 150px);
@@ -662,5 +670,5 @@ doesn't cause temporary line break during animation
 
 .link-card a {
   margin-left: 1em;
-  font-weight: bold;
+  /* font-weight: bold; */
 }

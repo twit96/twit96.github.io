@@ -1,5 +1,4 @@
 // All Nav Links Click Behavior - Scroll to position on page ------------------
-
 $.fn.scrollView = function () {
     return this.each(function () {
         $('html, body').animate({
