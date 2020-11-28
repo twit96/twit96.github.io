@@ -4,12 +4,18 @@
   - Light and Dark Mode (Root)
   - HTML Config
   - General Classes
-
   - Animated Circles Background
+
   - Header/Footer Bar
+    - config
+    - header content
+    - footer content
 
   - Intro Content
-  - Portfolio Projects Section
+  - Portfolio Projects Cards List
+    - config
+    - homepage
+    - all projects page
   - Experience Section
   - Contact Section
 
@@ -296,7 +302,7 @@ svg.wasClicked {
 
 
 /* Header/Footer Bar ------------------------------------------------------- */
-/* ------------------------------------------------------------------ Config */
+/* ------------------------------------------------------------------ config */
 header, footer {
   background-color: var(--accent-color);
   color: white;
@@ -422,7 +428,7 @@ footer .wrapper a {
 }
 
 
-/* intro content ----------------------------------------------------------- */
+/* Intro Content ----------------------------------------------------------- */
 #intro {
   padding: 1em 0;
 }
@@ -454,7 +460,7 @@ footer .wrapper a {
 }
 
 
-/* about section ----------------------------------------------------------- */
+/* About Section ----------------------------------------------------------- */
 
 /* base heading font-size on vw for small screens */
 @media (max-width: 425px) {
@@ -474,30 +480,8 @@ doesn't cause temporary line break during animation
 }
 
 
-/* portfolio projects section ---------------------------------------------- */
-#projects {
-  /* layout style */
-  padding: 0 2.5% 2.5% 2.5%;
-  margin: 0.75em auto;
-  line-height: 130%;
-  max-width: 90%;
-}
-
-#projects h1 {
-  margin-bottom: 0.25em;
-}
-
-#projects a {
-  float: right;
-}
-
-.card-list {
-  display: flex;
-  align-items: center;
-  overflow-x: scroll;
-  padding: 1.5em 0 1em 0;
-  border-top: 3px solid var(--dim-accent-color);
-}
+/* Portfolio Projects Cards List ------------------------------------------- */
+/* ------------------------------------------------------------------ config */
 .card-list::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -546,10 +530,20 @@ doesn't cause temporary line break during animation
   text-align: center;
 }
 
+.card p {
+  margin: 1em;
+}
+
 .card .date-text {
   color: var(--shadow-color);
   font-style: italic;
   font-size: 0.75em;
+}
+
+.card .links {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 /* emphasized link text (has left and right border bars) */
@@ -561,40 +555,88 @@ doesn't cause temporary line break during animation
   border-left: 2px solid var(--dim-accent-color);
   border-right: 2px solid var(--dim-accent-color);
 }
+/* ---------------------------------------------------------------- homepage */
+#projects {
+  /* layout style */
+  padding: 0 2.5% 2.5% 2.5%;
+  margin: 0.75em auto;
+  line-height: 130%;
+  max-width: 90%;
+}
+
+#projects h1 {
+  margin-bottom: 0.25em;
+}
+
+#projects a {
+  float: right;
+}
+
+#projects .card-list {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 1.5em 0 1em 0;
+  border-top: 3px solid var(--dim-accent-color);
+}
 
 /* refactor card layout on small screens */
-@media (max-width: 450px) { .card { min-width: 95%; } }
+@media (max-width: 450px) { #projects .card { min-width: 95%; } }
 
-.card:hover {
+#projects .card:hover {
   transform: translateY(-1rem);
 }
 
-.card:hover~.card {
+#projects .card:hover~.card {
   transform: translateX(130px);
 }
 
-.card:not(:first-child) {
+#projects .card:not(:first-child) {
   margin-left: -130px;
 }
 
-.card p {
-  padding: 0 1em;
+/* ------------------------------------------------------- all projects page */
+#all-projects h1 {
+  border-bottom: 3px solid var(--dim-accent-color);
+  padding-bottom: 0.5em;
+  margin: 1em 2.5%;
 }
 
-.card .links {
+#all-projects .card-list {
   display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-/* education section ------------------------------------------------------- */
+#all-projects .card {
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
+  /* reset min-width */
+  min-width: inherit;
+
+  margin: 0.75em 2.5%;
+}
+
+@media (min-width: 700px) {
+  #all-projects .card {
+    width: 45%;
+    margin: 0.5em;
+  }
+}
+
+
+
+
+/* Education Section ------------------------------------------------------- */
 #education a {
   float: right;
   margin-top: 0.75em;
   margin-right: 2.5%;
 }
 
-/* experience section ------------------------------------------------------ */
+/* Experience Section ------------------------------------------------------ */
 #experience {
   background: none;
   box-shadow: none;
@@ -609,7 +651,7 @@ doesn't cause temporary line break during animation
   font-weight: bold;
 }
 
-/* contact section --------------------------------------------------------- */
+/* Contact Section --------------------------------------------------------- */
 .business-card {
   display: flex;
   justify-content: center;

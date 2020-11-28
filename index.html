@@ -14,15 +14,22 @@
 		<script src="/assets/js/header.js" defer></script>
 		<script>
 			$(function(){
+				// Page Elements
 				$('#skills').load('/assets/templates/skills.html')
 				$('#experience').load('/assets/templates/experience.html')
 				$('footer').load('/assets/templates/footer.html')
+				// Project Overviews
+				$('#WittigGrass').load('/projects/wittiggrass/overview.html')
+				$('#TicTacToe').load('/projects/tic-tac-toe/overview.html')
+				$('#StarWarsSurvey').load('/projects/star-wars-survey/overview.html')
+				$('#PharaohsPhury').load('/projects/pharaohs-phury/overview.html')
+				$('#TankFighter').load('/projects/tank-fighter/overview.html')
 			});
 		</script>
 	</head>
 
 	<body>
-		<div id="portfolio">
+		<div>
 			<!-- Animated Background -->
 			<div class="ripple-background">
 				<div class="circle"></div>
@@ -105,147 +112,12 @@
 				<article id="projects">
 					<a href="/projects/">View All</a>
 					<h1>Projects</h1>
-
-					<!-- Project Overviews -->
 					<div class="card-list">
-
-						<!-- Web Programming -->
-						<!-- <div class="card"> -->
-							<!-- Title Card -->
-							<!-- <img border="0" src="/projects/web-programming/title-card.png" alt="Web Programming"> -->
-							<!-- Overview -->
-							<!-- <p>
-									<b>A Set of Web Programming Assignments</b>
-									<br />
-									<span class="date-text">In-Progress</span>
-							</p> -->
-							<!-- Description -->
-							<!-- <p class="description">
-								A mobile-responsive landing page, complete with a pure-CSS
-					      animated background, links to various assignments I've completed
-					      this semester involving JavaScript, CSS, and HTML.
-							</p> -->
-							<!-- Links -->
-							<!-- <p class="links">
-									<a href="https://fall-2020.cs.utexas.edu/cs329e-bulko/wittig/"><b>View Website</b></a>
-							</p>
-						</div> -->
-
-						<!-- Wittig Grass -->
-						<div class="card">
-							<!-- Title Card -->
-						  <img border="0" src="/projects/wittiggrass/title-card.png" alt="Wittig Grass">
-							<!-- Overview -->
-							<p>
-									<b>A Static Website Project for a Business</b>
-									<br />
-									<span class="date-text">In-Progress</span>
-							</p>
-							<!-- Description -->
-							<p class="description">
-								This <u>work-in-progress</u> static website gives a new face to a
-								business website in need of some love.
-								Background image slideshows and scrollable image cards are the first
-								of many pure CSS (no framework) features that this project has touched on.
-							</p>
-							<!-- Links -->
-							<p class="links">
-									<a href="https://twit96.github.io/wittiggrass/"><b>View Website</b></a>
-									<a href="https://github.com/twit96/wittiggrass">View GitHub</a>
-							</p>
-						</div>
-
-						<!-- Tic-Tac-Toe -->
-						<div class="card">
-							<!-- Title Card -->
-							<img border="0" src="/projects/tic-tac-toe/title-card.png" alt="Tic-Tac-Toe">
-							<!-- Overview -->
-							<p>
-									<b>A JavaScript Tic-Tac-Toe Game</b>
-									<br />
-									<span class="date-text">2020/11/06</span>
-							</p>
-							<!-- Description -->
-							<p class="description">
-								This simple take on a classic game is powered by JavaScript and
-								jQuery, and given a clean, responsive design with vanilla CSS.
-							</p>
-							<!-- Links -->
-							<p class="links">
-									<a href="/projects/tic-tac-toe/"><b>Play Now</b></a>
-							</p>
-						</div>
-
-						<!-- Star Wars Survey -->
-						<div class="card">
-							<!-- Title Card -->
-						  <img border="0" src="/projects/star-wars-survey/title-card.png" alt="Star Wars Survey Classification Analysis">
-							<!-- Overview -->
-							<p>
-								<b>A Machine Learning Classification Analysis</b>
-								<br />
-								<span class="date-text">2020/04/20</span>
-							</p>
-							<!-- Description -->
-							<p>
-								By utilizing a few machine learning classification techniques,
-								determining whether or not someone is a Star Wars fan need only
-								require their responses to a few survey questions.
-							</p>
-							<!-- Links -->
-							<p class="links">
-									<a href="/projects/star-wars-survey/"><b>View Project</b></a>
-									<a href="https://github.com/twit96/StarWarsSurvey-ClassificationAnalysis">View GitHub</a>
-							</p>
-						</div>
-
-						<!-- Pharaoh's Phury -->
-						<div class="card">
-							<!-- Title Card -->
-							<img border="0" src="/projects/pharaohs-phury/title-card.png" alt="Pharaoh's Phury">
-							<!-- Overview -->
-							<p>
-								<b>A 2D Platformer Web Game</b>
-								<br />
-								<span class="date-text">2019/12/09</span>
-							</p>
-							<!-- Description -->
-							<p>
-								After thousands of years of slumber, your place of rest has been invaded. Reclaim your prized
-								possessions, avoid traps and enemy attacks, and run the British Imperialists out of your pyramid,
-								or become their next museum exhibit.
-							</p>
-							<!-- Links -->
-							<p class="links">
-								<a href="https://twit96.github.io/PharaohsPhury_Phaser3/"><b>Play Now</b></a>
-								<a href="https://github.com/twit96/PharaohsPhury_Phaser3">View GitHub</a>
-								<a href="https://youtu.be/IQX4wJzflHA">Watch Trailer</a>
-							</p>
-						</div>
-
-						<!-- Tank Fighter -->
-						<div class="card">
-							<!-- Title Card -->
-						  <img border="0" src="/projects/tank-fighter/title-card.png" alt="Tank Fighter: Swarm of Orbs">
-							<!-- Overview -->
-							<p>
-								<b>A Top-Down Shooter Web Minigame</b>
-								<br />
-								<span class="date-text">2019/09/16</span>
-							</p>
-							<!-- Description -->
-							<p>
-								In a post-apocalyptic world, swarms of alien orbs have nearly overtaken planet Earth.
-								Your men have fallen and you have nothing left to lose.
-								As a lone tank, it is your duty to give the invaders a fight to the death that they won't soon forget.
-								Good luck, comrade.
-							</p>
-							<!-- Links -->
-							<p class="links">
-								<a href="https://twit96.github.io/TankFighter_Phaser3/"><b>Play Now</b></a>
-								<a href="https://github.com/twit96/TankFighter_Phaser3">View GitHub</a>
-							</p>
-						</div>
+						<div class="card" id="WittigGrass"></div>
+						<div class="card" id="TicTacToe"></div>
+						<div class="card" id="StarWarsSurvey"></div>
+						<div class="card" id="PharaohsPhury"></div>
+						<div class="card" id="TankFighter"></div>
 					</div>
 				</article>
 

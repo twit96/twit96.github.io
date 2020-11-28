@@ -8,15 +8,16 @@
 		<meta name="theme-color" content="black" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" href="/assets/img/icon.png" />
-		<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
 		<script src="/assets/js/jquery-3.5.1.min.js"></script>
 		<script>
 			$(function(){
+				// Page Elements
 				$('header').load('/assets/templates/header.html')
 				$('footer').load('/assets/templates/footer.html')
-				$('#TicTacToe').load('/projects/tic-tac-toe/overview.html')
+				// Projects Overviews
 				$('#WittigGrass').load('/projects/wittiggrass/overview.html')
+				$('#TicTacToe').load('/projects/tic-tac-toe/overview.html')
 				$('#StarWarsSurvey').load('/projects/star-wars-survey/overview.html')
 				$('#PharaohsPhury').load('/projects/pharaohs-phury/overview.html')
 				$('#TankFighter').load('/projects/tank-fighter/overview.html')
@@ -25,42 +26,25 @@
 	</head>
 
 	<body>
-		<div id="portfolio">
+		<div id="all-projects">
 
 			<!-- Navigation Bar -->
 			<header></header>
 
-			<!-- Page Contents -->
 			<div class="page-wrapper">
-
-				<!-- Title -->
-				<h2 align="center">Not just a portfolio website...</h2>
-				<!-- <p>
-					Over the past few months, I have programmed this portfolio website
-					from the ground up to teach myself web development.
-					I am self-taught and learning everyday, so feedback
-					and suggestions are always welcome!
-				</p> -->
-
-				<hr class="long" />
-				<br />
-
-				<!-- Project Overviews -->
-				<div class="flex">
-					<!-- <div id="WebProgramming"></div> -->
-					<div id="TicTacToe"></div>
-					<div id="WittigGrass"></div>
-					<div id="StarWarsSurvey"></div>
-					<div id="PharaohsPhury"></div>
-					<div id="TankFighter"></div>
-				</div>
-
-				<!-- Page Footer -->
-				<hr class="long" />
-				<br />
-
+				<article id="all-projects">
+					<h1>Not just a portfolio website...</h1>
+					<div class="card-list">
+						<div class="card" id="WittigGrass"></div>
+						<div class="card" id="TicTacToe"></div>
+						<div class="card" id="StarWarsSurvey"></div>
+						<div class="card" id="PharaohsPhury"></div>
+						<div class="card" id="TankFighter"></div>
+					</div>
+				</article>
 			</div>
 
+			<br />
 			<!-- Page Footer -->
 			<footer></footer>
 
