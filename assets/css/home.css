@@ -427,11 +427,6 @@ footer .wrapper a {
   padding: 1em 0;
 }
 
-#intro h1 {
-  padding-left: 5%;
-  margin-bottom: 0;
-}
-
 #intro img {
   /* float image to the right of container */
   float: right;
@@ -446,13 +441,6 @@ footer .wrapper a {
   box-shadow:         0 0 0.5em var(--shadow-color) inset;
 }
 
-@media (max-width: 450px) {
-  #intro img {
-    width: 86.5%;
-    margin-bottom: 1em;
-  }
-}
-
 /* swap icon with profile picture on page mouseover */
 .avatar-sub {
   display: none;
@@ -463,6 +451,26 @@ footer .wrapper a {
 }
 .page-wrapper:hover .avatar-sub {
   display: inline-block;
+}
+
+
+/* about section ----------------------------------------------------------- */
+
+/* base heading font-size on vw for small screens */
+@media (max-width: 425px) {
+  #about h2 {
+    font-size: 6vw;
+  }
+}
+
+/*
+remove heading animations so rotating screen from lanscape to portrait
+doesn't cause temporary line break during animation
+ */
+#about h2 {
+  -moz-transition: 0s;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 
