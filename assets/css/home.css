@@ -766,8 +766,9 @@ doesn't cause temporary line break during animation
 .business-card-container .shrink-text { font-size: min(1.5em, 4vw); }
 
 .business-card-container img {
-  width: min(75%, 150px);
   border-radius: 50%;
+  width: min(75%, 150px);
+  height: auto;
 }
 
 .business-card .avatar-main, .business-card .avatar-sub {
