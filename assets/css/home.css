@@ -210,6 +210,15 @@ svg.wasClicked {
 
 
 /* General Classes --------------------------------------------------------- */
+.emphasis {
+  /* emphasized text - border bars */
+  padding: 0 0.5em;
+  margin: 0.25em;
+  display: inline-block;
+  border-left: 2px solid var(--dim-accent-color);
+  border-right: 2px solid var(--dim-accent-color);
+}
+
 .no-break {
   /* prevent text breaks (inline) */
   white-space: nowrap;
@@ -612,14 +621,9 @@ doesn't cause temporary line break during animation
   flex-wrap: wrap;
 }
 
-/* emphasized link text (has left and right border bars) */
 .card a {
-  padding: 0 0.5em;
-  margin: 0.25em;
   display: inline-block;
   font-size: 0.95em;
-  border-left: 2px solid var(--dim-accent-color);
-  border-right: 2px solid var(--dim-accent-color);
 }
 /* ---------------------------------------------------------------- homepage */
 #projects {
@@ -744,9 +748,6 @@ doesn't cause temporary line break during animation
 }
 
 .business-card-container h3 {
-  padding: 0 0.5em;
-  border-left: 2px solid var(--dim-accent-color);
-  border-right: 2px solid var(--dim-accent-color);
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
