@@ -237,6 +237,73 @@ svg.wasClicked {
   margin: 0 auto;
 }
 
+/* -------------------------------------- (needs code refactor) page heading */
+.heading {
+  /* full screen width */
+  width: 100%;
+  background-color: black;
+}
+
+.vignette-container {
+  /* heading container - vignette image background */
+  width: 95%;
+  max-width: 900px;
+  height: 45vw;
+  max-height: 400px;
+  /* background defaults - if no override specified on page */
+  background-image:
+    radial-gradient(ellipse closest-side, #00000090, #000000),
+    url("/assets/img/default-heading.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  /* children */
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  /* text */
+  font-size: 1.25em;
+  color: white;
+}
+.vignette-container .content {
+  /* text content */
+  padding-bottom: 1em;
+}
+.vignette-container h2 {
+  /* reduce space below title */
+  margin-bottom: 0;
+}
+
+.banner {
+  /* heading container - bottom text banner for page description */
+  background-image: linear-gradient(black, var(--root-color), var(--root-color), var(--root-color), var(--root-color));
+  color: var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+  font-size: 75%;
+  font-style: italic;
+  line-height: normal;
+}
+.banner p {
+  /* banner text */
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5em 0em 1em 0em;
+}
+
+@media (min-width:320px) and (max-width: 1000px) and (orientation: landscape) {
+  #portfolio .vignette-container h2 { font-size: 1em; }
+}
+
+@media (min-width: 40em) {
+  .vignette-container { font-size: 1.5em; }
+  .banner { font-size: 80%; }
+  #portfolio .vignette-container h2 { font-size: 1em; }
+
+}
+
 /* Animated Circles Background --------------------------------------------- */
 .ripple-background {
   position: fixed;
@@ -363,7 +430,7 @@ header {
   font-size: 1.25em;
 }
 
-header + .page-wrapper {
+header + .page-wrapper, header + .heading {
   /* add space to page for fixed header */
   padding-top: 55px;
 }
