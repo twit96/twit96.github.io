@@ -276,20 +276,16 @@ svg.wasClicked {
   color: white;
 }
 .vignette-container .content {
-  /* text content */
   padding-bottom: 1em;
 }
 .vignette-container h2 {
-  /* reduce space below title */
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
 }
 
 .banner {
   /* heading container - bottom text banner for page description */
   background-image: linear-gradient(black, var(--root-color), var(--root-color), var(--root-color), var(--root-color));
-  color: var(--shadow-color);
-  position: relative;
-  overflow: hidden;
+  color: var(--main-text-color);
   font-size: 75%;
   font-style: italic;
   line-height: normal;
