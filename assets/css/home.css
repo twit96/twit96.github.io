@@ -119,9 +119,6 @@
   left: 4px;
   bottom: 4px;
   background-color: var(--dim-accent-color);
-  /* -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
-  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
-  box-shadow:         0 0 0.5em var(--shadow-color) inset; */
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50%;
@@ -749,7 +746,7 @@ doesn't cause temporary line break during animation
 .business-card-container {
   width: 40%;
   margin: 1em 0;
-  padding: 0 1em;
+  padding: 0 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -765,6 +762,7 @@ doesn't cause temporary line break during animation
   flex-grow: 5;
   justify-content: center;
   align-items: flex-start;
+  padding: 0 5%;
 }
 
 .business-card-container h3 {
@@ -787,14 +785,22 @@ doesn't cause temporary line break during animation
 }
 
 .link-card {
-  margin: 0.75em;
+  margin: 0.25em 0;
+  padding: 0 0.5em;
   display: flex;
   align-items: center;
-  height: 20%;
+  height: 25%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.link-card:hover {
+  background-color: var(--dim-accent-color);
 }
 
 .link-card img {
-  max-width: 75px;
+  width: 25%;
+  max-width: 50px;
 }
 
 .link-card img.inverted {
@@ -805,7 +811,6 @@ doesn't cause temporary line break during animation
   .link-card img { filter: invert(0.85); }
 }
 
-.link-card a {
+.link-card span {
   margin-left: 1em;
-  font-size: 1.25em;
 }
