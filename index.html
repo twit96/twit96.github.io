@@ -52,7 +52,7 @@
 				  <!-- Title and Tagline -->
 				  <div id="title-nav">
 				    <a class="title" href="javascript:;">Tyler Wittig</a>
-				    <span>Web Developer</span>
+				    <span class="tagline">Web Developer</span>
 				  </div>
 				  <!-- Hamburger Icon -->
 				  <svg class="hamburger-icon" viewBox="0 0 50 50">
@@ -61,32 +61,42 @@
 				    <line x1="7.5" y1="37.5" x2="42.5" y2="37.5"></line>
 				  </svg>
 				  <!-- Full Nav -->
-				  <ul id="full-nav">
-				    <li><a class="projects" href="javascript:;">Projects</a></li>
-				    <li><a class="education" href="javascript:;">Résumé</a></li>
-				    <li><a class="contact" href="javascript:;">Contact</a></li>
-				  </ul>
+					<div id="full-nav">
+						<ul>
+							<li><a class="projects" href="javascript:;">Projects</a></li>
+							<li><a class="education" href="javascript:;">Résumé</a></li>
+							<li><a class="contact" href="javascript:;">Contact</a></li>
+							<li>
+								<!-- Rounded switch -->
+								<label class="toggle">
+									<input type="checkbox">
+									<span class="slider"></span>
+								</label>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 				<!-- Small Nav -->
-				<ul id="small-nav">
-					<li><a class="projects" href="javascript:;">Projects</a></li>
-					<li><a class="education" href="javascript:;">Résumé</a></li>
-					<li><a class="contact" href="javascript:;">Contact</a></li>
-				</ul>
+				<div id="small-nav">
+					<ul>
+						<li><a class="projects" href="javascript:;">Projects</a></li>
+						<li><a class="education" href="javascript:;">Résumé</a></li>
+						<li><a class="contact" href="javascript:;">Contact</a></li>
+					</ul>
+					<!-- Rounded switch -->
+					<label class="toggle">
+						<input type="checkbox">
+						<span class="slider"></span>
+					</label>
+				</div>
+
 				<!-- background -->
 				<div id="small-nav-bg"></div>
 			</header>
 
 			<!-- Page Contents -->
 			<div class="page-wrapper">
-
-				<!-- Rounded switch -->
-				<!-- <label id="toggle">
-					<input type="checkbox">
-					<span class="slider"></span>
-				</label> -->
-
 
 				<div id="intro">
 					<img class="avatar-sub" src="/assets/img/icon.jpg" alt="Logo Icon">
@@ -170,7 +180,6 @@
 							</div>
 						</div>
 					</div>
-
 				</section>
 
 			</div>
