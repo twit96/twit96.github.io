@@ -775,7 +775,8 @@ doesn't cause temporary line break during animation
 
 .business-card-container img {
   border-radius: 50%;
-  width: min(75%, 150px);
+  width: 75%;
+  max-width: 150px;
   height: auto;
 }
 
