@@ -323,10 +323,10 @@ svg.wasClicked {
 
 .circle {
   position: absolute;
-  width: 150vw;
-  height: 150vw;
-  left: -75vw;
-  top: -75vw;
+  width: 150vmax;
+  height: 150vmax;
+  left: -75vmax;
+  top: -75vmax;
   /* style */
   border-radius: 50%;
   background-color: var(--accent-color);
@@ -338,8 +338,9 @@ svg.wasClicked {
 .flipped {
   /* class to reposition second set of circles */
   top: auto;
-  left: 25vw;
-  bottom: -75vw;
+  left: auto;
+  right: -75vmax;
+  bottom: -75vmax;
 }
 
 @keyframes ripple {
