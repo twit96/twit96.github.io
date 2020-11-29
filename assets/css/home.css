@@ -593,6 +593,10 @@ doesn't cause temporary line break during animation
   box-shadow:         0 0 0.5em var(--shadow-color) inset,
                       -1rem 0 3em var(--shadow-color) inset;
   transition: .15s;
+
+  /* chrome card flash on animation bug fix */
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
 }
 
 .card img {
