@@ -44,6 +44,11 @@
   --shadow-color: #171717;
 }
 
+/* Reduce Image Brightness */
+img { filter: brightness(100%); }
+img.invert-color-scheme { filter: brightness(75%); }
+img.invert-color-scheme:hover { filter: brightness(100%); }
+
 /* If user prefers dark theme, swap root and inverted color schemes */
 @media (prefers-color-scheme: dark) {
   :root {
@@ -68,9 +73,7 @@
   /* Reduce Image Brightness */
   img { filter: brightness(75%); }
   img:hover { filter: brightness(100%); }
-  /* fix for filter making img display over other cards */
-  img { z-index: 1; }
-  .card { z-index: 2; }
+  img.invert-color-scheme { filter: brightness(100%); }
 }
 
 /* animated transition between light and dark mode */
@@ -594,6 +597,7 @@ doesn't cause temporary line break during animation
   /* chrome card flash on animation bug fix */
   -webkit-backface-visibility: hidden;
   -webkit-transform: scale(1);
+  z-index: 2;
 }
 
 .card img {
@@ -608,6 +612,7 @@ doesn't cause temporary line break during animation
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+  z-index: 1;
 }
 
 .card p {
