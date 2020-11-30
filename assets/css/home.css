@@ -1,7 +1,11 @@
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Table of Contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - Light and Dark Mode (Root)
+  - Light and Dark Mode
+    - :root
+    - img
+    - toggle slider
+
   - HTML Config
   - General Classes
   - Animated Circles Background
@@ -23,7 +27,17 @@
 */
 
 
-/* Light and Dark Mode (Root) ---------------------------------------------- */
+/* Light and Dark Mode ----------------------------------------------------- */
+* {
+  /* animated transition between light and dark mode */
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+  transition:         all 0.2s ease;
+}
+
+/* ------------------------------------------------------------------- :root */
 :root {
   /* Default - Light Mode */
   --root-color: #fff;
@@ -43,11 +57,6 @@
   --dim-accent-color: #636363;
   --shadow-color: #171717;
 }
-
-/* Reduce Image Brightness */
-img { filter: brightness(100%); }
-img.invert-color-scheme { filter: brightness(75%); }
-img.invert-color-scheme:hover { filter: brightness(100%); }
 
 /* If user prefers dark theme, swap root and inverted color schemes */
 @media (prefers-color-scheme: dark) {
@@ -69,23 +78,29 @@ img.invert-color-scheme:hover { filter: brightness(100%); }
     --dim-accent-color: #dbdbdb;
     --shadow-color: #b0b0b0;
   }
+}
 
-  /* Reduce Image Brightness */
+/* --------------------------------------------------------------------- img */
+/* Default - Normal Images */
+img { filter: brightness(100%); }
+/* invert color scheme - reduce image brightness, restore on hover */
+img.invert-color-scheme { filter: brightness(75%); }
+img.invert-color-scheme:hover { filter: brightness(100%); }
+
+/* If user prefers dark theme, swap normal and inverted color schemes */
+@media (prefers-color-scheme: dark) {
   img { filter: brightness(75%); }
   img:hover { filter: brightness(100%); }
   img.invert-color-scheme { filter: brightness(100%); }
 }
 
-/* animated transition between light and dark mode */
-* {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition:    all 0.2s ease;
-  -ms-transition:     all 0.2s ease;
-  -o-transition:      all 0.2s ease;
-  transition:         all 0.2s ease;
+img {
+  /* chrome card flash on animation bug fix */
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(1);
 }
 
-/* Light/Dark Mode Toggle Slider */
+/* ----------------------------------------------------------- toggle slider */
 .toggle {
   position: relative;
   display: inline-block;
@@ -611,7 +626,7 @@ doesn't cause temporary line break during animation
   z-index: 1;
 }
 
-.card, .card img {
+.card {
   /* chrome card flash on animation bug fix */
   -webkit-backface-visibility: hidden;
   -webkit-transform: scale(1);
