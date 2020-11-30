@@ -6,7 +6,6 @@ $('.slider').on('click', function() {
     $(':root').removeClass('invert-color-scheme');
   } else {
     $(':root').addClass('invert-color-scheme');
-
   }
 
   $('img').toggleClass('invert-color-scheme');

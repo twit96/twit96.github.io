@@ -100,6 +100,16 @@ img {
   -webkit-transform: scale(1);
 }
 
+/* TEMPFIX - .link-card img */
+.link-card img.inverted {
+  filter: invert(0.85);
+}
+@media (prefers-color-scheme: dark) {
+  .link-card img.inverted {
+    filter: invert(0);
+  }
+}
+
 /* ----------------------------------------------------------- toggle slider */
 .toggle {
   position: relative;
@@ -823,10 +833,6 @@ doesn't cause temporary line break during animation
 .link-card img {
   width: 25%;
   max-width: 50px;
-}
-
-.link-card img.inverted {
-  filter: invert(0.85);
 }
 
 @media (prefers-color-scheme: dark) {
