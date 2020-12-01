@@ -162,7 +162,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px) rotate(360deg);
   -ms-transform: translateX(26px) rotate(360deg);
   transform: translateX(26px) rotate(360deg);
-  background-image: url('/assets/img/moon-border8px.png');
+  background-image: url('/assets/img/moon.png');
 }
 
 @media (prefers-color-scheme: dark) {
