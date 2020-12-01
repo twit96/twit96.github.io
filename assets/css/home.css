@@ -149,7 +149,7 @@ img {
   width: 18px;
   left: 4px;
   bottom: 4px;
-  background-image: url('/assets/img/sun.png');
+  background-image: url('/img/sun.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -162,15 +162,15 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px) rotate(360deg);
   -ms-transform: translateX(26px) rotate(360deg);
   transform: translateX(26px) rotate(360deg);
-  background-image: url('/assets/img/moon.png');
+  background-image: url('/img/moon.png');
 }
 
 @media (prefers-color-scheme: dark) {
   .slider:before {
-    background-image: url('/assets/img/moon.png');
+    background-image: url('/img/moon.png');
   }
   input:checked + .slider:before {
-    background-image: url('/assets/img/sun.png');
+    background-image: url('/img/sun.png');
   }
 }
 
@@ -301,7 +301,7 @@ svg.wasClicked {
   /* background defaults - if no override specified on page */
   background-image:
     radial-gradient(ellipse closest-side, #00000090, #000000),
-    url("/assets/img/default-heading.jpg");
+    url("/img/default-heading.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
