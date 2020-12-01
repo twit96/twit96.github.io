@@ -834,7 +834,7 @@ doesn't cause temporary line break during animation
   align-items: center;
   height: 25%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 50px 10px 10px 50px;
 }
 
 .link-card:hover {
