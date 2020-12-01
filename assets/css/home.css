@@ -133,10 +133,13 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--root-color);
+  background-color: var(--main-color);
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
 }
 
 .slider:before {
@@ -146,22 +149,30 @@ img {
   width: 18px;
   left: 4px;
   bottom: 4px;
-  background-color: var(--dim-accent-color);
+  background-image: url('/assets/img/sun.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 50%;
 }
 
-input:checked + .slider {
-  /* background-color: var(--dim-accent-color); */
-}
-
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(26px) rotate(360deg);
+  -ms-transform: translateX(26px) rotate(360deg);
+  transform: translateX(26px) rotate(360deg);
+  background-image: url('/assets/img/moon.png');
 }
 
+@media (prefers-color-scheme: dark) {
+  .slider:before {
+    background-image: url('/assets/img/moon.png');
+  }
+  input:checked + .slider:before {
+    background-image: url('/assets/img/sun.png');
+  }
+}
 
 /* HTML Config ------------------------------------------------------------- */
 * {
