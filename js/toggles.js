@@ -22,3 +22,28 @@ $('.slider').on('click', function() {
   // swap intro image
   // $('#intro').find('img').toggle();
 });
+
+
+
+/**
+* Function to toggle between portfolio contents and all-projects contents.
+* Illusion of two pages, but the all-projects article is set to display: none
+* by default, so toggling swaps it with the rest of the page contents.
+* Reasoning for this is so projects are re-arranged for quicker reading.
+*/
+$('.pages-toggle').on('click', function() {
+  // toggle header elements
+  $('header .projects').fadeToggle();
+  $('header .education').fadeToggle();
+  $('header .contact').fadeToggle();
+  // toggle page elements
+  $('#intro').toggle();
+  $('article').toggle();
+  $('section').toggle();
+  // scroll to projects
+  if ($('#all-projects').is(":visible")) {
+    $('#all-projects').scrollView();
+  } else {
+    $('#projects').scrollView();
+  }
+});

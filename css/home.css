@@ -724,6 +724,8 @@ doesn't cause temporary line break during animation
 }
 
 /* ------------------------------------------------------- all projects page */
+#all-projects { display: none; }
+
 #all-projects .wrapper {
   margin: 0 auto;
   padding: 0.5em 2.5%;
