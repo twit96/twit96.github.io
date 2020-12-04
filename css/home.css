@@ -867,6 +867,7 @@ doesn't cause temporary line break during animation
   border-top: 1px solid var(--dim-accent-color);
   padding-top: 1em;
   text-align: right;
+  line-height: normal;
 }
 
 @media (min-width: 42.5em) {
@@ -878,16 +879,14 @@ doesn't cause temporary line break during animation
 /* Contact2 Section -------------------------------------------------------- */
 /* #outro {
   padding: 1em 0;
-} */
+}
 
-/* #outro img { */
-  /* float image to the right of container */
-  /* float: left;
+#outro img {
+  float: left;
   width: 30%;
   margin-left: 5%;
-  margin-right: 0.5em; */
-  /* make image circular */
-  /* border-radius: 50%;
+  margin-right: 0.5em;
+  border-radius: 50%;
   border: 7px solid var(--root-color);
   -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
   -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
@@ -898,28 +897,6 @@ doesn't cause temporary line break during animation
 #contact2 h2 { text-align: right; }
 #contact2 p { text-align: right; }
 
-#contact2 div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; */
-  /* width hard coded to sit below float */
-  /* width: 88vw;
-  max-width: 865px;
-}
-
-#contact2 p.my-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 5%;
-}
-
-#contact2 p.my-info b {
-  font-size: min(2em, 3.5vw);
-}
-
-#contact2 p.my-info span { font-size: min(1.5em, 2.5vw); }
-
 #contact2 .link-card {
   display: inline-flex;
   flex-direction: column;
@@ -927,10 +904,30 @@ doesn't cause temporary line break during animation
   margin: 0 min(0.75em, 1.5vw);
 }
 
-
 @media (min-width: 42.5em) {
   #contact2 .short-text { display: none; }
   #contact2 .full-text { display: inline-block; }
   #contact2 img { max-width: 50px; }
-  #contact2 p.my-info b { padding-bottom: 0.25em; }
+}
+
+#contact2 div {
+  width: 86.5vw;
+  max-width: 865px;
+  transition: 0s;
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact2 div p.my-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  margin: 0;
+  font-size: min(3vw, 1.5em);
+}
+
+#contact2 div p:not(.my-info) {
+  text-align: right;
 } */
