@@ -34,9 +34,19 @@ $('.slider').on('click', function() {
 */
 $('.pages-toggle').on('click', function() {
   // toggle header elements
-  $('header .projects').fadeToggle();
-  $('header .experience').fadeToggle();
-  $('header .contact').fadeToggle();
+
+  if ($('header a.pages-toggle').is(":visible")) {
+    $('header a.pages-toggle').toggle();
+    $('header a').not('.title').not('.pages-toggle').fadeToggle();
+
+  } else {
+    $('header a').not('.title').not('.pages-toggle').toggle();
+    $('header a.pages-toggle').fadeToggle();
+  }
+
+
+  // $('header .experience').fadeToggle();
+  // $('header .contact').fadeToggle();
   // toggle page elements
   $('#intro').toggle();
   $('article').toggle();
