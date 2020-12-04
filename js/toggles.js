@@ -35,7 +35,7 @@ $('.slider').on('click', function() {
 $('.pages-toggle').on('click', function() {
   // toggle header elements
   $('header .projects').fadeToggle();
-  $('header .education').fadeToggle();
+  $('header .experience').fadeToggle();
   $('header .contact').fadeToggle();
   // toggle page elements
   $('#intro').toggle();

@@ -788,12 +788,12 @@ doesn't cause temporary line break during animation
 }
 
 /* Contact Section --------------------------------------------------------- */
-.business-card {
+#contact .business-card {
   display: flex;
   justify-content: center;
 }
 
-.business-card-container {
+#contact .business-card-container {
   width: 40%;
   margin: 1em 0;
   padding: 0 5%;
@@ -804,37 +804,37 @@ doesn't cause temporary line break during animation
   overflow: hidden;
 }
 
-.business-card-container:nth-child(1) {
+#contact .business-card-container:nth-child(1) {
   border-right: 1px solid var(--dim-accent-color);
   flex-shrink: 5;
 }
-.business-card-container:nth-child(2) {
+#contact .business-card-container:nth-child(2) {
   flex-grow: 5;
   justify-content: center;
   align-items: flex-start;
   padding: 0 5%;
 }
 
-.business-card-container h3 {
+#contact .business-card-container h3 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
 
-.business-card-container .shrink-text { font-size: min(1.5em, 4vw); }
+#contact .business-card-container .shrink-text { font-size: min(1.5em, 4vw); }
 
-.business-card-container img {
+#contact .business-card-container img {
   border-radius: 50%;
   width: 75%;
   max-width: 150px;
   height: auto;
 }
 
-.business-card .avatar-main, .business-card .avatar-sub {
+#contact .business-card .avatar-main, #contact .business-card .avatar-sub {
   border: 3px solid black;
 }
 
-.link-card {
+#contact .link-card {
   margin: 0.25em 0;
   padding: 0 0.5em;
   display: flex;
@@ -844,19 +844,91 @@ doesn't cause temporary line break during animation
   border-radius: 50px 10px 10px 50px;
 }
 
-.link-card:hover {
+#contact .link-card:hover {
   background-color: var(--dim-accent-color);
 }
 
-.link-card img {
+#contact .link-card img {
   width: 25%;
   max-width: 50px;
 }
 
 @media (prefers-color-scheme: dark) {
-  .link-card img { filter: invert(0.85); }
+  #contact .link-card img { filter: invert(0.85); }
 }
 
-.link-card span {
+#contact .link-card span {
   margin-left: 1em;
 }
+
+#contact p {
+  border-top: 1px solid var(--dim-accent-color);
+  padding-top: 1em;
+  text-align: right;
+}
+
+@media (min-width: 42.5em) {
+  #contact .short-text { display: none; }
+  #contact .full-text { display: inline-block; }
+}
+
+
+/* Contact2 Section -------------------------------------------------------- */
+/* #outro {
+  padding: 1em 0;
+} */
+
+/* #outro img { */
+  /* float image to the right of container */
+  /* float: left;
+  width: 30%;
+  margin-left: 5%;
+  margin-right: 0.5em; */
+  /* make image circular */
+  /* border-radius: 50%;
+  border: 7px solid var(--root-color);
+  -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
+  -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
+  box-shadow:         0 0 0.5em var(--shadow-color) inset;
+}
+
+#contact2 img { max-width: 35px; }
+#contact2 h2 { text-align: right; }
+#contact2 p { text-align: right; }
+
+#contact2 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  /* width hard coded to sit below float */
+  /* width: 88vw;
+  max-width: 865px;
+}
+
+#contact2 p.my-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+}
+
+#contact2 p.my-info b {
+  font-size: min(2em, 3.5vw);
+}
+
+#contact2 p.my-info span { font-size: min(1.5em, 2.5vw); }
+
+#contact2 .link-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 min(0.75em, 1.5vw);
+}
+
+
+@media (min-width: 42.5em) {
+  #contact2 .short-text { display: none; }
+  #contact2 .full-text { display: inline-block; }
+  #contact2 img { max-width: 50px; }
+  #contact2 p.my-info b { padding-bottom: 0.25em; }
+} */
