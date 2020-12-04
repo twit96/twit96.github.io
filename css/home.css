@@ -87,7 +87,7 @@ img { filter: brightness(100%); }
 img.invert-color-scheme { filter: brightness(75%); }
 img.invert-color-scheme:hover { filter: brightness(100%); }
 
-/* If user prefers dark theme, swap normal and inverted color schemes */
+/* If user prefers dark theme, swap img color scheme classes */
 @media (prefers-color-scheme: dark) {
   img { filter: brightness(75%); }
   img:hover { filter: brightness(100%); }
