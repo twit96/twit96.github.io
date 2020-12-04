@@ -16,7 +16,7 @@ $('header a').click(function() {
   $('header a').not(this).removeClass('active');
 
   // delay then remove active link
-  $(this).addClass('active').delay(2000).queue(function(next){
+  $(this).addClass('active').delay(500).queue(function(next){
     $(this).removeClass('active');
     next();
   });
