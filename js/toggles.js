@@ -1,4 +1,9 @@
-// Allow User to Toggle Page-Wide Dark Mode
+
+/**
+* Allow user to toggle page-wide dark mode by clicking slider in header.
+* Function toggles :root color scheme, light/dark img styling, and makes sure
+* that both sliders are in sync between small and full nav.
+*/
 $('.slider').on('click', function() {
 
   // toggle dark theme on root element
@@ -18,18 +23,14 @@ $('.slider').on('click', function() {
   var this_input = $(this).parent().children('input:checkbox');
   var this_checked = !this_input.prop('checked');
   $('input:checkbox').not(this_input).prop('checked', this_checked);
-
-  // swap intro image
-  // $('#intro').find('img').toggle();
 });
 
 
-
 /**
-* Function to toggle between portfolio contents and all-projects contents.
+* Function to toggle between portfolio contents and all-projects view contents.
 * Illusion of two pages, but the all-projects article is set to display: none
 * by default, so toggling swaps it with the rest of the page contents.
-* Reasoning for this is so projects are re-arranged for quicker reading.
+* Reasoning for this is so projects are then re-arranged for quicker reading.
 */
 $('.pages-toggle').on('click', function() {
   // toggle header elements
