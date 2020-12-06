@@ -436,11 +436,18 @@ header li, footer li { display: inline-block; }
 
 /* links */
 header a, footer a {
-  color: var(--main-text-color);
+  color: white;
   text-decoration: none;
   padding: 10px;
   border-radius: 10px;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.2s;
+}
+
+/* link hovering */
+header a:hover, footer a:hover {
+  background-color: #dbdbdb25;
+  color: black;
+  text-decoration: underline;
 }
 
 /* active link */
@@ -456,21 +463,16 @@ header .title, footer .title {
   text-shadow: 1px 1px black;
 }
 
+header .title:hover, footer .title:hover {
+  text-shadow: 1px 1px white;
+}
+
 /* navigation links */
 header ul, footer ul {
   margin: 0.25em 0;
   list-style: none;
 }
 
-/* link hovering */
-header a:hover, footer a:hover {
-  background-color: #dbdbdb25;
-}
-
-header a:not(.title):hover, footer a:not(.title):hover {
-  color: var(--root-color);
-  text-decoration: underline;
-}
 
 /* ---------------------------------------------------------- header content */
 header {
