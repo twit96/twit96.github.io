@@ -831,6 +831,8 @@ doesn't cause temporary line break during animation
   border-radius: 50%;
   width: 75%;
   max-width: 150px;
+  height: 75%;
+  max-height: 150px;
   height: auto;
 }
 
