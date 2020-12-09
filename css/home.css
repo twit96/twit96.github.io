@@ -829,9 +829,9 @@ doesn't cause temporary line break during animation
 
 #contact .business-card-container img {
   border-radius: 50%;
-  width: 75%;
+  width: 30vw;
   max-width: 150px;
-  height: 75%;
+  height: 30vw;
   max-height: 150px;
   height: auto;
 }
