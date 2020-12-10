@@ -16,9 +16,22 @@
   width: 100vw;
 }
 
-#not-found img {
-  width: 30vw;
-  max-width: 300px;
+#not-found section {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 650px) and (min-height: 400px) {
+  #not-found section {
+    flex-direction: column;
+  }
+}
+
+#not-found section img {
+  width: 300px;
+  max-width: min(40vw, 35vh);
+  height: ;
+  max-height: min(40vw, 35vh);
   margin: 0.75em;
   /* make image circular */
   border-radius: 50%;
@@ -38,8 +51,7 @@
   }
 }
 
-#not-found article {
-  padding: 1em;
+#not-found section div {
   margin: 0.75em;
 }
 
