@@ -39,7 +39,7 @@
   -moz-box-shadow:    0 0 0.5em var(--shadow-color);
   -webkit-box-shadow: 0 0 0.5em var(--shadow-color);
   box-shadow:         0 0 0.5em var(--shadow-color);
-  animation: teeter 1s alternate ease-in-out infinite;
+  animation: teeter 2s alternate ease-in-out infinite;
 }
 
 @keyframes teeter {
