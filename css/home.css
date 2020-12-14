@@ -569,18 +569,17 @@ footer .wrapper a {
   -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
   -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
   box-shadow:         0 0 0.5em var(--shadow-color) inset;
+  /* teeter animation */
+  animation: teeter 2.5s alternate ease-in-out infinite;
 }
 
-/* swap icon with profile picture on page mouseover */
-.avatar-sub {
-  display: none;
+@keyframes teeter {
+0% {
+  transform: rotate(-5deg);
 }
-
-.page-wrapper:hover .avatar-main {
-  display: none;
+100% {
+  transform: rotate(5deg);
 }
-.page-wrapper:hover .avatar-sub {
-  display: inline-block;
 }
 
 
@@ -836,7 +835,7 @@ doesn't cause temporary line break during animation
   height: auto;
 }
 
-#contact .business-card .avatar-main, #contact .business-card .avatar-sub {
+#contact .business-card .avatar {
   border: 3px solid black;
 }
 

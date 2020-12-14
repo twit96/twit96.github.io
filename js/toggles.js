@@ -1,5 +1,26 @@
 
 /**
+* Automatically toggle between profile and logo images on img.avatar elements.
+* Functions call each other after delay, with initial call to fadeToLogo().
+*/
+function fadeToLogo() {
+  $('img.avatar').fadeTo(1000,0.30, function() {
+      $('img.avatar').attr("src",'/img/icon.jpg');
+  }).fadeTo(500,1);
+  setTimeout(() => { fadeToProfile() }, 5000);
+}
+
+function fadeToProfile() {
+  $('img.avatar').fadeTo(1000,0.30, function() {
+      $('img.avatar').attr("src",'/img/profile.jpg');
+  }).fadeTo(500,1);
+  setTimeout(() => { fadeToLogo() }, 5000);
+}
+
+setTimeout(() => { fadeToLogo() }, 5000);
+
+
+/**
 * Allow user to toggle page-wide dark mode by clicking slider in header.
 * Function toggles :root color scheme, light/dark img styling, and makes sure
 * that both sliders are in sync between small and full nav.
