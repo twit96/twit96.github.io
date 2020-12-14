@@ -23,15 +23,8 @@ $('header a').click(function() {
 
 });
 
-
 $('header .title').click(function() {
-  if ($(window).scrollTop() == 0) {
-    // go to homepage if at top
-    window.location.href = "/";
-  } else {
-    // scroll to top if not at top
-    $("html, body").scrollView();
-  }
+  $('#intro').scrollView();
 });
 
 
