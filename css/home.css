@@ -323,7 +323,11 @@ svg.wasClicked {
 
 .banner {
   /* heading container - bottom text banner for page description */
-  background-image: linear-gradient(black, var(--root-color), var(--root-color), var(--root-color), var(--root-color));
+  background: var(--main-color);
+  /* bottom shadow */
+  -moz-box-shadow: 0 0 1em #000000;
+  -webkit-box-shadow: 0 0 1em #000000;
+  box-shadow: 0 0 0.5em #000000;
   color: var(--main-text-color);
   font-size: 75%;
   font-style: italic;
@@ -333,8 +337,8 @@ svg.wasClicked {
   /* banner text */
   width: 95%;
   max-width: 900px;
-  margin: auto;
-  padding: 1.5em 0em 1em 0em;
+  margin: 0 auto;
+  padding: 1em 0em;
 }
 
 @media (min-width:320px) and (max-width: 1000px) and (orientation: landscape) {
