@@ -28,23 +28,103 @@ setTimeout(() => { fadeToLogo() }, 5000);
 $('.slider').on('click', function() {
 
   // toggle dark theme on root element
-  if ($(':root').hasClass('invert-color-scheme')) {
-    $(':root').removeClass('invert-color-scheme');
-  } else {
-    $(':root').addClass('invert-color-scheme');
-  }
-
-  $('img').toggleClass('invert-color-scheme');
-
-  // toggle inverted color scheme on contact section link images
-  // (tempfix until SVGs implemented here)
-  $('.link-card img').toggleClass('inverted');
+  toggleColorScheme();
 
   // update slider from other nav (since separate sliders in small/full navs)
   var this_input = $(this).parent().children('input:checkbox');
   var this_checked = !this_input.prop('checked');
   $('input:checkbox').not(this_input).prop('checked', this_checked);
+
+  // Update site_color_scheme Cookie
+  updateCookie();
 });
+
+
+function toggleColorScheme() {
+  $(':root').toggleClass('invert-color-scheme');
+  $('img').toggleClass('invert-color-scheme');
+
+  // toggle inverted color scheme on contact section link images
+  // (tempfix until SVGs implemented here)
+  $('.link-card img').toggleClass('inverted');
+}
+
+
+function setCookie(cvalue) {
+  var d = new Date();
+  d.setTime(d.getTime() + (365*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "site_color_scheme" + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+function getCookie() {
+  var name = "site_color_scheme=";
+  var c = decodeURIComponent(document.cookie).split(';')[0];
+  while (c.charAt(0) == ' ') {
+    c = c.substring(1);
+  }
+  if (c.indexOf("site_color_scheme=") == 0) {
+    return c.substring(name.length, c.length);
+  }
+}
+
+
+function updateCookie() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // prefers dark mode
+    if ($(':root').hasClass('invert-color-scheme')) {
+      // toggled to dark
+      setCookie('dark');
+    } else {
+      // toggled to light
+      setCookie('light');
+    }
+  } else {
+    // prefers light mode
+    if ($(':root').hasClass('invert-color-scheme')) {
+      // toggled to dark
+      setCookie('dark');
+    } else {
+      // toggled to light
+      setCookie('light');
+    }
+  }
+}
+
+
+function configColorScheme() {
+  var site_color_scheme = getCookie();
+
+  if (site_color_scheme == "light") {
+    console.log('cookie: light');
+    if ($(':root').hasClass('invert-color-scheme')) {
+      toggleColorScheme();
+    }
+  } else if (site_color_scheme == "dark") {
+    console.log('cookie: dark');
+    if (!$(':root').hasClass('invert-color-scheme')) {
+      toggleColorScheme();
+    }
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    console.log('no cookie - prefers dark');
+    setCookie('dark');
+    if (!$(':root').hasClass('invert-color-scheme')) {
+      $(':root').addClass('invert-color-scheme');
+    }
+  } else {
+    console.log('no cookie - prefers light');
+    setCookie('light');
+    if ($(':root').hasClass('invert-color-scheme')) {
+      $(':root').removeClass('invert-color-scheme');
+    }
+  }
+}
+
+configColorScheme();
+
+
+// ----------------------------------------------------------------------------
 
 
 /**

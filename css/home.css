@@ -59,26 +59,26 @@
 }
 
 /* If user prefers dark theme, swap root and inverted color schemes */
-@media (prefers-color-scheme: dark) {
-  :root {
+/* @media (prefers-color-scheme: dark) {
+  :root { */
     /* Default - Dark Mode */
-    --root-color: #171717;
+    /* --root-color: #171717;
     --main-text-color: #e0e0e0;
     --main-color: #474747;
     --accent-color: #0052cf;
     --dim-accent-color: #636363;
     --shadow-color: #171717;
   }
-  :root.invert-color-scheme {
+  :root.invert-color-scheme { */
     /* Toggleable - Light Mode */
-    --root-color: #fff;
+    /* --root-color: #fff;
     --main-text-color: #000;
     --main-color: #f0f0f0;
     --accent-color: #0066ff;
     --dim-accent-color: #dbdbdb;
     --shadow-color: #b0b0b0;
   }
-}
+} */
 
 /* --------------------------------------------------------------------- img */
 /* Default - Normal Images */
@@ -88,11 +88,11 @@ img.invert-color-scheme { filter: brightness(75%); }
 img.invert-color-scheme:hover { filter: brightness(100%); }
 
 /* If user prefers dark theme, swap img color scheme classes */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   img { filter: brightness(75%); }
   img:hover { filter: brightness(100%); }
   img.invert-color-scheme { filter: brightness(100%); }
-}
+} */
 
 img {
   /* chrome card flash on animation bug fix */
@@ -104,11 +104,11 @@ img {
 .link-card img.inverted {
   filter: invert(0.85);
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .link-card img.inverted {
     filter: invert(0);
   }
-}
+} */
 
 /* ----------------------------------------------------------- toggle slider */
 .toggle {
@@ -158,6 +158,10 @@ img {
   border-radius: 50%;
 }
 
+.slider.invert-color-scheme:before {
+  background-image: url('/img/moon.png');
+}
+
 input:checked + .slider:before {
   -webkit-transform: translateX(26px) rotate(360deg);
   -ms-transform: translateX(26px) rotate(360deg);
@@ -165,14 +169,18 @@ input:checked + .slider:before {
   background-image: url('/img/moon.png');
 }
 
-@media (prefers-color-scheme: dark) {
+input:checked + .slider.invert-color-scheme:before {
+  background-image: url('/img/moon.png');
+}
+
+/* @media (prefers-color-scheme: dark) {
   .slider:before {
     background-image: url('/img/moon.png');
   }
   input:checked + .slider:before {
     background-image: url('/img/sun.png');
   }
-}
+} */
 
 /* HTML Config ------------------------------------------------------------- */
 * {
