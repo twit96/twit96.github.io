@@ -38,7 +38,9 @@ $('.slider').on('click', function() {
 });
 
 function toggleColorScheme() {
-  $(':root, img, .slider, input').toggleClass('invert-color-scheme');
+  $(':root, .slider, input').toggleClass('invert-color-scheme');
+  // toggle images after delay - bug patch where images not getting toggled
+  setTimeout(() => { $('img').toggleClass('invert-color-scheme'); }, 200);
   // toggle inverted color scheme on contact section link images
   // (tempfix until SVGs implemented here)
   $('.link-card img').toggleClass('inverted');
@@ -110,8 +112,7 @@ function configColorScheme() {
   }
 }
 
-configColorScheme();
-
+configColorScheme()
 
 // ----------------------------------------------------------------------------
 
