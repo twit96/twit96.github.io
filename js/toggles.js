@@ -102,15 +102,11 @@ function configColorScheme() {
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     // console.log('no cookie - prefers dark');
     setCookie('dark');
-    if (!$(':root').hasClass('invert-color-scheme')) {
-      $(':root').addClass('invert-color-scheme');
-    }
+    toggleColorScheme();
   } else {
     // console.log('no cookie - prefers light');
     setCookie('light');
-    if ($(':root').hasClass('invert-color-scheme')) {
-      $(':root').removeClass('invert-color-scheme');
-    }
+    toggleColorScheme();
   }
 }
 
