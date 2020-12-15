@@ -22,8 +22,6 @@ setTimeout(() => { fadeToLogo() }, 5000);
 
 /**
 * Allow user to toggle page-wide dark mode by clicking slider in header.
-* Function toggles :root color scheme, light/dark img styling, and makes sure
-* that both sliders are in sync between small and full nav.
 */
 $('.slider').on('click', function() {
 
@@ -39,11 +37,8 @@ $('.slider').on('click', function() {
   updateCookie();
 });
 
-
 function toggleColorScheme() {
-  $(':root').toggleClass('invert-color-scheme');
-  $('img').toggleClass('invert-color-scheme');
-
+  $(':root, img, .slider, input').toggleClass('invert-color-scheme');
   // toggle inverted color scheme on contact section link images
   // (tempfix until SVGs implemented here)
   $('.link-card img').toggleClass('inverted');
@@ -57,7 +52,6 @@ function setCookie(cvalue) {
   document.cookie = "site_color_scheme" + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-
 function getCookie() {
   var name = "site_color_scheme=";
   var c = decodeURIComponent(document.cookie).split(';')[0];
@@ -68,7 +62,6 @@ function getCookie() {
     return c.substring(name.length, c.length);
   }
 }
-
 
 function updateCookie() {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -97,23 +90,23 @@ function configColorScheme() {
   var site_color_scheme = getCookie();
 
   if (site_color_scheme == "light") {
-    console.log('cookie: light');
+    // console.log('cookie: light');
     if ($(':root').hasClass('invert-color-scheme')) {
       toggleColorScheme();
     }
   } else if (site_color_scheme == "dark") {
-    console.log('cookie: dark');
+    // console.log('cookie: dark');
     if (!$(':root').hasClass('invert-color-scheme')) {
       toggleColorScheme();
     }
   } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    console.log('no cookie - prefers dark');
+    // console.log('no cookie - prefers dark');
     setCookie('dark');
     if (!$(':root').hasClass('invert-color-scheme')) {
       $(':root').addClass('invert-color-scheme');
     }
   } else {
-    console.log('no cookie - prefers light');
+    // console.log('no cookie - prefers light');
     setCookie('light');
     if ($(':root').hasClass('invert-color-scheme')) {
       $(':root').removeClass('invert-color-scheme');
