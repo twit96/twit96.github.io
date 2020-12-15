@@ -3,21 +3,17 @@
 * Automatically toggle between profile and logo images on img.avatar elements.
 * Functions call each other after delay, with initial call to fadeToLogo().
 */
-function fadeToLogo() {
-  $('img.avatar').fadeTo(1000,0.30, function() {
+function fadeAvatarImg() {
+  $('img.avatar').delay(5000).fadeTo(1000,0.30, function() {
       $('img.avatar').attr("src",'/img/icon.jpg');
   }).fadeTo(500,1);
-  setTimeout(() => { fadeToProfile() }, 5000);
-}
-
-function fadeToProfile() {
-  $('img.avatar').fadeTo(1000,0.30, function() {
+  $('img.avatar').delay(5000).fadeTo(1000,0.30, function() {
       $('img.avatar').attr("src",'/img/profile.jpg');
   }).fadeTo(500,1);
-  setTimeout(() => { fadeToLogo() }, 5000);
+  setTimeout(() => { fadeAvatarImg() }, 5000);
 }
 
-setTimeout(() => { fadeToLogo() }, 5000);
+fadeAvatarImg();
 
 
 /**
