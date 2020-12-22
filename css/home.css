@@ -755,10 +755,6 @@ doesn't cause temporary line break during animation
   max-width: 50px;
 }
 
-@media (prefers-color-scheme: dark) {
-  #contact .link-card img { filter: invert(0.85); }
-}
-
 #contact .link-card span {
   margin-left: 1em;
 }

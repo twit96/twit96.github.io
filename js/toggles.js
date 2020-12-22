@@ -104,7 +104,6 @@ function configColorScheme() {
   } else {
     // console.log('no cookie - prefers light');
     setCookie('light');
-    toggleColorScheme();
   }
 }
 
