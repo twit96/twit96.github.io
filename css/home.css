@@ -789,6 +789,7 @@ doesn't cause temporary line break during animation
   -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
   -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
   box-shadow:         0 0 0.5em var(--shadow-color) inset;
+  animation: teeter 2.5s alternate ease-in-out infinite;
 }
 
 #contact-lg img { max-width: 35px; }
