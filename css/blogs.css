@@ -44,6 +44,7 @@
   font-size: 75%;
   font-style: italic;
   line-height: normal;
+  margin-bottom: min(2em, 2.5%);
   /* bottom shadow */
   -moz-box-shadow: 0 0 1em #000000;
   -webkit-box-shadow: 0 0 1em #000000;
@@ -60,4 +61,8 @@
 @media (min-width: 40em) {
   .vignette-container { font-size: 1.5em; }
   .banner { font-size: 80%; }
+}
+
+footer {
+  margin-top: min(2em, 2.5%);
 }
