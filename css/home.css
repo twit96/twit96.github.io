@@ -782,7 +782,7 @@ doesn't cause temporary line break during animation
 #outro img {
   float: left;
   width: 30%;
-  margin-left: 5%;
+  margin-left: 4.5%;
   margin-right: 0.5em;
   border-radius: 50%;
   border: 7px solid var(--root-color);
