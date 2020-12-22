@@ -688,12 +688,13 @@ doesn't cause temporary line break during animation
 }
 
 /* Contact Section --------------------------------------------------------- */
-#contact .business-card {
+/* ------------------------------------------------------- contact-sm config */
+#contact-sm .business-card {
   display: flex;
   justify-content: center;
 }
 
-#contact .business-card-container {
+#contact-sm .business-card-container {
   width: 40%;
   margin: 1em 0;
   padding: 0 5%;
@@ -704,26 +705,28 @@ doesn't cause temporary line break during animation
   overflow: hidden;
 }
 
-#contact .business-card-container:nth-child(1) {
+#contact-sm .business-card-container:nth-child(1) {
   border-right: 1px solid var(--dim-accent-color);
   flex-shrink: 5;
 }
-#contact .business-card-container:nth-child(2) {
+#contact-sm .business-card-container:nth-child(2) {
   flex-grow: 5;
   justify-content: center;
   align-items: flex-start;
   padding: 0 5%;
 }
 
-#contact .business-card-container h3 {
+#contact-sm .business-card-container h3 {
   margin-top: 1em;
   margin-bottom: 0.5em;
   font-weight: bold;
 }
 
-#contact .business-card-container .shrink-text { font-size: min(1.5em, 4vw); }
+#contact-sm .business-card-container .shrink-text {
+  font-size: min(1.5em, 4vw);
+}
 
-#contact .business-card-container img {
+#contact-sm .business-card-container img {
   border-radius: 50%;
   width: 30vw;
   max-width: 150px;
@@ -732,11 +735,11 @@ doesn't cause temporary line break during animation
   height: auto;
 }
 
-#contact .business-card .avatar {
+#contact-sm .business-card .avatar {
   border: 3px solid black;
 }
 
-#contact .link-card {
+#contact-sm .link-card {
   margin: 0.25em 0;
   padding: 0 0.5em;
   display: flex;
@@ -746,20 +749,20 @@ doesn't cause temporary line break during animation
   border-radius: 50px 10px 10px 50px;
 }
 
-#contact .link-card:hover {
+#contact-sm .link-card:hover {
   background-color: var(--dim-accent-color);
 }
 
-#contact .link-card img {
+#contact-sm .link-card img {
   width: 25%;
   max-width: 50px;
 }
 
-#contact .link-card span {
+#contact-sm .link-card span {
   margin-left: 1em;
 }
 
-#contact p {
+#contact-sm p {
   border-top: 1px solid var(--dim-accent-color);
   padding-top: 1em;
   text-align: right;
@@ -767,13 +770,12 @@ doesn't cause temporary line break during animation
 }
 
 @media (min-width: 42.5em) {
-  #contact .short-text { display: none; }
-  #contact .full-text { display: inline-block; }
+  #contact-sm .short-text { display: none; }
+  #contact-sm .full-text { display: inline-block; }
 }
 
-
-/* Contact2 Section -------------------------------------------------------- */
-/* #outro {
+/* ------------------------------------------------------- contact-lg config */
+#outro {
   padding: 1em 0;
 }
 
@@ -789,11 +791,11 @@ doesn't cause temporary line break during animation
   box-shadow:         0 0 0.5em var(--shadow-color) inset;
 }
 
-#contact2 img { max-width: 35px; }
-#contact2 h2 { text-align: right; }
-#contact2 p { text-align: right; }
+#contact-lg img { max-width: 35px; }
+#contact-lg h2 { text-align: right; }
+#contact-lg p { text-align: right; }
 
-#contact2 .link-card {
+#contact-lg .link-card {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -801,12 +803,12 @@ doesn't cause temporary line break during animation
 }
 
 @media (min-width: 42.5em) {
-  #contact2 .short-text { display: none; }
-  #contact2 .full-text { display: inline-block; }
-  #contact2 img { max-width: 50px; }
+  #contact-lg .short-text { display: none; }
+  #contact-lg .full-text { display: inline-block; }
+  #contact-lg img { max-width: 50px; }
 }
 
-#contact2 div {
+#contact-lg div {
   width: 86.5vw;
   max-width: 865px;
   transition: 0s;
@@ -814,7 +816,7 @@ doesn't cause temporary line break during animation
   justify-content: space-between;
 }
 
-#contact2 div p.my-info {
+#contact-lg div p.my-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -824,6 +826,13 @@ doesn't cause temporary line break during animation
   font-size: min(3vw, 1.5em);
 }
 
-#contact2 div p:not(.my-info) {
+#contact-lg div p:not(.my-info) {
   text-align: right;
-} */
+}
+
+/* ----------------------------------------------------------- swap behavior */
+#contact-sm { display: none; }
+@media (max-width: 500px) {
+  #contact-sm { display: block; }
+  #outro, #contact-lg { display: none; }
+}
