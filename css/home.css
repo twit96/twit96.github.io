@@ -796,12 +796,18 @@ doesn't cause temporary line break during animation
 #contact-lg h2 { text-align: right; }
 #contact-lg p { text-align: right; }
 
+#contact-lg .links { margin: 0; }
+
 #contact-lg .link-card {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 min(0.75em, 1.5vw);
+  margin: 0 0.25em;
+  padding: 0.5em;
+  border-radius: 10px;
 }
+
+#contact-lg .link-card:hover { background-color: var(--dim-accent-color); }
 
 @media (min-width: 42.5em) {
   #contact-lg .short-text { display: none; }
