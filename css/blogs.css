@@ -12,7 +12,7 @@
   /* heading container - vignette image background */
   width: 90%;
   max-width: 900px;
-  height: 45vw;
+  height: 45vh;
   max-height: 400px;
   /* background defaults - if no override specified on page */
   background-image:
@@ -35,9 +35,6 @@
 }
 .vignette-container h2 {
   margin-bottom: 0.25em;
-}
-@media (max-width: 450px) {
-  .vignette-container { min-height: 40vh; }
 }
 
 .banner {
