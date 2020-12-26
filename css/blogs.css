@@ -36,6 +36,9 @@
 .vignette-container h2 {
   margin-bottom: 0.25em;
 }
+@media (max-width: 450px) {
+  .vignette-container { min-height: 40vh; }
+}
 
 .banner {
   /* heading container - bottom text banner for page description */
