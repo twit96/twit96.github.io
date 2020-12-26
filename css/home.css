@@ -775,7 +775,7 @@ doesn't cause temporary line break during animation
 }
 
 /* ------------------------------------------------------- contact-lg config */
-#outro {
+/* #outro {
   padding: 1em 0;
 }
 
@@ -789,7 +789,6 @@ doesn't cause temporary line break during animation
   -moz-box-shadow:    0 0 0.5em var(--shadow-color) inset;
   -webkit-box-shadow: 0 0 0.5em var(--shadow-color) inset;
   box-shadow:         0 0 0.5em var(--shadow-color) inset;
-  animation: teeter 2.5s alternate ease-in-out infinite;
 }
 
 #contact-lg img { max-width: 45px; }
@@ -835,11 +834,11 @@ doesn't cause temporary line break during animation
 
 #contact-lg div p:not(.my-info) {
   text-align: right;
-}
+} */
 
 /* ----------------------------------------------------------- swap behavior */
-#contact-sm { display: none; }
+/* #contact-sm { display: none; }
 @media (max-width: 550px) {
   #contact-sm { display: block; }
   #outro, #contact-lg { display: none; }
-}
+} */
