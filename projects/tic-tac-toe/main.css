@@ -1,4 +1,10 @@
 /* Config HTML ------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /* reused colors */
   --main-color: #fff;
@@ -17,6 +23,7 @@ body {
 
 header {
   width: 100%;
+  padding: 1em;
   text-align: center;
   background-color: var(--accent-color);
   color: var(--main-color);
@@ -29,15 +36,15 @@ table {
 }
 
 button {
-  width: 25vw;
-  height: 25vw;
+  width: 25vmin;
+  height: 25vmin;
   max-width: 150px;
   max-height: 150px;
   font-size: 3em;
   color: var(--accent-color);
   border: 0;
   border-radius: 50%;
-  margin: min(1vw, 5px);
+  margin: 2vmin;
 }
 
 button:hover { box-shadow: 0 0 0.5em var(--accent-color) inset; }
@@ -54,6 +61,7 @@ button:focus {
   border-radius: 15px;
   border: 0;
   padding: 0.75em;
+  margin-top: 1em;
   font-size: 1em;
   text-transform: uppercase;
 }
@@ -73,6 +81,7 @@ footer {
   left: 0;
   bottom: 0;
   right: 0;
+  padding: 1em;
   background-color: var(--accent-color);
   color: var(--main-color);
 }
