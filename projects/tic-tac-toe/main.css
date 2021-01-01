@@ -21,12 +21,38 @@ body {
   align-items: center;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+  margin: 0 auto;
+  max-width: 450px;
+}
+
 header {
   width: 100%;
-  padding: 1em;
-  text-align: center;
+  padding: 0.5em;
   background-color: var(--accent-color);
   color: var(--main-color);
+  /* bottom shadow */
+  -moz-box-shadow: 0 0 1em #000000;
+  -webkit-box-shadow: 0 0 1em #000000;
+  box-shadow: 0 0 0.5em #000000;
+}
+
+a {
+  color: white;
+  font-size: 1.25em;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+  background-color: #dbdbdb25;
+  color: black;
 }
 
 /* Game Board -------------------------------------------------------------- */
@@ -84,17 +110,13 @@ footer {
   padding: 1em;
   background-color: var(--accent-color);
   color: var(--main-color);
+  /* top shadow */
+  -moz-box-shadow: 0 0 1em #000000;
+  -webkit-box-shadow: 0 0 1em #000000;
+  box-shadow: 0 0 0.5em #000000;
 }
 
 /* add padding to body content to account for fixed footer */
 body { padding-bottom: 100px;}
 
 footer h2 { text-align: center; }
-
-footer .wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1em;
-  margin: 0 auto;
-  max-width: 450px;
-}
