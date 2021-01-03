@@ -7,11 +7,14 @@ var winner = false;
 // button click event
 $("button").click(function(e) {
 
-  // generate current symbol
-  var symbol = symbols[turn];
-
   // ensure button doesn't already have value
   if (!$(this).html()) {
+
+    // update button style
+    $(this).addClass('clicked');
+
+    // generate current symbol
+    var symbol = symbols[turn];
 
     // update value and played array
     $(this).html(symbol);
@@ -103,6 +106,7 @@ function reset_board() {
   // reset board
   for (i=1;i<10;i++) {
     document.getElementById(i).innerHTML = "";
+    $('#'+ i).removeClass('clicked');
     played[i] = "";
   }
 
