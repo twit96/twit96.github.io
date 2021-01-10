@@ -544,12 +544,16 @@ doesn't cause temporary line break during animation
   margin: 0 auto;
   padding: 0;
   border-radius: 10px;
+  border: 0.5em solid black;
+  background: black;
   /* alt text */
   color: black;
   font-size: 1.5em;
   font-weight: bold;
   text-align: center;
+  /* adjustments */
   z-index: 1;
+  box-sizing: border-box;
 }
 
 .card {
@@ -588,6 +592,7 @@ doesn't cause temporary line break during animation
   display: inline-block;
   font-size: 0.95em;
 }
+
 /* ---------------------------------------------------------------- homepage */
 #projects {
   /* layout style */
