@@ -8,6 +8,7 @@
 
   - HTML Config
   - General Classes
+  - Fade-In Background
   - Animated Circles Background
 
   - Header/Footer Bar
@@ -244,6 +245,25 @@ svg.wasClicked {
   max-width: 960px;
   margin: 0 auto;
 }
+
+
+/* Fade-In Background ------------------------------------------------------ */
+#fadein-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #171717;
+  z-index: 10000;
+  animation: fadeOut 0.75s ease-in 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 
 /* Animated Circles Background --------------------------------------------- */
 .ripple-background {
