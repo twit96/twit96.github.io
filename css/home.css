@@ -398,8 +398,8 @@ header {
   z-index: 1000;
   font-size: 1.25em;
   /* bottom shadow */
-  -moz-box-shadow: 0 0 1em #000000;
-  -webkit-box-shadow: 0 0 1em #000000;
+  -moz-box-shadow: 0 0 0.5em #000000;
+  -webkit-box-shadow: 0 0 0.5em #000000;
   box-shadow: 0 0 0.5em #000000;
 }
 
