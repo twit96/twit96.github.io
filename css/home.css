@@ -410,6 +410,7 @@ header .pages-toggle { display: none; }
   -moz-transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .hamburger-icon.wasClicked {
@@ -570,6 +571,12 @@ doesn't cause temporary line break during animation
 
 .card p {
   margin: 1em;
+  /* prevent random text selection onclick */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .card .date-text {
