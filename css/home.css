@@ -224,6 +224,17 @@ svg.wasClicked {
   white-space: nowrap;
 }
 
+.noselect {
+  /* prevent random text selection onclick */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 .short-text {
   /* displayed below large screen breakpoint, hidden above */
   display: inline-block;
@@ -571,28 +582,12 @@ doesn't cause temporary line break during animation
 
 .card p {
   margin: 1em;
-  /* prevent random text selection onclick */
-  /* -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
 }
 
 .card .date-text {
   color: var(--shadow-color);
   font-style: italic;
   font-size: 0.75em;
-}
-
-.card .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .card .links {
