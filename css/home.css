@@ -411,6 +411,12 @@ header .pages-toggle { display: none; }
   -webkit-transition: transform 0.5s;
   transition: transform 0.5s;
   cursor: pointer;
+  /* prevent random text selection onclick */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .hamburger-icon.wasClicked {
