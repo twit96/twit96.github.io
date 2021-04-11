@@ -39,7 +39,7 @@ $('.hamburger-icon').click(function() {
   // update button
   $(this).toggleClass('wasClicked');
   // display small nav
-  $('#small-nav').toggle();
+  $('#small-nav').slideToggle();
   // display small nav background
   $('#small-nav-bg').fadeToggle();
 });
@@ -50,7 +50,7 @@ function hide_small_nav() {
   // reset hamburger icon
   $('.hamburger-icon').toggleClass('wasClicked');
   // slide up small nav
-  $('#small-nav').toggle();
+  $('#small-nav').slideToggle();
   // fade out small nav background
   $('#small-nav-bg').fadeOut();
 }

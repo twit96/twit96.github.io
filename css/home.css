@@ -440,6 +440,7 @@ header .pages-toggle { display: none; }
   display: none;
   text-align: right;
   padding: 1em 2.5%;
+  transition: all 0s linear;  /* jquery slideToggle() bugfix */
 }
 
 #small-nav li {
